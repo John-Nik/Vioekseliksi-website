@@ -1,3 +1,4 @@
+/* ======================= Global Settings ====================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+/* ======================= Global Profiles ====================== */
 
 /* ======================= Global Profiles ====================== */
 :root {
@@ -52,20 +54,40 @@
 }
 /* ======================= Global Profiles ====================== */
 
+
+
+
+/* ============================================================== */
+/*                                                                */
+/*                             Nav Bar                            */
+/*                                                                */
+/* ============================================================== */
 /* --- Mobile ---*/
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+    nav {
+        display: flex;
+        position: fixed;
+        width: 100%;
+    }
+
+    /* ------------------------ Phone Icon -------------------- */
     #nav-bar #mobile .call-icon {
         width: 32px;
         height: auto;
     }
+    /* ------------------------ Phone Icon -------------------- */
 
+    /* ------------------------ Nav Bar Container -------------------- */
     #nav-bar {
         position: fixed;
         width: 100vw;
         top: 0;
         left: 0;
+        background-color: white;
     }
+    /* ------------------------ Nav Bar Container -------------------- */
 
+    /* ------------------------ Mobile Top Nav Bar -------------------- */
     #nav-bar #mobile {
         display: flex;
         position: relative;
@@ -78,8 +100,11 @@
         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
         padding-left: clamp(8px, calc(25vw - 70px), 32px);
         padding-right: clamp(8px, calc(25vw - 70px), 32px);
+        width: 100%;
     }
+    /* ------------------------ Mobile Top Nav Bar -------------------- */
 
+    /* ------------------------ Burger Icon -------------------- */
     #nav-bar #mobile .burger-icon {
         width: 36px;
         height: 32px;
@@ -88,7 +113,9 @@
         justify-content: space-between;
         overflow: hidden;
     }
+    /* ------------------------ Burger Icon -------------------- */
 
+    /* ------------------------ Burger Icon Lines -------------------- */
     #nav-bar .burger-icon .line {
         width: 100%;
         height: 2px;
@@ -107,17 +134,21 @@
     #nav-bar .open-menu .burger-icon .line3 {
         transform: rotate(-405deg) translateY(-14px) translateX(8px);
     }
+    /* ------------------------ Burger Icon Lines -------------------- */
 
+    /* ------------------------ Logo -------------------- */
     #nav-bar #mobile .logo {
         width: 32px;
         height: auto;
     }
+    /* ------------------------ Logo -------------------- */
 
+    /* ------------------------ Links Wrapper Container -------------------- */
     #nav-bar #wrapper {
         display: flex;
         width: 60%;
         height: 100vh;
-        position: fixed;
+        position: absolute;
         flex-direction: column;
         list-style: none;
         padding-left: 16px;
@@ -134,9 +165,11 @@
     #nav-bar .open-menu #wrapper {
         transform: translateX(0);
     }
+    /* ------------------------ Links Wrapper Container -------------------- */
 
+    /* ------------------------ All Links Container/Backdrop -------------------- */
     #nav-bar .container-links {
-        position: relative;
+        position: absolute;
         width: 100%;
         display: flex;
         justify-content: flex-end;
@@ -152,25 +185,32 @@
     #nav-bar .open-menu .container-links {
         opacity: 1;
     }
+    /* ------------------------ All Links Container/Backdrop -------------------- */
 
+    /* ------------------------ Logo contained in Links listing -------------------- */
     #nav-bar #wrapper .logo-container {
         display: none;
     }
+    /* ------------------------ Logo contained in Links listing -------------------- */
 
+    /* ------------------------ Link Text Styling -------------------- */
     #nav-bar #wrapper .link a {
         text-decoration: none !important;
         display: flex;
         flex-direction: row;
-        font-size: clamp(12px, 5vw, 20px);
+        font-size: clamp(0.75rem, 5vw, 1.25rem);
         font-weight: 500;
         letter-spacing: 1px;
         color: var(--black-text-color);
+        user-select: none;
     }
 
     #nav-bar #wrapper .link:nth-child(1) a {
         font-weight: 700;
     }
+    /* ------------------------ Link Text Styling -------------------- */
 
+    /* ------------------------ Link Container -------------------- */
     #nav-bar #wrapper .link {
         padding: 16px 0px 16px 8px;
         border-radius: 16px;
@@ -183,7 +223,9 @@
     #nav-bar #wrapper .link:active {
         background-color: rgb(217, 217, 217);
     }
+    /* ------------------------ Link Container -------------------- */
 
+    /* ------------------------ Link Icon -------------------- */
     #nav-bar #wrapper .link a::before {
         display: flex;
         width: clamp(12px, 5vw, 20px);
@@ -198,37 +240,39 @@
 
     #nav-bar #wrapper .link:nth-child(1) a::before {
         background-image: url("/assets/img/home-icon.svg");
-        
     }
 
     #nav-bar #wrapper .link:nth-child(2) a::before {
         background-image: url("/assets/img/location-pin.svg");
-        width: 18px;
     }
 
     #nav-bar #wrapper .link:nth-child(3) a::before {
         background-image: url("/assets/img/info-icon.svg");
-        width: 18px;
     }
 
     #nav-bar #wrapper .link:nth-child(5) a::before {
         background-image: url("/assets/img/blog-icon.svg");
-        width: 18px;
     }
 
     #nav-bar #wrapper .link:nth-child(6) a::before {
         background-image: url("/assets/img/biomarkers-icon.svg");
-        width: 18px;
     }
 
     #nav-bar #wrapper .link:nth-child(7) a::before {
         background-image: url("/assets/img/call-icon.svg");
-        width: 18px;
     }
+    /* ------------------------ Link Icon -------------------- */
 }
 
 /* --- Tablet --- */
 @media only screen and (min-width: 768px) {
+    nav {
+        display: flex;
+        position: fixed;
+        background-color: white;
+    }
+
+    /* ------------------------ All Links Container/Backdrop -------------------- */
     #nav-bar .container-links {
         width: 100%;
         max-width: 1024px;
@@ -236,18 +280,24 @@
         padding-left: 16px;
         padding-right: 16px;
     }
+    /* ------------------------ All Links Container/Backdrop -------------------- */
 
+    /* ------------------------ Mobile Top Nav Bar -------------------- */
     #nav-bar #mobile {
         display: none;
     }
+    /* ------------------------ Mobile Top Nav Bar -------------------- */
 
+    /* ------------------------ Nav Bar Element -------------------- */
     #nav-bar nav {
         display: flex;
         width: 100%;
         justify-content: center;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
     }
+    /* ------------------------ Nav Bar Element -------------------- */
 
+    /* ------------------------ Links Wrapper Container -------------------- */
     #nav-bar #wrapper {
         display: flex;
         width: 100%;
@@ -257,7 +307,9 @@
         list-style: none;
         align-items: center;
     }
+    /* ------------------------ Links Wrapper Container -------------------- */
     
+    /* ------------------------ Link Text Styling -------------------- */
     #nav-bar .link a {
         font-size: clamp(1rem, 10%, 1.25rem);
         text-decoration: none;
@@ -267,10 +319,36 @@
         text-underline-offset: 4px;
         transform: scale(1);
         transition: all 0.2s ease-in-out;
+        user-select: none;
     }
 
     #nav-bar .link:hover a {
         color: var(--primary-blue-color);
+    }
+    /* ------------------------ Link Text Styling -------------------- */
+
+    /* ------------------------ Link Container -------------------- */
+    #nav-bar .link:active {
+        animation: click-link 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s 1 alternate;
+    }
+
+    #nav-bar .link:hover {
+        cursor: pointer;
+    }
+
+    #nav-bar .link {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    #nav-bar .link:nth-child(1) {
+        padding-left: 8px;
+    }
+
+    #nav-bar .link:last-child {
+        padding-right: 8px;
     }
 
     @keyframes click-link {
@@ -281,14 +359,13 @@
             transform: scale(1.1);
         }
     }
-    
-    #nav-bar .link:active {
-        animation: click-link 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s 1 alternate;
-    }
-    
+    /* ------------------------ Link Container -------------------- */
+
+    /* ------------------------ Logo Styling -------------------- */
     #nav-bar li img {
         height: 48px;
         width: auto;
         margin-top: 4px;
     }
+    /* ------------------------ Logo Styling -------------------- */
 }

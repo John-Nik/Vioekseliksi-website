@@ -16,8 +16,8 @@ function underlineActiveTab(link) {
 
 navBarBurgerButton.addEventListener('click', toggleMenu);
 
-function toggleMenu(element) {
-    if (element.target.classList.contains('container-links') || element.currentTarget.classList.contains('navButton')) {
+function toggleMenu(buttonUserClicked) {
+    if (buttonUserClicked.target.classList.contains('container-links') || buttonUserClicked.currentTarget.classList.contains('navButton')) {
         if (navBarBurgerButton.parentElement.parentElement.classList.contains('open-menu')) {
             mobileMenuBackdrop.removeEventListener('click', toggleMenu);
         } else {
