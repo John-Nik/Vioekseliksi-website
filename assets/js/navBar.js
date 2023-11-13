@@ -1,10 +1,10 @@
 const links = document.querySelectorAll('#wrapper .link');
-const navButton =  document.querySelector('.navButton');
+const navBarBurgerButton =  document.querySelector('.navButton');
 const mobileMenuBackdrop = document.querySelector('.container-links')
 
-links.forEach(underline, window.location.pathname);
+links.forEach(underlineActiveTab, window.location.pathname);
 
-function underline(link) {
+function underlineActiveTab(link) {
     if (link.children[0].dataset.link.includes(this)) {
 
         link.children[0].style.textDecoration = 'underline';
@@ -14,15 +14,15 @@ function underline(link) {
     };
 };
 
-navButton.addEventListener('click', toggleMenu);
+navBarBurgerButton.addEventListener('click', toggleMenu);
 
-function toggleMenu(btn) {
-    if (btn.target.classList.contains('container-links') || btn.currentTarget.classList.contains('navButton')) {
-        if (navButton.parentElement.parentElement.classList.contains('open-menu')) {
+function toggleMenu(element) {
+    if (element.target.classList.contains('container-links') || element.currentTarget.classList.contains('navButton')) {
+        if (navBarBurgerButton.parentElement.parentElement.classList.contains('open-menu')) {
             mobileMenuBackdrop.removeEventListener('click', toggleMenu);
         } else {
             mobileMenuBackdrop.addEventListener('click', toggleMenu);
         }
-    navButton.parentElement.parentElement.classList.toggle('open-menu');
+        navBarBurgerButton.parentElement.parentElement.classList.toggle('open-menu');
     }
 }
