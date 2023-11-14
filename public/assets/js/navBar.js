@@ -1,6 +1,7 @@
 const links = document.querySelectorAll('#wrapper .link');
 const navBarBurgerButton =  document.querySelector('.navButton');
-const mobileMenuBackdrop = document.querySelector('.container-links')
+const mobileMenuBackdrop = document.querySelector('.container-links');
+const htmlBody = document.querySelector('body');
 
 links.forEach(underlineActiveTab, window.location.pathname);
 
@@ -24,5 +25,6 @@ function toggleMenu(buttonUserClicked) {
             mobileMenuBackdrop.addEventListener('click', toggleMenu);
         }
         navBarBurgerButton.parentElement.parentElement.classList.toggle('open-menu');
+        htmlBody.classList.toggle('open-menu');
     }
 }
