@@ -18,3 +18,5 @@
 			</ul>
 
 **0.3.1:** Prepared the FAQ question mark for the addition of the background blob | G
+
+**0.3.2:** Added the aforementioned background blob | G
