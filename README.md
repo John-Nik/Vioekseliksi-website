@@ -16,3 +16,5 @@
 				<li>Fixed an issue in the mobile version where the body's buttons weren't working due to an overlay oversight | G</li>
 				<li>Changed the way the "navBar.js" works to fix the issue above | G</li>
 			</ul>
+
+**0.3.1:** Prepared the FAQ question mark for the addition of the background blob | G

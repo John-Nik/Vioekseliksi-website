@@ -80,10 +80,21 @@
         justify-content: center;
         align-items: center;
     }
-    
+
+    #faq .question-mark-container .blob1 {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        z-index: -1;
+        background-color: green;
+    }
+
     #faq .question-mark-container img {
+        aspect-ratio: 7/8;
         width: 50%;
-        height: auto;
+        position: relative;
+        backdrop-filter: hue-rotate(90deg);
+        clip-path: url(#myClip);
     }
     
     #faq .questions-container {
