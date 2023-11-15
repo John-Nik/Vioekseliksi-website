@@ -1,13 +1,13 @@
-const questionBlock = document.querySelectorAll('.question-container');
+// const questionBlock = document.querySelectorAll('.question-container');
 
-questionBlock.forEach(questionBlockClickable);
+// questionBlock.forEach(questionBlockClickable);
 
-function questionBlockClickable(questionBlockButton) {
-    questionBlockButton.addEventListener('click', toggleAnswerReveal);
-}
+// function questionBlockClickable(questionBlockButton) {
+//     questionBlockButton.addEventListener('click', toggleAnswerReveal);
+// }
 
-function toggleAnswerReveal (questionClicked) {
-    let questionToToggle = questionClicked.currentTarget.parentElement;
+// function toggleAnswerReveal (questionClicked) {
+//     let questionToToggle = questionClicked.currentTarget.parentElement;
 
-    questionToToggle.classList.toggle('answer-reveal');
-}
+//     questionToToggle.classList.toggle('answer-reveal');
+// }
