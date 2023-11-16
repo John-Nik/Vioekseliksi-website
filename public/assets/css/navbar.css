@@ -64,18 +64,14 @@
 /* ============================================================== */
 /* --- Mobile ---*/
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+    main{
+        padding-top: 96px;
+    }
+
     nav {
         display: flex;
         position: fixed;
         width: 100%;
-    }
-
-    body.open-menu {
-        filter: brightness(0.5);
-    }
-
-    body {
-        filter: brightness(1);
     }
 
     /* ------------------------ Phone Icon -------------------- */
@@ -166,6 +162,12 @@
         box-shadow: 0px 0px 2px rgb(0, 0, 0), 0px 0px 20px 8px rgba(0, 0, 0, 0.3);
         z-index: 1500;
         background-color: white;
+        transform: translateX(100%);
+        transition: all 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
+
+    #nav-bar .open-menu #wrapper {
+        transform: translateX(0);
     }
     /* ------------------------ Links Wrapper Container -------------------- */
 
@@ -180,14 +182,12 @@
         transition: opacity 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         height: 100vh;
         z-index: 1000;
+        backdrop-filter: brightness(0.5);
         overflow: hidden;
-        transform: translateX(100%);
-        transition: all 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     }
 
     #nav-bar .open-menu .container-links {
         opacity: 1;
-        transform: translateX(0);
     }
     /* ------------------------ All Links Container/Backdrop -------------------- */
 
@@ -270,6 +270,9 @@
 
 /* --- Tablet --- */
 @media only screen and (min-width: 768px) {
+    main{
+        padding-top: 64px;
+    }
     nav {
         display: flex;
         position: fixed;

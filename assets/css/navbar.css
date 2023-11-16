@@ -64,6 +64,10 @@
 /* ============================================================== */
 /* --- Mobile ---*/
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+    main{
+        padding-top: 96px;
+    }
+
     nav {
         display: flex;
         position: fixed;
@@ -266,6 +270,9 @@
 
 /* --- Tablet --- */
 @media only screen and (min-width: 768px) {
+    main{
+        padding-top: 64px;
+    }
     nav {
         display: flex;
         position: fixed;
