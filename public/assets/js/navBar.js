@@ -18,11 +18,11 @@ navBarBurgerButton.addEventListener('click', toggleMenu);
 
 function toggleMenu(buttonUserClicked) {
     if (buttonUserClicked.target.classList.contains('container-links') || buttonUserClicked.currentTarget.classList.contains('navButton')) {
-        if (navBarBurgerButton.parentElement.parentElement.classList.contains('open-menu')) {
+        if (htmlBody.classList.contains('open-menu')) {
             mobileMenuBackdrop.removeEventListener('click', toggleMenu);
         } else {
             mobileMenuBackdrop.addEventListener('click', toggleMenu);
         }
-        navBarBurgerButton.parentElement.parentElement.classList.toggle('open-menu');
+        htmlBody.classList.toggle('open-menu');
     }
 }

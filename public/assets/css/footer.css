@@ -56,6 +56,7 @@
 
 
 @media only screen and (min-width: 0px) {
+    /* ------------------------ Footer -------------------- */
     footer {
         height: fit-content;
         width: 100%;
@@ -63,9 +64,11 @@
         display: flex;
         justify-content: center;
         position: relative;
-        z-index: -1;
+        z-index: 1;
     }
+    /* ------------------------ Footer -------------------- */
 
+    /* ------------------------ Footer Container -------------------- */
     footer .container {
         width: 100%;
         height: 100%;
@@ -73,7 +76,9 @@
         padding-left: 16px;
         padding-right: 16px;
     }
+    /* ------------------------ Footer Container -------------------- */
 
+    /* ------------------------ Main Content -------------------- */
     footer .content-container {
         width: 100%;
         height: 80%;
@@ -81,28 +86,42 @@
         display: flex;
         flex-direction: column;
     }
+    /* ------------------------ Main Content -------------------- */
 
+    /* ------------------------ Copyright Content Container -------------------- */
     footer .misc-container {
         width: 100%;
         height: 10.6%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 16px;
     }
+    /* ------------------------ Copyright Content Container -------------------- */
 
+    /* ------------------------ Logo Styling -------------------- */
     footer .logo-wrapper img {
         height: 81px;
         width: auto;
     }
+    /* ------------------------ Logo Styling -------------------- */
 
+    /* ------------------------ Logo Container -------------------- */
     footer .logo-wrapper {
         margin-bottom: 64px;
     }
+    /* ------------------------ Logo Container -------------------- */
 
+    /* ------------------------ Link Lists Container -------------------- */
     footer .links-container {
         display: grid;
         grid-template-columns: repeat(2, minmax(50px, 1fr));
         gap: 26px;
         max-width: 100%;
     }
+    /* ------------------------ Link Lists Container -------------------- */
 
+    /* ------------------------ Links Wrapper Styling -------------------- */
     footer .listing-wrappers {
         width: 100%;
         display: flex;
@@ -114,17 +133,23 @@
     footer .listing-wrappers:first-child {
         margin-right: -20px;
     }
+    /* ------------------------ Links Wrapper Styling -------------------- */
 
+    /* ------------------------ UL Links -------------------- */
     footer .listing-wrappers ul {
         list-style: none;
         margin-top: 32px;
         align-items: flex-end;
     }
+    /* ------------------------ UL Links -------------------- */
 
+    /* ------------------------ Links Styling -------------------- */
     footer .footer-links li {
         margin-bottom: 16px;
     }
+    /* ------------------------ Links Styling -------------------- */
 
+    /* ------------------------ Links Text -------------------- */
     footer .footer-links li:hover a {
         text-decoration: underline;
     }
@@ -138,7 +163,9 @@
         text-decoration: none;
         font-size: 1rem;
     }
+    /* ------------------------ Links Text -------------------- */
 
+    /* ------------------------ Links Title -------------------- */
     footer .title {
         color: white;
         font-weight: 600;
@@ -155,20 +182,17 @@
         height: 2px;
         background-color: var(--green-color-tint-1);
     }
+    /* ------------------------ Links Title -------------------- */
 
-    footer .misc-container {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin-bottom: 16px;
-    }
-
+    /* ------------------------ Copyright Text's Wrapper Styling -------------------- */
     footer .misc-container small {
         margin-bottom: 4px;
         color: #8f8f8f;
         font-size: 0.75rem;
     }
+    /* ------------------------ Copyright Text's Wrapper Styling -------------------- */
 
+    /* ------------------------  Copyright Text Styling -------------------- */
     footer .misc-container small a {
         color: inherit;
         text-decoration: underline;
@@ -181,9 +205,11 @@
     footer #assets-used a:hover {
         color: white;
     }
+    /* ------------------------  Copyright Text Styling -------------------- */
 }
 
 @media only screen and (min-width: 600px) {
+    /* ------------------------ Link Lists Container -------------------- */
     footer .links-container {
         display: grid;
         width: 100%;
@@ -191,50 +217,69 @@
         gap: 26px;
         justify-items: end;
     }
+    /* ------------------------ Link Lists Container -------------------- */
 }
 
 @media only screen and (min-width: 768px) {
+    /* ------------------------ Footer -------------------- */
     footer {
         height: 512px;
     }
+    /* ------------------------ Footer -------------------- */
 
+    /* ------------------------ Footer Container -------------------- */
     footer .container {
         padding-left: 16px;
         padding-right: 16px;
     }
+    /* ------------------------ Footer Container -------------------- */
 
+    /* ------------------------ Main Content -------------------- */
     footer .content-container {
         flex-direction: row;
     }
+    /* ------------------------ Main Content -------------------- */
 
-    footer .logo-wrapper {
-        width: 30%;
-    }
-
-    footer .links-container {
-        width: 70%;
-        grid-template-columns: repeat(4, minmax(100px, 1fr));
-        padding-right: 16px;
-    }
-
-    footer .listing-wrappers {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    footer .footer-links li {
-        text-align: right;
-        margin-bottom: 0.5rem;
-    }
-
-    footer .title {
-        flex-direction: row-reverse;
-    }
-
+    /* ------------------------ Copyright Content Container -------------------- */
     footer .misc-container {
         justify-content: space-between;
         align-items: flex-end;
         flex-direction: row;
     }
+    /* ------------------------ Copyright Content Container -------------------- */
+
+    /* ------------------------ Logo Container -------------------- */
+    footer .logo-wrapper {
+        width: 30%;
+    }
+    /* ------------------------ Logo Container -------------------- */
+
+    /* ------------------------ Link Lists Container -------------------- */
+    footer .links-container {
+        width: 70%;
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
+        padding-right: 16px;
+    }
+    /* ------------------------ Link Lists Container -------------------- */
+
+    /* ------------------------ Links Wrapper Styling -------------------- */
+    footer .listing-wrappers {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    /* ------------------------ Links Wrapper Styling -------------------- */
+
+    /* ------------------------ Links Styling -------------------- */
+    footer .footer-links li {
+        text-align: right;
+        margin-bottom: 0.5rem;
+    }
+    /* ------------------------ Links Styling -------------------- */
+
+    /* ------------------------ Links Title -------------------- */
+    footer .title {
+        flex-direction: row-reverse;
+    }
+    /* ------------------------ Links Title -------------------- */
 }
