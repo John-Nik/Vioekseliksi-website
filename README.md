@@ -22,3 +22,5 @@
 **0.3.2:** Added the aforementioned background blob | G
 
 **0.3.3:** Changed the color of the FAQ header to a lighter shade | G
+
+**0.4.0:** Added contact us section block and an unfinished services section block | E

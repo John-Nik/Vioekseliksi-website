@@ -168,12 +168,6 @@
         box-shadow: 0px 0px 4px rgb(0, 0, 0), 0px 0px 64px 8px rgba(0, 0, 0, 0.3);
         z-index: 1500;
         background-color: white;
-        transform: translateX(100%);
-        transition: all 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    }
-
-    #nav-bar .open-menu #wrapper {
-        transform: translateX(0);
     }
     /* ------------------------ Links Wrapper Container -------------------- */
 
@@ -189,8 +183,9 @@
         transition: opacity 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         height: 100vh;
         z-index: 1000;
-        backdrop-filter: brightness(0.5);
         overflow: hidden;
+        transform: translateX(100%);
+        transition: all 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     }
 
     .open-menu #nav-bar .container-links {
