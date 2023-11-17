@@ -1,7 +1,6 @@
 const links = document.querySelectorAll('#wrapper .link');
 const navBarBurgerButton =  document.querySelector('.navButton');
-const mobileMenuBackdrop = document.querySelector('.container-links');
-const htmlBody = document.querySelector('body');
+const mobileMenuBackdrop = document.querySelector('.container-links')
 
 links.forEach(underlineActiveTab, window.location.pathname);
 
