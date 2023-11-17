@@ -1,0 +1,15 @@
+.s{
+    background-color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding:10px;
+    border-radius: 30%;
+    width:60vw;
+    height:30ch;
+}
+
+.services{
+
+}
