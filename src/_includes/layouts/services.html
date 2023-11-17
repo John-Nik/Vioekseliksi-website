@@ -1,5 +1,6 @@
+
 <div class="s">
-<div>
+<div class="serv">
     <h4>SERVICES</h4>
     <span> Ipsum is simply 
 dummy text of the 
@@ -7,8 +8,36 @@ printing and
 typesetting industry.</span>
 </div>
 
-<div class="services">
-    
+<div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-item">
+        <!-- Content for slide 1 -->
+        <img src="assets\img\Service.webp" alt="Slide 1">
+      </div>
+  
+      <div class="carousel-item">
+        <!-- Content for slide 2 -->
+        <img src="assets\img\Service.webp" alt="Slide 2">
+      </div>
+  
+      <div class="carousel-item">
+        <!-- Content for slide 3 -->
+        <img src="assets\img\Service.webp" alt="Slide 3">
+      </div>
+  
+      <!-- Add more slides as needed -->
+    </div>
+  
+    <div id="prev" name="nav" class="carousel-btn prev-btn" onclick="document.querySelector(':checked').previousElementSibling.checked = true;">
+    <label for="prev" class="carousel-btn prev-btn">
+      <img src="assets/img/arrow-left.svg" alt="Previous">
+    </label></div>
+  
+    <div id="next" name="nav" class="carousel-btn next-btn" onclick="document.querySelector(':checked').nextElementSibling.checked = true;">
+    <label for="next" class="carousel-btn next-btn">
+      <img src="assets/img/arrow-right.svg" alt="Next">
+    </label>
+    </div>
+  </div>
 
-</div>
-</div>
+  </div>

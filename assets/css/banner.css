@@ -68,7 +68,6 @@
     background-color: rgba(255, 0, 0, 0.13);
     justify-content: center;
     align-items: center;
-    padding-left: 10%;
 }
 
 #banner .content {
@@ -79,14 +78,16 @@
 }
 
 #banner .title {
-    width: 350px;
-    font-size: 2em;
+    width: 100%;
+    max-width: 350px;
+    font-size: clamp(48px, 5vw, 80px);
     font-weight: 700;
     text-align: right;
     color: var(--blue-color-shade-7);
     letter-spacing: -2px;
     line-height: 70px;
     font-family: 'Judson', serif;
+    padding-right: 32px;
 }
 
 #banner .text {
