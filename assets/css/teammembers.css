@@ -86,8 +86,9 @@
     #team-members .title {
         text-align: center;
         color: var(--blue-color-shade-7);
-        font-size: clamp(2rem, 4vw, 3rem);
+        font-size: clamp(2.5rem, 4vw, 3rem);
         font-weight: 600;
+        letter-spacing: -1px;
     }
 
     #team-members .profile-information {
@@ -116,7 +117,8 @@
         max-width: 50ch;
         text-align: center;
         margin-top: 24px;
-        font-size: 1rem
+        font-size: 1rem;
+        line-height: 1.3rem;
         color: var(--black-text-color);
         opacity: 0.8;
         margin-bottom: 64px;
