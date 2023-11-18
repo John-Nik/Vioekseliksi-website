@@ -43,115 +43,116 @@
 }
 /* ======================= Global Profiles ====================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Judson:wght@700&display=swap');
-
-
 @media only screen and (min-width: 0px) {
-    #banner {
-        height: 300px;
-        width: 100%;
+    #team-members {
         display: flex;
-        justify-content: center;
+        margin-top: 48px;
         margin-bottom: 48px;
+        justify-content: center;
     }
-    
-    #banner .banner-container {
-        width: 100%;
-        max-width: 425px;
-        height: 100%;
+
+    #team-members .container {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        max-width: 1024px;
         padding-left: 24px;
         padding-right: 24px;
-    }
-    
-    #banner .title-wrapper {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 48px;
-    }
-    
-    #banner .content {
-        width: 100%;
-        display: flex;
         align-items: center;
     }
-    
-    #banner .content-container {
-        margin-bottom: -50%;
+
+    #team-members .profile-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin-left: 0px;
+        align-items: center;
+    }
+
+    #team-members img {
+        width: 100%;
+    }
+
+    #team-members .profile {
+        width: 100%;
+        max-width: 290px;
+        margin-bottom: 48px;
+    }
+
+    #team-members .header {
+        display: block;
     }
     
-    #banner .title {
-        width: 100%;
-        font-size: clamp(2.5rem, 5vw, 3rem);
-        font-weight: 700;
+    #team-members .title {
         text-align: center;
         color: var(--blue-color-shade-7);
-        letter-spacing: -2px;
-        line-height: 70px;
-        font-family: 'Judson', serif;
+        font-size: clamp(2.5rem, 4vw, 3rem);
+        font-weight: 600;
+        letter-spacing: -1px;
     }
-    
-    #banner .text {
-        font-size: clamp(16px, 2vw, 24px);
-        color: var(--blue-color-shade-6);
-        line-height: 24px;
+
+    #team-members .profile-information {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+        color: var(--black-text-color);
     }
-    
-    #banner img {
-        height: clamp(150px, 25vw, 170px);
-        width: auto;
-        float: right;
-        position: relative;
+
+    #team-members .name {
+        margin-top: 8px;
+        font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+        font-weight: 500;
+        text-align: center;
     }
-    
-    #banner .text-wrapper {
-        margin-top: -40px;
+
+    #team-members .role {
+        font-weight: 300;
+        font-size: 1rem;
+        color: var(--black-text-color);
+        opacity: 0.8;
+        text-align: center;
+    }
+
+    #team-members .description {
+        max-width: 50ch;
+        text-align: center;
+        margin-top: 24px;
+        font-size: 1rem;
+        line-height: 1.3rem;
+        color: var(--black-text-color);
+        opacity: 0.8;
+        margin-bottom: 64px;
+        font-weight: 400;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    #banner {
-        height: 510px;
-        margin-bottom: 96px;
+    #team-members .profile-wrapper {
+        display: grid;
+        margin-left: -24px;
+        grid-template-columns: repeat(3, 1fr);
     }
-    
-    #banner .banner-container {
-        max-width: 1024px;
+
+    #team-members .profile {
+        width: clamp(150px, 80%, 350px);
+        max-width: unset();
+        justify-self: center;
+    }
+
+    #team-members .profile-information {
         padding-left: 16px;
-        padding-right: 16px;
-        flex-direction: row;
     }
-    
-    #banner .title-wrapper {
-        width: 50%;
-        height: 100%;
-        padding-bottom: 0px;
+
+    #team-members .name {
+        text-align: left;
     }
-    
-    #banner .content {
-        width: 50%;
+
+    #team-members .role {
+        text-align: left;
     }
-    
-    #banner .title {
-        max-width: 350px;
-        text-align: right;
-        padding-right: 32px;
-    }
-    
-    #banner .text {
-        font-size: clamp(16px, 2vw, 24px);
-        color: var(--blue-color-shade-6);
-        line-height: 24px;
-    }
-    
-    #banner img {
-        height: clamp(150px, 25vw, 250px);
-    }
-    
-    #banner .text-wrapper {
-        margin-top: -40px;
+
+    #team-members .description {
+        margin-top: 32px;
+        margin-bottom: 96px;
     }
 }

@@ -24,3 +24,11 @@
 **0.3.3:** Changed the color of the FAQ header to a lighter shade | G
 
 **0.4.0:** Added contact us section block and an unfinished services section block | E
+
+**0.4.1:** Added responsive design for both section and contact us block | E
+
+**0.5.0:** Added a banner layout that will be used on all navigated pages | G
+
+**0.6.0:** Added team members section block | G
+
+**0.6.1:** Slight readjustment on font sizes for section block titles | G
