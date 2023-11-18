@@ -4,9 +4,11 @@
             <h1 class="title">{{bannerTitle}}</h1>
         </div>
         <div class="content">
-            <div class="text">{{bannerText}}</div>
-            <div class="image-wrapper">
-                <img src="{{bannerImage}}" alt="">
+            <div class="content-container">
+                    <img style="shape-outside: url({{bannerImage}})" src="{{bannerImage}}" alt="">
+                <div class="text-wrapper">
+                    <span class="text">{{bannerText}}</span>
+                </div>
             </div>
         </div>
     </div>
