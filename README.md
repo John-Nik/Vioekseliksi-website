@@ -28,3 +28,5 @@
 **0.4.1:** Added responsive design for both section and contact us block | E
 
 **0.5.0:** Added a banner layout that will be used on all navigated pages | G
+
+**0.6.0:** Added team members section block | G
