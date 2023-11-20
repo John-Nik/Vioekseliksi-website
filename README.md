@@ -33,4 +33,7 @@
 
 **0.6.1:** Slight readjustment on font sizes for section block titles | G
 
-**0.6.2:** Added a half-done contact us layout with google maps in its background | G
+**0.6.2:** <ul>
+				<li>Added a half-done contact us strip with its background being google maps | G</li>
+				<li>Fixed an issue with the navigation bar not being in the dead center of the desktop version of it | G</li>
+			</ul>
