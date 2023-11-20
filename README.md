@@ -32,3 +32,5 @@
 **0.6.0:** Added team members section block | G
 
 **0.6.1:** Slight readjustment on font sizes for section block titles | G
+
+**0.6.2:** Added a half-done contact us layout with google maps in its background | G
