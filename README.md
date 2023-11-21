@@ -42,3 +42,9 @@
 				<li>Moved the code for the FAQ Section Block from the "index.html" file to its own dedicated layout | G</li>
 				<li>Created "offers.css", "offersEN.html" and "offers.js" files in preparation of the offers layout | G</li>
 			</ul>
+
+**0.6.4:** <ul>
+				<li>Removed the visibility of the half-done contact us strip so as to not be bothersome for the rest of the site's development until its redesign is finished | G</li>
+				<li>Created the basic layout of offers. Will add functionality later | G</li>
+				<li>Removed some unused files from the public directory | G</li>
+			</ul>
