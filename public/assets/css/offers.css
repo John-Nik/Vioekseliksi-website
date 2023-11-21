@@ -115,3 +115,11 @@
     width: 110px;
     height: 110px;
 }
+
+#offers .top {
+    position: absolute;
+}
+
+#offers .bot {
+    position: relative;
+}
