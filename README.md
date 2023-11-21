@@ -37,3 +37,8 @@
 				<li>Added a half-done contact us strip with its background being google maps | G</li>
 				<li>Fixed an issue with the navigation bar not being in the dead center of the desktop version of it | G</li>
 			</ul>
+
+**0.6.3:** <ul>
+				<li>Moved the code for the FAQ Section Block from the "index.html" file to its own dedicated layout | G</li>
+				<li>Created "offers.css", "offersEN.html" and "offers.js" files in preparation of the offers layout | G</li>
+			</ul>
