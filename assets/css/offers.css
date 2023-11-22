@@ -123,3 +123,9 @@
 #offers .bot {
     position: relative;
 }
+
+@keyframes offersAnimation {
+    25% {
+        
+    }
+}
