@@ -48,3 +48,5 @@
 				<li>Created the basic layout of offers. Will add functionality later | G</li>
 				<li>Removed some unused files from the public directory | G</li>
 			</ul>
+
+**0.6.5:** Added the json file and some javascript code for the offers section block | G
