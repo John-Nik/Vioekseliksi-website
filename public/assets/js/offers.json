@@ -1,6 +1,6 @@
 {
-    "offer-1": [
-        "description": "lorem ipsum dolor sit amet, consectetur adipiscing el",
-        "image": ""
-    ]
+    "offer1":{ "description":"lorem ipsum", "image":"/assets/img/offers1.png" },
+    "offer2":{ "description":"lorem ipsum dolor sit", "image":"/assets/img/offers1.png" },
+    "offer3":{ "description":"lorem ipsum dolor sit amet consectetur", "image":"/assets/img/offers1.png" },
+    "offer4":{ "description":"lorem ipsum dolor sit amet consectetur adipiscing el", "image":"/assets/img/offers1.png" }
 }
