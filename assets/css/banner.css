@@ -53,6 +53,7 @@
         display: flex;
         justify-content: center;
         margin-bottom: 48px;
+        margin-top: 48px;
     }
     
     #banner .banner-container {
@@ -116,6 +117,7 @@
     #banner {
         height: 510px;
         margin-bottom: 96px;
+        margin-top: -96px;
     }
     
     #banner .banner-container {
@@ -123,10 +125,11 @@
         padding-left: 16px;
         padding-right: 16px;
         flex-direction: row;
+        column-gap: 64px;
     }
     
     #banner .title-wrapper {
-        width: 50%;
+        width: 40%;
         height: 100%;
         padding-bottom: 0px;
     }
@@ -138,7 +141,7 @@
     #banner .title {
         max-width: 350px;
         text-align: right;
-        padding-right: 32px;
+        /* padding-right: 32px; */
     }
     
     #banner .text {
