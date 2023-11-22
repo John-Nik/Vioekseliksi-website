@@ -50,3 +50,4 @@
 			</ul>
 
 **0.6.5:** Added the json file and some javascript code for the offers section block | G
+           Finished the Services page, fixed the bugs for the layout of the cards | E
