@@ -51,3 +51,5 @@
 
 **0.6.5:** Added the json file and some javascript code for the offers section block | G
            Finished the Services page, fixed the bugs for the layout of the cards | E
+
+**0.6.6:** Added javascript code for the offers section block. Predictably so, it should work flawlessly. It is unfinished and will be polished, optimized and be made more readable in the next version | G

@@ -1,6 +1,8 @@
 {
-    "offer1":{ "description":"lorem ipsum", "image":"/assets/img/offers1.png" },
-    "offer2":{ "description":"lorem ipsum dolor sit", "image":"/assets/img/offers1.png" },
-    "offer3":{ "description":"lorem ipsum dolor sit amet consectetur", "image":"/assets/img/offers1.png" },
-    "offer4":{ "description":"lorem ipsum dolor sit amet consectetur adipiscing el", "image":"/assets/img/offers1.png" }
+    "offersList":[
+        { "description":"lorem ipsum", "image":"/assets/img/offers1.png" },
+        { "description":"lorem ipsum dolor sit", "image":"/assets/img/offers1.png" },
+        { "description":"lorem ipsum dolor sit amet consectetur", "image":"/assets/img/offers1.png" },
+        { "description":"lorem ipsum dolor sit amet consectetur adipiscing el", "image":"/assets/img/offers1.png" }
+    ]
 }
