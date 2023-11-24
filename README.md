@@ -57,4 +57,5 @@
 **0.6.7:** <ul>
 				<li>Made the first question block of the FAQ section block reveal the answer on initial page load | G</li>
 				<li>Continued with the development of the offer's javascript code | G</li>
+				<li>Refreshed the public directory so as to remove any residual deleted files | G</li>
 			</ul>
