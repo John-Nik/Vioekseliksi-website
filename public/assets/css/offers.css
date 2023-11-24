@@ -119,14 +119,17 @@
 #offers .layer {
     display: flex;
     gap: 13px;
+    opacity: 0;
 }
 
 #offers .layer1 {
     position: absolute;
-    opacity: 1;
 }
 
 #offers .layer2 {
     position: relative;
-    opacity: 0;
+}
+
+#offers .layer.visible {
+    opacity: 1;
 }

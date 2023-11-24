@@ -53,3 +53,8 @@
            Finished the Services page, fixed the bugs for the layout of the cards | E
 
 **0.6.6:** Added javascript code for the offers section block. Predictably so, it should work flawlessly. It is unfinished and will be polished, optimized and be made more readable in the next version | G
+
+**0.6.7:** <ul>
+				<li>Made the first question block of the FAQ section block reveal the answer on initial page load | G</li>
+				<li>Continued with the development of the offer's javascript code | G</li>
+			</ul>

@@ -14,52 +14,93 @@ fetch(test)
 
             if (numberOfOffers == 1) {
                 offersWrappingContainer.style.opacity = '0';
-            };
-            if (numberOfOffers == 2) {
+            }
+            if (numberOfOffers == 2 || numberOfOffers == 3) {
                 offersLayers.forEach((layer) => {
                     layer.style.gap = '24px';
                 })
-            };
-            if (numberOfOffers == 3) {
-                offersLayers.forEach((layer) => {
-                    layer.style.gap = '24px';
-                })
-            } else {
-                // do nothing
             }
 
+
+            let execution = 0;
+            
             for (let i = 0; i < numberOfOffers; i++) {
                 let forLoopIteration = i+1;
                 let forLoopIterationPlusOne = forLoopIteration + 1;
+                let individualOfferInformation = data.offersList[execution];
+                let individualOfferInformationPlusOne = data.offersList[forLoopIteration];
+                
 
                 if (forLoopIterationPlusOne == numberOfOffers + 1) {
                     forLoopIterationPlusOne = forLoopIterationPlusOne - numberOfOffers;
+                    individualOfferInformationPlusOne = data.offersList[0];
                 }
+                
+                
 
-                offersLayer1.innerHTML += `<img class="img${forLoopIteration}" src="/assets/img/offers${forLoopIteration}.png" alt="">`;
-                offersLayer2.innerHTML += `<img class="img${forLoopIterationPlusOne}" src="/assets/img/offers${forLoopIterationPlusOne}.png" alt="">`;
+                offersLayer1.innerHTML += `<img class="img${forLoopIteration} offerimg" src="${individualOfferInformation.image}" alt="">`;
+                offersLayer2.innerHTML += `<img class="img${forLoopIterationPlusOne} offerimg2" src="${individualOfferInformationPlusOne.image}" alt="">`;
+                execution++;
+                if (i == numberOfOffers - 1) {
+                    return flipOffers();
+                }
             }
 
 
             
+            function flipOffers() {
+                const offerImage = document.querySelectorAll('.offerimg');
+                const offerImage2 = document.querySelectorAll('.offerimg2');
+                let executed = 0;
+                let iteration = 1 + executed;
+                let iteration2 = 2;
+                console.log(iteration);
+                setTimeout(offersdisplayedfunction, 12000);
+
+                function offersdisplayedfunction() {
+                    
+                    console.log(iteration);
+                    setInterval(offersdisplayedfunction, 12000);
+
+                    offerImage.forEach((blabla) => {
+                        let displayedOffer = data.offersList[iteration];
+                        console.log(`For the first layer, the picture visible is on array position: ${iteration}`);
+                        if (iteration >= numberOfOffers - 1) {
+                            iteration = 0;
+                            blabla.src = `${displayedOffer.image}`;
+                            console.log('iteration reset to 0');
+                            return;
+                        }
+                        blabla.src = `${displayedOffer.image}`;
+                        iteration++;
+                        
+                        
+                    })
+                    executed++;
+                }
                 
+            }
                 
             
-        });
+        })
 
 setTimeout(offersInitialFadeInOutEffect, 5000);
 setInterval(offersFadeInOutEffect, 10000);
 
 function offersFadeInOutEffect() {
-    offersLayer1.style.opacity = 1;
-    offersLayer2.style.opacity = 0;
+    offersLayers.forEach((layer) => {
+        layer.classList.toggle('visible')
+    })
     setTimeout(() => {
-        offersLayer1.style.opacity = 0;
-        offersLayer2.style.opacity = 1;
-    }, 5000);
-};
+        offersLayers.forEach((layer) => {
+            layer.classList.toggle('visible')
+        })
+    }, 5000)
+}
 
 function offersInitialFadeInOutEffect() {
-    offersLayer1.style.opacity = 0;
-    offersLayer2.style.opacity = 1;
-};
+    offersLayers.forEach((layer) => {
+        layer.classList.toggle('visible')
+    })
+}
+
