@@ -8,6 +8,7 @@ const test = new Request('/assets/js/offers.json');
 fetch(test)
     .then((response) => response.json())
         .then((data) => {
+            jsonData = data;
             let numberOfOffers = data.offersList.length;
             let offersArray = data.offersList.reverse();
             let loop = 1;
@@ -43,8 +44,8 @@ fetch(test)
                 
                 
 
-                offersLayer1.innerHTML += `<img class="img${forLoopIteration} offerimg" data-cycle="${execution}" src="${individualOfferInformation.image}" alt="">`;
-                offersLayer2.innerHTML += `<img class="img${forLoopIterationPlusOne} offerimg2" data-cycle="${execution2}" src="${individualOfferInformationPlusOne.image}" alt="">`;
+                offersLayer1.innerHTML += `<img class="img${forLoopIteration} offerimg" onclick="clicked();" data-cycle="${execution}" src="${individualOfferInformation.image}" alt="">`;
+                offersLayer2.innerHTML += `<img class="img${forLoopIterationPlusOne} offerimg2" onclick="clicked();" data-cycle="${execution2}" src="${individualOfferInformationPlusOne.image}" alt="">`;
                 execution++;
                 execution2++;
                 if (i == 3 || i == numberOfOffers - 1) {
@@ -52,7 +53,7 @@ fetch(test)
                 }
             }
 
-
+            
             
             function flipOffers() {
                 const offerImage = document.querySelectorAll('.offerimg');
@@ -60,9 +61,15 @@ fetch(test)
                 setTimeout(offersdisplayedfunction, 12000);
 
                 function offersdisplayedfunction() {
-                    setTimeout(offersdisplayedfunction, 20000);
+
+                    var imagesChanged = setTimeout(offersdisplayedfunction, 20000);
+                    var layer2ImageChangeVar = setTimeout(layer2ImageChange, 10000);
+                    
                     layer1ImageChange();
-                    setTimeout(layer2ImageChange, 10000);
+                    
+
+
+                    
 
                     function layer2ImageChange() {
                         offerImage2.forEach((blabla) => {
@@ -75,6 +82,7 @@ fetch(test)
                             blabla.dataset.cycle = executionCycle;
                             blabla.src = data.offersList[executionCycle].image;
                         })
+                        console.log('layer2 Images Changed');
                     }
                     
                     function layer1ImageChange() {
@@ -88,13 +96,14 @@ fetch(test)
                             blabla.dataset.cycle = executionCycle;
                             blabla.src = data.offersList[executionCycle].image;
                         })
+                        console.log('layer1 Images Changed');
                     }
                 }
             }
         })
 
 
-setInterval(offersFadeInOutEffect, 10000);
+var intervalLayer = setInterval(offersFadeInOutEffect, 10000);
 
 function offersFadeInOutEffect() {
     offersLayers.forEach((layer) => {
@@ -105,4 +114,10 @@ function offersFadeInOutEffect() {
     } else {
         console.log('layer 2 has visibility');
     }
+}
+
+function clicked(buttonClicked) {
+    clearInterval(intervalLayer);
+    console.log('clear interval for the layer opacity switching');
+    
 }

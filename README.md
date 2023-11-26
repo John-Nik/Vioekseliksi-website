@@ -64,3 +64,5 @@
 				<li>Successfully created the desired carousel effect for the offers section block. What is left to do is add user interactivity by allowing the user to click whatever offer he desires and display it, and also dynamically change the displayed offer | G</li>
 				<li>Changed the offer images | G</li>
 			</ul>
+
+**0.6.9:** Added the functionality to stop the carousel effect from the offers layout | G
