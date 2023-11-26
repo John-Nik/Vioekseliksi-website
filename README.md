@@ -59,3 +59,8 @@
 				<li>Continued with the development of the offer's javascript code | G</li>
 				<li>Refreshed the public directory so as to remove any residual deleted files | G</li>
 			</ul>
+
+**0.6.8:** <ul>
+				<li>Successfully created the desired carousel effect for the offers section block. What is left to do is add user interactivity by allowing the user to click whatever offer he desires and display it, and also dynamically change the displayed offer | G</li>
+				<li>Changed the offer images | G</li>
+			</ul>
