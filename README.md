@@ -66,3 +66,4 @@
 			</ul>
 
 **0.6.9:** Added the functionality to stop the carousel effect from the offers layout | G
+           Added the finished biomarkers page | E
