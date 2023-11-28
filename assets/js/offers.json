@@ -1,8 +1,8 @@
 {
     "offersList":[
         { "description":"lorem ipsum", "image":"/assets/img/offers1.png" },
-        { "description":"lorem ipsum dolor sit", "image":"/assets/img/offers2.jpg" },
-        { "description":"lorem ipsum dolor sit amet consectetur", "image":"/assets/img/offers3.webp" },
+        { "description":"lorem ipsum dolor sit", "image":"/assets/img/offers2.png" },
+        { "description":"lorem ipsum dolor sit amet consectetur", "image":"/assets/img/offers3.png" },
         { "description":"lorem ipsum dolor sit amet consectetur adipiscing el", "image":"/assets/img/offers4.png" }
     ]
 }
