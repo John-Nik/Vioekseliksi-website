@@ -41,8 +41,8 @@ async function logMovies() {
         
         
 
-        offersLayer1.innerHTML += `<img class="img${numberOfCycles} offerimg image" data-cycle="${i}" src="${individualOfferInformation.image}" alt="">`;
-        offersLayer2.innerHTML += `<img class="img${numberOfCycles} offerimg2 image" data-cycle="${populatingImagesExecutionCyclePlusOne}" src="${individualOfferInformationPlusOne.image}" alt="">`;
+        offersLayer1.innerHTML += `<img class="img${numberOfCycles} offerimg image" data-cycle="${i}" data-ID="${numberOfCycles}" src="${individualOfferInformation.image}" alt="">`;
+        offersLayer2.innerHTML += `<img class="img${numberOfCycles} offerimgtwo image" data-cycle="${populatingImagesExecutionCyclePlusOne}" data-ID="${numberOfCycles}" src="${individualOfferInformationPlusOne.image}" alt="">`;
         populatingImagesExecutionCycle++;
         populatingImagesExecutionCyclePlusOne++;
         if (i == 3 || i == numberOfOffers - 1) {
@@ -55,7 +55,7 @@ async function logMovies() {
     function flipOffers() {
         const offerImages = document.querySelectorAll('.image');
         const offerImage = document.querySelectorAll('.offerimg');
-        const offerImage2 = document.querySelectorAll('.offerimg2');
+        const offerImage2 = document.querySelectorAll('.offerimgtwo');
         let layer2;
         let layer1;
         setTimeout(() => {
@@ -76,7 +76,41 @@ async function logMovies() {
         function userClickability(button) {
             button.addEventListener('click', flippingImageStop);
             button.addEventListener('click', (button) => {
-                button.currentTarget.dataset.cycle
+                let difference = (offerImages.length/2) - parseInt(button.currentTarget.dataset.ID);
+
+                let repeatance = 0;
+                offerImages.forEach(changeCycle);
+
+                function changeCycle(image) {
+                    let datasetCycle = image.dataset.cycle;
+                    if (parseInt(datasetCycle) >= numberOfOffers) {
+                        image.dataset.cycle = parseInt(datasetCycle) - numberOfOffers;
+                    } else {
+                        image.dataset.cycle = parseInt(datasetCycle) + difference;
+                    }
+
+                    if (repeatance >= offerImages.length) {
+                        setTimeout(() => {
+                            layer1ImageChange();
+                            let layer1 = setInterval(layer1ImageChange, 20000);
+                        }, 12000);
+                        setInterval(layer2ImageChange, 20000);
+                        setTimeout(() => {
+                            layer2ImageChange();
+                            let layer2 = setInterval(layer2ImageChange, 20000);
+                        }, 22000);
+                        let intervalLayer = setInterval(offersFadeInOutEffect, 10000);
+                        offerImages.forEach(changePictures);
+                    }
+
+                    repeatance++;
+                }
+
+                function changePictures(image) {
+                    let picturePosition = image.dataset.cycle;
+
+                    image.src = jsonData.offersList[picturePosition];
+                }
             })
         }
 
