@@ -74,3 +74,5 @@
 **0.8.0:** Added the finished About Us page | E
 
 **0.9.0:** Added the finished carousel effect for the offers section block | G
+
+**0.9.1:** Changes on the About Us page layout | E
