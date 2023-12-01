@@ -83,13 +83,19 @@
             padding-top: 100px;
             padding-bottom: 100px;
     }
-    .about_the_company{display: flex;
+    .about_the_company{
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding:10px;
         row-gap: 10px;
-    width:60%;}
+        width:60%;
+    }
+
+    .about_the_company p {
+        font-size: 1.5rem;
+    }
    
 }
 
