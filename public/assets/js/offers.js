@@ -2,6 +2,7 @@ const offersLayers = document.querySelectorAll('.layer');
 const offersLayer1 = document.querySelector('.layer1');
 const offersLayer2 = document.querySelector('.layer2');
 const offersWrappingContainer = document.querySelector('.offers-wrapper');
+const offerDesc = document.querySelector('#offers .description');
 
 
 const test = new Request('/assets/js/offers.json');
@@ -12,6 +13,7 @@ async function logMovies() {
     const jsonData = await response.json();
     const numberOfOffers = jsonData.offersList.length;
 
+
     if (numberOfOffers == 1) {
         offersWrappingContainer.style.opacity = '0';
     }
@@ -21,141 +23,245 @@ async function logMovies() {
         })
     }
 
-    let populatingImagesExecutionCycle = 0;
-    let populatingImagesExecutionCyclePlusOne = 1;
+
+    initialPopulationOfImages();    
     
-    for (let i = 0; i < numberOfOffers; i++) {
-        let numberOfCycles = i+1;
-        let numberOfCyclesPlusOne = numberOfCycles + 1;
-        let project = i - populatingImagesExecutionCyclePlusOne;
-        let individualOfferInformation = jsonData.offersList[populatingImagesExecutionCycle];
-        let individualOfferInformationPlusOne = jsonData.offersList[numberOfCycles];
-        
-        if (numberOfCyclesPlusOne == numberOfOffers + 1) {
-            numberOfCyclesPlusOne = numberOfCyclesPlusOne - numberOfOffers;
-            individualOfferInformationPlusOne = jsonData.offersList[0];
-        }
+    function initialPopulationOfImages() {
+        for (let i = 0; i < numberOfOffers; i++) {
+            let numberOfCycles = i+1;
+            let layer1Cycle = numberOfOffers - 1 - i;
+            let layer2Cycle = numberOfOffers - i;
 
-        if (project < 0) {
-            project = numberOfOffers - 1;
-        }
+            if (layer2Cycle >= numberOfOffers) {
+                layer2Cycle = layer2Cycle - numberOfOffers;
+            }
 
-        console.log(project);
-        
+            offersLayer1.innerHTML += `<img class="img${numberOfCycles} offerimg image" data-cycle="${layer1Cycle}" data-ID="${numberOfCycles}" src="${jsonData.offersList[layer1Cycle].image}" alt="">`;
+            offersLayer2.innerHTML += `<img class="img${numberOfCycles} offerimgtwo image" data-cycle="${layer2Cycle}" data-ID="${numberOfCycles}" src="${jsonData.offersList[layer2Cycle].image}" alt="">`;
 
-        
-
-        offersLayer1.innerHTML += `<img class="img${numberOfCycles} offerimg image" data-cycle="${i}" data-ID="${numberOfCycles}" src="${individualOfferInformation.image}" alt="">`;
-        offersLayer2.innerHTML += `<img class="img${numberOfCycles} offerimgtwo image" data-cycle="${project}" data-ID="${numberOfCycles}" src="${jsonData.offersList[project].image}" alt="">`;
-        populatingImagesExecutionCycle++;
-        if (i == 3 || i == numberOfOffers - 1) {
-            return flipOffers();
+            if (i == 3 || i == numberOfOffers - 1) {
+                return offersCarousel();
+            }
         }
     }
 
     
-    
-    function flipOffers() {
-        const offerImages = document.querySelectorAll('.image');
-        const offerImage = document.querySelectorAll('.offerimg');
-        const offerImage2 = document.querySelectorAll('.offerimgtwo');
-        let layer2;
-        let layer1;
-        setTimeout(() => {
-            layer1ImageChange();
-            let layer1 = setInterval(layer1ImageChange, 20000);
-        }, 12000);
+    function offersCarousel() {
+        const totalVisibleOffers = document.querySelectorAll('.image');
+        const imagesLayer1 = document.querySelectorAll('.offerimg');
+        const imagesLayer2 = document.querySelectorAll('.offerimgtwo');
+        const highlightedImages = document.querySelectorAll('.offer-highlighted .img');
+        const highlightedImageForLayer1 = document.querySelector('.offer-highlighted .img1');
+        const highlightedImageForLayer2 = document.querySelector('.offer-highlighted .img2');
+        const offersVisiblePerLayer = totalVisibleOffers.length / 2;
+        const lastOfferListing = offersVisiblePerLayer - 1;
+        let layer1LastOfferElement = document.querySelector('.offerimg:last-child');
+        let layer2LastOfferElement = document.querySelector('.offerimgtwo:last-child')
+        let lastOfferListingDataCycleForLayer1 = imagesLayer1[lastOfferListing].dataset.cycle;
+        let lastOfferListingDataCycleForLayer2 = imagesLayer2[lastOfferListing].dataset.cycle;
+        
 
-        setTimeout(() => {
+        highlightedImageForLayer1.src = imagesLayer1[lastOfferListing].src;
+        highlightedImageForLayer2.src = imagesLayer2[lastOfferListing].src;
+
+
+        let layer2ImageCarouselInterval = setTimeout(() => {
             layer2ImageChange();
-            let layer2 = setInterval(layer2ImageChange, 20000);
+            layer2ImageCarouselInterval = setInterval(layer2ImageChange, 20000);
         }, 22000);
-
-        
-        
-        
-        offerImages.forEach(userClickability);
-
-        function userClickability(button) {
-            button.addEventListener('click', flippingImageStop);
-            button.addEventListener('click', (button) => {
-                let clickedButtonsImageCycle = button.currentTarget.dataset.id;
-
-                let distance =  parseInt(clickedButtonsImageCycle) - (offerImages.length/2);
-                distance = Math.abs(distance);
-
-                
-
-                
-
-                offerImages.forEach(changeImageDisplayedOnCont);
-
-                function changeImageDisplayedOnCont(click) {
-
-                    let currentCycle = parseInt(click.dataset.cycle);
-
-                    let newCycle = currentCycle - distance;
-
-                    if (newCycle < 0) {
-                        newCycle = newCycle + numberOfOffers;
-                    }
-
-
-
-                    click.dataset.cycle = newCycle;
-
-                    click.src = jsonData.offersList[newCycle].image;
-
-                }
-
-                // startCarousel();
-                
-            })
-        }
-
-        function startCarousel() {
-                    console.log('carousel should predictably start');
-                    setTimeout(() => {
-                        layer1ImageChange();
-                        console.log('carousel for layer 1 started');
-                        setInterval(layer1ImageChange, 20000);
-                    }, 12000);
-            
-                    setTimeout(() => {
-                        layer2ImageChange();
-                        console.log('carousel for layer 1 started');
-                        setInterval(layer2ImageChange, 20000);
-                    }, 22000);
-                    setInterval(offersFadeInOutEffect, 10000);
-
-                    
-                }
-
+        let layer1ImageCarouselInterval = setTimeout(() => {
+            layer1ImageChange();
+            layer1ImageCarouselInterval = setInterval(layer1ImageChange, 20000);
+        }, 12000);
         let intervalLayer = setInterval(offersFadeInOutEffect, 10000);
 
 
-        function flippingImageStop() {
-            console.log('flipping images shouldve stopped');
-            clearInterval(layer1);
-            clearInterval(layer2);
-            clearInterval(intervalLayer);
-            changeImagePosition;
+        totalVisibleOffers.forEach(addOffersInteractivity);
+        offerDesc.textContent = jsonData.offersList[layer1LastOfferElement.dataset.cycle].description;
+
+
+        function addOffersInteractivity(buttonClicked) {
+            buttonClicked.addEventListener('click', layerImageCarouselAndLayerSwitchingStops);
+            buttonClicked.addEventListener('click', (userInteractedWithThis) => {
+                
+                let cycleNumberOnClickedButton = parseInt(userInteractedWithThis.currentTarget.dataset.cycle);
+                let layerClicked = userInteractedWithThis.currentTarget.parentElement;
+                let childrenListOfClickedLayerParentElement = layerClicked.parentElement.children
+                let childrenListOfClickedLayerParentElementUnfiltered = Object.entries(childrenListOfClickedLayerParentElement);
+                let filteredChildrenListOfClickedLayerParentElement = childrenListOfClickedLayerParentElementUnfiltered.map((array) => {
+                    return array.slice(1);
+                });
+                let usableArrayOfChildrenListForClickedLayersParentElement = filteredChildrenListOfClickedLayerParentElement.map((array) => {
+                    return array[0];
+                });
+                let siblingOfLayerClicked = usableArrayOfChildrenListForClickedLayersParentElement.filter((layerChecked) => layerChecked != layerClicked)
+                let finalOfferVisibleOfLayersClickedSibling = Object.values(siblingOfLayerClicked[0].children).pop();
+
+
+                finalOfferVisibleOfLayersClickedSibling.dataset.cycle = cycleNumberOnClickedButton;
+                finalOfferVisibleOfLayersClickedSibling.src = jsonData.offersList[cycleNumberOnClickedButton].image
+
+
+                let layersClickedChildrenExceptLastOne;
+                getSiblingsOfClickedOffer(finalOfferVisibleOfLayersClickedSibling)
+
+                function getSiblingsOfClickedOffer(elem) {
+
+                    let siblings = [];
+                    let sibling = elem.parentNode.firstChild;
+
+                    while (sibling) {
+                        if (sibling.nodeType === 1 && sibling !== elem) {
+                            siblings.push(sibling);
+                        }
+                        sibling = sibling.nextSibling
+                    }
+                
+                    layersClickedChildrenExceptLastOne = siblings;
+                    
+                    changeClickedLayersSiblingChildren();
+                };
+
+                
+                function changeClickedLayersSiblingChildren() {
+                    layersClickedChildrenExceptLastOne.forEach((sibling) => {
+                        let elementID = parseInt(sibling.dataset.id);
+                        let distance = totalVisibleOffers.length / 2 - elementID;
+                        let calculatedCycleForSibling = cycleNumberOnClickedButton + distance;
+    
+                        if (calculatedCycleForSibling >= numberOfOffers) {
+                            calculatedCycleForSibling = calculatedCycleForSibling - numberOfOffers;
+                        }
+    
+                        sibling.dataset.cycle = calculatedCycleForSibling;
+    
+                        sibling.src = jsonData.offersList[calculatedCycleForSibling].image;
+                    })
+                    setTimeout(() => {
+                        if (siblingOfLayerClicked[0].classList.contains('visible')) {
+                            changeClickedLayerChildren();
+                        }
+                    }, 500)
+                }
+                
+                function changeClickedLayerChildren() {
+                    let layerClickedChildren = layerClicked.children
+                    let layerClickedChildrenUnfiltered = Object.entries(layerClickedChildren);
+                    let filteredLayerClickedChildren = layerClickedChildrenUnfiltered.map((array) => {
+                        return array.slice(1);
+                    });
+                    let usableArrayOfLayerClickedChildren = filteredLayerClickedChildren.map((array) => {
+                        return array[0];
+                    });
+
+                    console.log(usableArrayOfLayerClickedChildren)
+
+                    usableArrayOfLayerClickedChildren.forEach((child) => {
+                        let elementID = parseInt(child.dataset.id);
+                        let distance = totalVisibleOffers.length / 2 - elementID;
+                        let calculatedCycleForSibling = cycleNumberOnClickedButton + distance + 1;
+    
+                        if (calculatedCycleForSibling >= numberOfOffers) {
+                            calculatedCycleForSibling = calculatedCycleForSibling - numberOfOffers;
+                        }
+    
+                        child.dataset.cycle = calculatedCycleForSibling;
+    
+                        child.src = jsonData.offersList[calculatedCycleForSibling].image;
+                    })
+                    highlightedImageForLayer1.src = imagesLayer1[lastOfferListing].src;
+                    highlightedImageForLayer2.src = imagesLayer2[lastOfferListing].src;
+                }
+                
+                
+                highlightedImageForLayer1.src = imagesLayer1[lastOfferListing].src;
+                highlightedImageForLayer2.src = imagesLayer2[lastOfferListing].src;
+                offersLayers.forEach((layer) => {
+                    layer.classList.toggle('visible')
+                })
+                highlightedImages.forEach((layer) => {
+                    layer.classList.toggle('visible');
+                })
+
+                
+
+                restartCarousel(layerClicked);
+                })
+            } 
+
+        function changeText() {
+            offerDesc.classList.add('fade');
+
+            if (offersLayer1.classList.contains('visible')) {
+                setTimeout(() => { 
+                    offerDesc.textContent = jsonData.offersList[layer1LastOfferElement.dataset.cycle].description; 
+                    offerDesc.classList.remove('fade');
+                }, 175)
+            } else {
+                setTimeout(() => { 
+                    offerDesc.textContent = jsonData.offersList[layer2LastOfferElement.dataset.cycle].description; 
+                    offerDesc.classList.remove('fade');
+                }, 175)
+            }
         }
 
-        function changeImagePosition() {
+        function restartCarousel(layerClicked) {
 
+            if (layerClicked.classList.contains('layer1')) {
+                layer2ImageCarouselInterval = setTimeout(() => {
+                    console.log('layer2 switch has been executed');
+                    layer2ImageChange();
+                    layer2ImageCarouselInterval = setInterval(layer2ImageChange, 20000);
+                }, 12000);
+                layer1ImageCarouselInterval = setTimeout(() => {
+                    console.log('layer1 switch has been executed');
+                    layer1ImageChange();
+                    layer1ImageCarouselInterval = setInterval(layer1ImageChange, 20000);
+                }, 22000); 
+            } else {
+                layer1ImageCarouselInterval = setTimeout(() => {
+                    console.log('layer1 switch has been executed');
+                    layer1ImageChange();
+                    layer1ImageCarouselInterval = setInterval(layer1ImageChange, 20000);
+                }, 12000);
+                layer2ImageCarouselInterval = setTimeout(() => {
+                    console.log('layer2 switch has been executed');
+                    layer2ImageChange();
+                    layer2ImageCarouselInterval = setInterval(layer2ImageChange, 20000);
+                }, 22000);
+            }
+            
+
+            changeText();
+            intervalLayer = setInterval(offersFadeInOutEffect, 10000);
+        }
+
+        
+
+
+        function layerImageCarouselAndLayerSwitchingStops() {
+
+            clearInterval(layer1ImageCarouselInterval);
+            clearInterval(layer2ImageCarouselInterval);
+            clearInterval(intervalLayer);
         }
 
         
 
         function offersFadeInOutEffect() {
+
             offersLayers.forEach((layer) => {
-                layer.classList.toggle('visible')
+                layer.classList.toggle('visible');
             })
+            highlightedImages.forEach((layer) => {
+                layer.classList.toggle('visible');
+            })
+            changeText();
         }
 
         function layer1ImageChange() {
-            offerImage.forEach((blabla) => {
+
+            imagesLayer1.forEach((blabla) => {
                 executionCycle = blabla.dataset.cycle;
                 executionCycle = executionCycle - 2;
                 if (executionCycle < 0) {
@@ -164,10 +270,12 @@ async function logMovies() {
                 blabla.dataset.cycle = executionCycle;
                 blabla.src = jsonData.offersList[executionCycle].image;
             })
+            highlightedImageForLayer1.src = imagesLayer1[lastOfferListing].src
         }
 
         function layer2ImageChange() {
-            offerImage2.forEach((blabla) => {
+
+            imagesLayer2.forEach((blabla) => {
                 executionCycle = blabla.dataset.cycle;
                 executionCycle = executionCycle - 2;
                 if (executionCycle < 0) {
@@ -175,7 +283,9 @@ async function logMovies() {
                 }
                 blabla.dataset.cycle = executionCycle;
                 blabla.src = jsonData.offersList[executionCycle].image;
+                
             })
+            highlightedImageForLayer2.src = imagesLayer2[lastOfferListing].src
         }
     }
 }

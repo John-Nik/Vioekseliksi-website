@@ -72,3 +72,5 @@
 **0.7.1:** Added functionality to scroll through the carousel of the offers layout | G
 
 **0.8.0:** Added the finished About Us page | E
+
+**0.9.0:** Added the finished carousel effect for the offers section block | G
