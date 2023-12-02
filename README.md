@@ -76,3 +76,8 @@
 **0.9.0:** Added the finished carousel effect for the offers section block | G
 
 **0.9.1:** Changes on the About Us page layout | E
+
+**0.9.2:** <ul>
+				<li>Did some changes with the css of the offers section block | G</li>
+				<li>Cleaned up the javascript for the offers section block in order to make it cleaner | G</li>
+			</ul>
