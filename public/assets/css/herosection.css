@@ -1,0 +1,25 @@
+.herosection{
+    width:100%;
+}
+
+.herosection img{
+    width:100%;
+}
+
+.herosection h1{
+    position:absolute;
+    color:white;
+    font-size: 5.3vw;
+    top:250px;
+    left:150px;
+    padding:30px;
+}
+
+.herosection h2{
+    position:absolute;
+    color:white;
+    top:400px;
+    padding:30px;
+    left:150px;
+    font-size: 1.5vw;
+}

@@ -81,3 +81,5 @@
 				<li>Did some changes with the css of the offers section block | G</li>
 				<li>Cleaned up the javascript for the offers section block in order to make it cleaner | G</li>
 			</ul>
+
+**0.9.3:**  Added the hero section | E
