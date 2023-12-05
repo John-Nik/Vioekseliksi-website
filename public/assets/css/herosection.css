@@ -10,16 +10,16 @@
     position:absolute;
     color:white;
     font-size: 5.3vw;
-    top:250px;
-    left:150px;
+    top:20vh;
+    left:9.7vw;
     padding:30px;
 }
 
 .herosection h2{
     position:absolute;
     color:white;
-    top:400px;
+    top:35vh;
     padding:30px;
-    left:150px;
+    left:9.7vw;
     font-size: 1.5vw;
 }
