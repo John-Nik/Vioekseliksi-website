@@ -5,10 +5,7 @@
     justify-content: center;
     flex-direction: row;
     padding:10px;
-    border-radius: 80px;
+    border-radius: 30%;
     width:60vw;
-    height:25vh;
-    position:relative;
-    top:-16.4vh;
-    left:18.2vw;
+    height:30ch;
 }

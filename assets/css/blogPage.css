@@ -1,0 +1,132 @@
+:root {
+    --primary: #ff6a3e;
+    --primaryLight: #ffba43;
+    --secondary: #ffba43;
+    --secondaryLight: #ffba43;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fafbfc;
+    /* 13px - 16px */
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    /* 31px - 49px */
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    /* 60px - 100px top and bottom */
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+}
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #content-page-849 {
+        padding: var(--sectionPadding);
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+    #content-page-849 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+    }
+    #content-page-849 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: 39.375rem;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+    }
+    #content-page-849 .cs-title {
+        font-size: var(--headerFontSize);
+        font-weight: 600;
+        line-height: 1.2em;
+        text-align: inherit;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 1rem 0;
+        color: #0b2d39;
+        position: relative;
+    }
+    #content-page-849 p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-align: left;
+        font-weight: 400;
+        letter-spacing: 1px;
+        width: 100%;
+        margin: 32px 0 1rem 0;
+        color: #252525;
+    }
+    #content-page-849 p:last-of-type {
+        margin-bottom: 2rem;
+    }
+    #content-page-849 img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    #content-page-849 .cs-image-group {
+        width: 50%;
+        max-width: 33.875rem;
+        display: none;
+        position: relative;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+    #content-page-849 .cs-picture {
+        width: 100%;
+        /* 300px - 520px */
+        height: clamp(18.75rem, 40vw, 32.5rem);
+        box-shadow: 0px 3.3478px 50.2169px rgba(0, 0, 0, 0.16);
+        /* 125px - 200px */
+        border-radius: clamp(7.8125rem, 15vw, 12.5rem) 0
+            clamp(7.8125rem, 15vw, 12.5rem) 0;
+        /* prevents border from affecting height and width */
+        box-sizing: border-box;
+        /* clips img tag corners */
+        overflow: hidden;
+        display: block;
+        position: relative;
+    }
+    #content-page-849 .cs-picture img {
+        width: 100%;
+        height: 100%;
+        /* makes it act like a background image */
+        object-fit: cover;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #content-page-849 .cs-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    #content-page-849 .cs-content {
+        flex: none;
+        width: 60%;
+    }
+    #content-page-849 .cs-image-group {
+        display: flex;
+    }
+}
+
+                                

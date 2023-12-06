@@ -369,6 +369,12 @@
     #nav-bar .link:hover a {
         color: var(--primary-blue-color);
     }
+
+    #nav-bar .link.active a {
+        text-decoration: underline;
+        color: var(--primary-blue-color);
+        text-decoration-thickness: 3px;
+    }
     /* ------------------------ Link Text Styling -------------------- */
 
     /* ------------------------ Link Container -------------------- */
