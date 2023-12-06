@@ -1,19 +1,6 @@
-const links = document.querySelectorAll('#wrapper .link');
 const navBarBurgerButton =  document.querySelector('.navButton');
 const mobileMenuBackdrop = document.querySelector('.container-links');
 const htmlBody = document.querySelector('body');
-
-links.forEach(underlineActiveTab, window.location.pathname);
-
-function underlineActiveTab(link) {
-    if (link.children[0].dataset.link.includes(this)) {
-        
-        link.children[0].style.textDecoration = 'underline';
-        link.children[0].style.textDecorationColor = 'var(--primary-blue-color)';
-        link.children[0].style.textDecorationThickness = '3px';
-        link.classList.add('active');
-    }
-};
 
 navBarBurgerButton.addEventListener('click', toggleMenu);
 
@@ -27,3 +14,9 @@ function toggleMenu(buttonUserClicked) {
         htmlBody.classList.toggle('open-menu');
     }
 }
+
+import CMS from 'decap-cms-app'
+// Initialize the CMS object
+CMS.init()
+// Now the registry is available via the CMS object.
+CMS.registerPreviewTemplate('my-template', MyTemplate)

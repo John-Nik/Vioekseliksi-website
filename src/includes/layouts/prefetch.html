@@ -1,0 +1,3 @@
+{% for navPages in collections.all | eleventyNavigation %}
+<link rel="prefetch" href="{{ navPages.url }}">
+{% endfor %}

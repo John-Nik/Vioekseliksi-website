@@ -58,17 +58,21 @@
     #members h1{
         font-size: 2rem;
     }
+<<<<<<< HEAD
 
     #company2 h1{
         font-size: 2rem;
     }
 
-    
+    .about_the_member {
+=======
     .about_the_company{
+>>>>>>> 3318abcd8b10ba5446b724af02c693cc826b6b7e
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+<<<<<<< HEAD
         padding: 10px;
         row-gap: 50px;
         width: 60%;
@@ -113,23 +117,17 @@
         font-size: 1.2rem;
     }
 
-    .about_the_member {
-        display:flex;
+=======
         padding:10px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        row-gap: 20px;
+        row-gap: 10px;
         width:60%;
-    }
-    .about_the_member h2{
-        text-align: center;
     }
 
     .about_the_company p {
         font-size: 1.5rem;
     }
-
+   
+>>>>>>> 3318abcd8b10ba5446b724af02c693cc826b6b7e
 }
 
 @media only screen and (min-width: 768px) {}
