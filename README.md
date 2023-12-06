@@ -83,3 +83,9 @@
 			</ul>
 
 **0.9.3:**  Added the hero section | E
+
+**0.9.4:**  <ul>
+               <li>Fixed the homepage | E</li>
+               <li>Fixed the herosection | E </li>
+			   <li>Fixed the aboutus page | E </li>
+</ul> 

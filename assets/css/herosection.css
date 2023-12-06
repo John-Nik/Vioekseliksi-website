@@ -4,22 +4,24 @@
 
 .herosection img{
     width:100%;
+    position:relative;
+    top:-5vh;
 }
 
 .herosection h1{
     position:absolute;
     color:white;
     font-size: 5.3vw;
-    top:250px;
-    left:150px;
+    top:19vh;
+    left:7.8vw;
     padding:30px;
 }
 
 .herosection h2{
     position:absolute;
     color:white;
-    top:400px;
+    top:35vh;
     padding:30px;
-    left:150px;
+    left:7.8vw;
     font-size: 1.5vw;
 }
