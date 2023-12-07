@@ -1,0 +1,16 @@
+.contactusfullpage{
+display: flex;
+align-items: center;
+justify-content: center;
+    
+}
+
+.info_options ul{
+    list-style-type: none;
+    flex-direction: row;
+    column-gap: 30px;
+    }
+
+.info_options li{
+background-color: white;
+}
