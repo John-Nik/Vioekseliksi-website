@@ -102,9 +102,16 @@
 				<li>Added 3 more npm packages, "Netlify CMS Proxy Server", "npm-run-all" and "11ty Navigation" | G </li>
 			</ul>
 
-**0.11.0:**  <ul>
-               <li>Created the Contact Us page | E</li>
+**0.11.0:** <ul>
+               <li>Created the Contact Us page | E </li>
                <li>Fixed the herosection | E </li>
 			</ul>
+
+**0.11.1:** <ul>
+               <li>Made the offers section block responsive for all screen sizes | G </li>
+               <li>Placed the contactus page in the "src" folder inside another folder | G</li>
+			</ul>
+
+
 
 
