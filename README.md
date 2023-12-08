@@ -85,19 +85,21 @@
 **0.9.3:**  Added the hero section | E
 
 **0.9.4:**  <ul>
-               <li>Fixed the homepage | E</li>
+               <li>Fixed the homepage | E </li>
                <li>Fixed the herosection | E </li>
 			   <li>Fixed the aboutus page | E </li>
 			</ul>
 
 **0.10.0:** <ul>
-				<li>Added Decap CMS as the CMS the owners will use | G</li>
-				<li>Added a blog posts section block | G</li>
-				<li>Added a blogs page, listing all the blogs | G</li>
-				</li>Added full blog's pages | G</li>
+				<li>Added Decap CMS as the CMS the owners will use | G </li>
+				<li>Added a blog posts section block | G </li>
+				<li>Added a blogs page, listing all the blogs | G </li>
+				</li>Added full blog's pages | G </li>
 				<li>Added a ".gitignore" file with the task of ignoring the node_modules directory | G</li>
-				<li>Configured "eleventy.js" to support the CMS | G</li>
-				<li>Changed the way "navbarEN.html" works it's logic of what page is active to a more efficient and accurate method | G</li>
-				<li>Added a new script command to "package.json" to start both the CMS server for local development and 11ty aswell | G</li>
-				<li>Added 3 more npm packages, "Netlify CMS Proxy Server", "npm-run-all" and "11ty Navigation" | G</li>
+				<li>Configured "eleventy.js" to support the CMS | G </li>
+				<li>Changed the way "navbarEN.html" works it's logic of what page is active to a more efficient and accurate method | G </li>
+				<li>Added a new script command to "package.json" to start both the CMS server for local development and 11ty aswell | G </li>
+				<li>Added 3 more npm packages, "Netlify CMS Proxy Server", "npm-run-all" and "11ty Navigation" | G </li>
 			</ul>
+
+

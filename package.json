@@ -8,7 +8,7 @@
     "execute": "npx @11ty/eleventy",
     "cms": "npx netlify-cms-proxy-server",
     "serverLaunch": "npx @11ty/eleventy --serve",
-    "server": "npm-run-all --parallel serverLaunch cms"
+    "server": "npm-run-all --parallel cms serverLaunch"
   },
   "dependencies": {
     "decap-cms-app": "^3.0.12",
