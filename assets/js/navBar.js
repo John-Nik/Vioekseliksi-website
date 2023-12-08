@@ -7,16 +7,12 @@ navBarBurgerButton.addEventListener('click', toggleMenu);
 function toggleMenu(buttonUserClicked) {
     if (buttonUserClicked.target.classList.contains('container-links') || buttonUserClicked.currentTarget.classList.contains('navButton')) {
         if (htmlBody.classList.contains('open-menu')) {
+            console.log('toggle button clicked');
             mobileMenuBackdrop.removeEventListener('click', toggleMenu);
         } else {
+            console.log('toggle button clicked');
             mobileMenuBackdrop.addEventListener('click', toggleMenu);
         }
         htmlBody.classList.toggle('open-menu');
     }
 }
-
-import CMS from 'decap-cms-app'
-// Initialize the CMS object
-CMS.init()
-// Now the registry is available via the CMS object.
-CMS.registerPreviewTemplate('my-template', MyTemplate)
