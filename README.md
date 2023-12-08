@@ -102,4 +102,9 @@
 				<li>Added 3 more npm packages, "Netlify CMS Proxy Server", "npm-run-all" and "11ty Navigation" | G </li>
 			</ul>
 
+**0.11.0:**  <ul>
+               <li>Created the Contact Us page | E</li>
+               <li>Fixed the herosection | E </li>
+			</ul>
+
 
