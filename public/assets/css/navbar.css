@@ -231,6 +231,9 @@
         font-weight: 500;
         letter-spacing: 2px;
         color: var(--black-text-color);
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
         user-select: none;
     }
 

@@ -86,8 +86,8 @@
 
 **0.9.4:**  <ul>
                <li>Fixed the homepage | E </li>
-               <li>Fixed the herosection | E </li>
-			   <li>Fixed the aboutus page | E </li>
+               <li>Fixed the hero section | E </li>
+			   <li>Fixed the about us page | E </li>
 			</ul>
 
 **0.10.0:** <ul>
@@ -104,12 +104,23 @@
 
 **0.11.0:** <ul>
                <li>Created the Contact Us page | E </li>
-               <li>Fixed the herosection | E </li>
+               <li>Fixed the hero section | E </li>
 			</ul>
 
 **0.11.1:** <ul>
                <li>Made the offers section block responsive for all screen sizes | G </li>
-               <li>Placed the contactus page in the "src" folder inside another folder | G</li>
+               <li>Placed the Contact Us page in the "src" folder inside another folder | G</li>
+			</ul>
+
+**0.12.0:** <ul>
+				<li>Changed the directory structure of the repository for the purpose of preparing the creation of a multi-lingual page | G </li>
+				<li>Added more parts to be available for edit in Decap, both English and Greek | G</li>
+				<li>Added a new "prefetch.html" layout for the purpose of speeding up the navigation through the pages by preloading all the other html documents in the navigation bar | G</li>
+				<li>Adjusted the offers section block's and faq section block's top margins to make them fit more into the home page's flow | G</li>
+				<li>Fixed the issue where users were forced to click the anchor element tag in order to get redirected to the desired page | G</li>
+				<li>When on mobile version, the anchor tag no longer get highlighted when clicked | G</li>
+				<li>When the user is on a biomarker's full page information, it correctly hovers the biomarkers navigation button | G</li>
+				<li>Completed the set up of the backend | G</li>
 			</ul>
 
 

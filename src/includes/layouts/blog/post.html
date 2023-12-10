@@ -55,14 +55,14 @@ eleventyComputed:
             </title>
         </head>
         <body style="background-color: #F7F8FF">
-            {% include "layouts/navbarEN.html" %}
+            {% include "english layouts/navbarEN.html" %}
             <main id="main">
                 <section id="content-page-849">
                     <div class="cs-container">
                         <div class="cs-content">
                             <h1 class="cs-title">{{ title }}</h1>
                             <p>
-                                {{ content | safe  }}
+                                {{ bodyEN }}
                             </p>
                         </div>
                         <div class="cs-image-group">
@@ -75,7 +75,7 @@ eleventyComputed:
                 </section>
                                 
             </main>
-            {% include "layouts/footerEN.html" %}
+            {% include "english layouts/footerEN.html" %}
         </body>
     </html>
 

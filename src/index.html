@@ -31,23 +31,16 @@ eleventyNavigation:
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-        {% include "layouts/prefetch.html" %}
+        {% include "prefetch.html" %}
     </head>
     <body style="background-color: #F7F8FF">
-        {% include "layouts/navbarEN.html" %}
+        {% include "english layouts/navbarEN.html" %}
         <main>
-            {% include "layouts/herosection.html" %}  
-            {% include "layouts/offersEN.html" %}
-            {% include "layouts/faqEN.html" %}
-            {% include "layouts/contactusEN.html" %}
-            <!-- {% include "layouts/pageBannerEN.html" %} -->
-            <!-- {% include "layouts/teammembersEN.html" %} -->
-            <!-- {% include "layouts/contactus-withGMapsEN.html" %} -->
-            
-            
+            {% include "english layouts/herosection.html" %}  
+            {% include "english layouts/offersEN.html" %}
+            {% include "english layouts/faqEN.html" %}
+            {% include "english layouts/contactusEN.html" %}     
         </main>
-        
-        {% include "layouts/footerEN.html" %}
-        
+        {% include "english layouts/footerEN.html" %}
     </body>
 </html>

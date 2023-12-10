@@ -1,0 +1,77 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+# This line should *not* be indented
+publish_mode: editorial_workflow
+
+# This line should *not* be indented
+media_folder: "assets/cms_media"
+
+i18n:
+  structure: multiple_folders
+  locales: [en, gr]
+
+collections:
+  - name: "teamMembers"
+    label: "Team Members / Προσωπικό"
+    folder: "src/content_management_files/team_members"
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - {label: "Name", name: "name", widget: "string", i18n: true}
+      - {label: "Profile Picture of member", name: "pfp", widget: "image", i18n: duplicate}
+      - {label: "Tags", name: "tags", widget: "hidden", default: ["memberEN"]}
+      - {label: "Job Title", name: "title", widget: "string", i18n: true}
+      - {label: "Description", name: "body", widget: "markdown", i18n: true}
+
+
+  - name: "biomarkers"
+    label: "Biomarkers / Βιοδεικτά Στοιχεία"
+    folder: "src/content_management_files/biomarkers"
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - {label: "Name", name: "name", widget: "string", i18n: true}
+      - {label: "Picture", name: "pfp", widget: "image", required: false, hint: "**Not required**", i18n: duplicate}
+      - {label: "Tags", name: "tags", widget: "hidden", default: ["biomarkerEN"]}
+      - {label: "Description", name: "body", widget: "markdown", i18n: true}
+
+
+  - name: "about"
+    label: "Πληροφορίες Βιοεξέλιξης"
+    files:
+      - label: "Πληροφορίες"
+        name: "client"
+        file: "src/data/client.json"
+        fields:
+          - {label: "E-mail", name: "email", widget: "string"}
+          - {label: "domain", name: "domain", widget: "string", default: ["www.domain.com"]}
+          - label: "Τηλέφωνα"
+            name: "phoneForTel"
+            widget: list
+            allow_add: true
+            label_singular: "νούμερο τηλεφώνου"
+            summary: 'Τηλ.: {{fields.number}}'
+            collapsed: true
+            min: 1
+            field: {label: "τηλεφωνο", name: "number", widget: "number"}
+
+          - label: "Διευθύνσεις"
+            name: "addresses"
+            widget: list
+            allow_add: true
+            label_singular: "διεύθυνση"
+            summary: 'Διευθύνσεις: {{fields.number}}'
+            collapsed: true
+            min: 1
+            fields:
+              - {label: "Πρώτη Γραμμή", name: "line1", widget: "string", required: true}
+              - {label: "Δεύτερη Γραμμή", name: "line2", widget: "string", required: false, hint: "**προαιρετικό**"}
+              - {label: "Πόλη / Επαρχία", name: "city", widget: "string", required: true}
+              - {label: "Περιοχή", name: "area", widget: "string", required: false, hint: "**προαιρετικό**"}
+              - {label: "Ταχυδρομικός Κώδικας", name: "zip", widget: "number", required: true}
