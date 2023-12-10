@@ -54,9 +54,14 @@
         row-gap: 50px;
     }
 
+    .contactusfullpage h1{
+        text-align: center;
+    }
     .calendly-inline-widget{
         width:80%;
+        margin: auto;
     }
+
     .contactusfullpage ul {
         display: flex;
         list-style-type: none;
