@@ -22,11 +22,10 @@ collections:
     slug: "{{slug}}"
     i18n: true
     fields:
-      - {label: "Name", name: "name", widget: "string", i18n: true}
-      - {label: "Profile Picture of member", name: "pfp", widget: "image", i18n: duplicate}
-      - {label: "Tags", name: "tags", widget: "hidden", default: ["memberEN"]}
-      - {label: "Job Title", name: "title", widget: "string", i18n: true}
-      - {label: "Description", name: "body", widget: "markdown", i18n: true}
+      - {label: "Όνομα", name: "name", widget: "string", i18n: true}
+      - {label: "Φωτογραφία προφίλ", name: "pfp", widget: "image", i18n: duplicate}
+      - {label: "Ρόλος στο χημείο", name: "title", widget: "string", i18n: true}
+      - {label: "Περιγραφή", name: "body", widget: "markdown", i18n: true}
 
 
   - name: "biomarkers"
@@ -36,10 +35,22 @@ collections:
     slug: "{{slug}}"
     i18n: true
     fields:
-      - {label: "Name", name: "name", widget: "string", i18n: true}
-      - {label: "Picture", name: "pfp", widget: "image", required: false, hint: "**Not required**", i18n: duplicate}
-      - {label: "Tags", name: "tags", widget: "hidden", default: ["biomarkerEN"]}
-      - {label: "Description", name: "body", widget: "markdown", i18n: true}
+      - {label: "Όνομα Στοιχείου", name: "name", widget: "string", i18n: true}
+      - {label: "Φωτογραφία Στοιχείου", name: "pfp", widget: "image", i18n: duplicate}
+      - {label: "Μικρή περιγραφή στοιχείου", name: "shortDesc", widget: "string", i18n: true}
+      - {label: "Περιγραφη", name: "body", widget: "markdown", i18n: true}
+
+
+  - name: "services"
+    label: "Services / Υπηρεσίες"
+    folder: "src/content_management_files/services_provided"
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - {label: "Όνομα Υπηρεσίας", name: "name", widget: "string", i18n: true}
+      - {label: "Φωτογραφία", name: "pfp", widget: "image", i18n: duplicate}
+      - {label: "Περιγραφή", name: "body", widget: "markdown", i18n: true}
 
 
   - name: "about"

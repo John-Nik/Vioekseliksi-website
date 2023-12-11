@@ -123,6 +123,14 @@
 				<li>Completed the set up of the backend | G</li>
 			</ul>
 
+**0.13.0:** <ul>
+				<li>Fixed the issue where the highlighted offers image expanded while switching layers | G</li>
+				<li>Fixed an issue where the font "Roboto Slab" wasn't correctly loaded on all pages | G</li>
+				<li>Made the required changes to make the "Services", "Biomarkers" and "About Us" pages update with the backend | G</li>
+				<li>Added the ability for the owners of the website to add more phone numbers and locations to their "client.json", and update the "contact us" page accordingly | G</li>
+				<li>Slightly moved the banner more to the left for screen sizes ranging from 0px to 1024px so as to not be on the very right edge | G</li>
+			</ul>
+
 
 
 

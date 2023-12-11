@@ -1,5 +1,0 @@
-{
-    "layout": "layouts/blog/baseBlog.html",
-	"tags": "biomarker",
-    "permalink": "/biomarkers/{{ page.fileSlug }}/index.html"
-}

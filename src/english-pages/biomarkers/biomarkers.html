@@ -18,6 +18,11 @@ eleventyNavigation:
    <link rel="stylesheet" href="../assets/css/navbar.css">
    <link rel="stylesheet" href="../assets/css/footer.css">
    <link rel="stylesheet" href="../assets/css/biomarkers.css">
+   <link rel="icon" href="assets\img\vioekseliksi-logo.webp" type="image/png" sizes="16x16 32x32">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
    <title>Biomarkers</title>
    {% include "prefetch.html" %}
 </head>
@@ -28,87 +33,21 @@ eleventyNavigation:
       {% include "english layouts/pageBannerEN.html" %}
 <section id="biomarkers">
       <div class="bio">
-         <div class="bio-item">
-            <img src="public/assets/img/full-syringe.svg" alt="Syringe Image">
-            <h4>Biomarker 1</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-               hic qui fugiat accusamus fuga.</p>
-         </div>
-         <div class="bio-item">
-            <img src="public/assets/img/full-syringe.svg" alt="Syringe Image">
-            <h4>Biomarker 2</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-               hic qui fugiat accusamus fuga.</p>
-         </div>
-         <div class="bio-item">
-            <img src="public/assets/img/full-syringe.svg" alt="Syringe Image">
-            <h4>Biomarker 3</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-               hic qui fugiat accusamus fuga.</p>
-         </div>
-         <div class="bio-item">
-            <img src="public/assets/img/full-syringe.svg" alt="Syringe Image">
-            <h4>Biomarker 4</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-               hic qui fugiat accusamus fuga.</p>
-         </div>
+         {% if collections.biomarkersEN | length == 0%}
 
-      </div>
+            <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">No Biomarkers Added<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Please add biomarkers to display</span></h1>
 
-      <div class="bio">
-        <div class="bio-item">
-           <img src="public/assets/img/full-syringe.svg" alt="Syringe Image">
-           <h4>Biomarker 5</h4>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-              hic qui fugiat accusamus fuga.</p>
-        </div>
-        <div class="bio-item">
-           <img src="public/assets/img/full-syringe.svg" alt="Syringe Image">
-           <h4>Biomarker 6</h4>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-              hic qui fugiat accusamus fuga.</p>
-        </div>
-        <div class="bio-item">
-           <img src="public/assets/img/full-syringe.svg" alt="Syringe Image">
-           <h4>Biomarker 7</h4>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-              hic qui fugiat accusamus fuga.</p>
-        </div>
-        <div class="bio-item">
-           <img src="public/assets/img/full-syringe.svg" alt="Syringe Image">
-           <h4>Biomarker 8</h4>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-              hic qui fugiat accusamus fuga.</p>
-        </div>
+         {% else %}
 
-     </div>
+            {% for biomarker in collections.biomarkersEN %}
+               <div class="bio-item">
+                  <img src="{{ biomarker.data.pfp }}" alt="Syringe Image">
+                  <h4>{{ biomarker.data.name }}</h4>
+                  <p>{{ biomarker.data.shortDesc}}</p>
+               </div>
+            {% endfor %}
 
-     <div class="bio">
-        <div class="bio-item">
-           <img src="public/assets/img/full-syringe.svg" alt="Syringe Image">
-           <h4>Biomarker 9</h4>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-              hic qui fugiat accusamus fuga.</p>
-        </div>
-        <div class="bio-item">
-           <img src="public/assets/img/full-syringe.svg" alt="Syringe Image">
-           <h4>Biomarker 10</h4>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-              hic qui fugiat accusamus fuga.</p>
-        </div>
-        <div class="bio-item">
-           <img src="public/assets/img/full-syringe.svg" alt="Syringe Image">
-           <h4>Biomarker 11</h4>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-              hic qui fugiat accusamus fuga.</p>
-        </div>
-        <div class="bio-item">
-           <img src="public/assets/img/full-syringe.svg" alt="Syringe Image">
-           <h4>Biomarker 12</h4>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-              hic qui fugiat accusamus fuga.</p>
-        </div>
-
+         {% endif %}
      </div>
    </section>
    </main>

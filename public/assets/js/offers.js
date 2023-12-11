@@ -15,7 +15,6 @@ async function logMovies() {
     const jsonData = await response.json();
     const numberOfOffers = jsonData.offersList.length;
 
-
     switch (numberOfOffers) {
         case 0:
             offersSectionBlock.style.display = 'none';

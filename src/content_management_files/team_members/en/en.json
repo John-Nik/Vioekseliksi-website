@@ -1,0 +1,5 @@
+{
+    "layout": "layouts/blog/baseBlog.html",
+	"tags": "teamMembersEN",
+    "permalink": "/aboutus/{{ page.fileSlug }}/index.html"
+}

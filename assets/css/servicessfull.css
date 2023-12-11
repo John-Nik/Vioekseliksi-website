@@ -47,16 +47,16 @@
     #services {
         display: flex;
         width:100%;
-        justify-content: center;    
+        justify-content: center;
     }
 
     .cards {
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         row-gap: 50px;
-        padding:50px 0px;
+        padding: 50px 0px;
     }
     
     .card {
@@ -87,15 +87,17 @@
     
     .cards {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        grid-template-columns: repeat(3, minmax(150px, 3fr));
         justify-content: center;
-        column-gap: 50px;
         max-width: 1280px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
     
     .card {
         row-gap: 20px;
-        width: 300px;
+        width: auto;
         height: 300px;
         padding:20px;
     }
@@ -104,7 +106,8 @@
 @media only screen and (min-width: 1024px) {
     
     .cards {
-        display:flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 4fr));
         align-items: center;
         justify-content: center;
         flex-direction: row;
@@ -116,7 +119,7 @@
     
     .card {
         row-gap: 20px;
-        width: 300px;
+        width: auto;
         height: 300px;
     }
 }
