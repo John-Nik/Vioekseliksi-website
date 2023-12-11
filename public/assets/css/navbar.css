@@ -235,6 +235,15 @@
         -webkit-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        background: transparent;
+    }
+
+    #nav-bar #wrapper .link a::selection {
+        background: transparent;
+    }
+    
+    #nav-bar #wrapper .link a::selection::-moz-selection {
+        background: transparent;
     }
 
     #nav-bar #wrapper .link:nth-child(1) a {

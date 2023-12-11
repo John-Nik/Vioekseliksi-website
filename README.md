@@ -117,7 +117,6 @@
 				<li>Added more parts to be available for edit in Decap, both English and Greek | G</li>
 				<li>Added a new "prefetch.html" layout for the purpose of speeding up the navigation through the pages by preloading all the other html documents in the navigation bar | G</li>
 				<li>Adjusted the offers section block's and faq section block's top margins to make them fit more into the home page's flow | G</li>
-				<li>Fixed the issue where users were forced to click the anchor element tag in order to get redirected to the desired page | G</li>
 				<li>When on mobile version, the anchor tag no longer get highlighted when clicked | G</li>
 				<li>When the user is on a biomarker's full page information, it correctly hovers the biomarkers navigation button | G</li>
 				<li>Completed the set up of the backend | G</li>
@@ -129,6 +128,7 @@
 				<li>Made the required changes to make the "Services", "Biomarkers" and "About Us" pages update with the backend | G</li>
 				<li>Added the ability for the owners of the website to add more phone numbers and locations to their "client.json", and update the "contact us" page accordingly | G</li>
 				<li>Slightly moved the banner more to the left for screen sizes ranging from 0px to 1024px so as to not be on the very right edge | G</li>
+				<li>Fixed the issue where users were forced to click the anchor element tag in order to get redirected to the desired page | G</li>
 			</ul>
 
 
