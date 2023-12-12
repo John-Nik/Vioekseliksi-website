@@ -131,7 +131,7 @@
 				<li>Fixed the issue where users were forced to click the anchor element tag in order to get redirected to the desired page | G</li>
 			</ul>
 
-**0.14.00:** <ul>
+**0.14.0:** <ul>
 				<li>Fixed the underline behavior of the navigation bar. Now the underline cuts off exactly with the last letter instead of extending 2 pixels ahead | G</li>
 				<li>Added 2 .webmanifest files, one for each site version, enabling the use of mobile apps in supported browsers | G</li>
 				<li>Added a layout "metaTags.html", will be used for the meta tags to be used on every page fast and effectively | G</li>
