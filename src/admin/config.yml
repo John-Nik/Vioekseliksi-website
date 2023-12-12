@@ -36,7 +36,7 @@ collections:
     i18n: true
     fields:
       - {label: "Όνομα Στοιχείου", name: "name", widget: "string", i18n: true}
-      - {label: "Φωτογραφία Στοιχείου", name: "pfp", widget: "image", i18n: duplicate}
+      - {label: "Φωτογραφία Στοιχείου", name: "image", widget: "image", i18n: duplicate}
       - {label: "Μικρή περιγραφή στοιχείου", name: "shortDesc", widget: "string", i18n: true}
       - {label: "Περιγραφη", name: "body", widget: "markdown", i18n: true}
 
@@ -49,7 +49,7 @@ collections:
     i18n: true
     fields:
       - {label: "Όνομα Υπηρεσίας", name: "name", widget: "string", i18n: true}
-      - {label: "Φωτογραφία", name: "pfp", widget: "image", i18n: duplicate}
+      - {label: "Φωτογραφία", name: "image", widget: "image", i18n: duplicate}
       - {label: "Περιγραφή", name: "body", widget: "markdown", i18n: true}
 
 

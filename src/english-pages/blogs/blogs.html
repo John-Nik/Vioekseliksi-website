@@ -3,27 +3,27 @@ permalink: blogs/
 eleventyNavigation:
     key: BLOGS
     order: 400
+language: EN
+metaDescription: description goes here
+metaCanonical: canonical
+metaTitle: Blogs
+manifestLanguage: english
 ---
 
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DOCUMENT</title>
-        <link rel="stylesheet" href="/assets/css/footer.css">
-        <link rel="stylesheet" href="/assets/css/navbar.css">
+        {% include "metaTags.html" %}
+        {% block pageCSS %}
         <link rel="stylesheet" href="/assets/css/blogSection.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        {% endblock %}
         {% include "prefetch.html" %}
     </head>
     <body style="background-color: #F7F8FF">
         {% include "english layouts/navbarEN.html" %}
         <main>
+            {% include "languageSwitch.html" %}
             <section id="blog-1347">
                 <div class="cs-container">
                     <div class="cs-content">

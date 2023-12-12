@@ -1,5 +1,10 @@
 {
     "layout": "layouts/blog/baseBlog.html",
 	"tags": "biomarkersGR",
-    "permalink": "/biomarkers/{{ page.fileSlug }}/index.html"
+    "permalink": "/gr/biomarkers/{{ page.fileSlug }}/index.html",
+    "language": "el",
+    "metaDescription": "description goes here",
+    "metaCanonical": "canonical",
+    "metaTitle": "WIP",
+    "manifestLanguage": "greek"
 }

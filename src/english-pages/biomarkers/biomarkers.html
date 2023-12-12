@@ -6,50 +6,49 @@ permalink: biomarkers/
 eleventyNavigation:
     key: BIOMARKERS
     order: 500
+language: EN
+metaDescription: description goes here
+metaCanonical: canonical
+metaTitle: Biomarkers
+manifestLanguage: english
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   {% include "metaTags.html" %}
+   {% block pageCSS %}
    <link rel="stylesheet" href="../assets/css/banner.css">
-   <link rel="stylesheet" href="../assets/css/navbar.css">
-   <link rel="stylesheet" href="../assets/css/footer.css">
    <link rel="stylesheet" href="../assets/css/biomarkers.css">
-   <link rel="icon" href="assets\img\vioekseliksi-logo.webp" type="image/png" sizes="16x16 32x32">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-   <title>Biomarkers</title>
+   {% endblock %}
    {% include "prefetch.html" %}
 </head>
 
 <body style="background-color: #F7F8FF">
    {% include "english layouts/navbarEN.html" %}
    <main>
+      {% include "languageSwitch.html" %}
       {% include "english layouts/pageBannerEN.html" %}
-<section id="biomarkers">
-      <div class="bio">
-         {% if collections.biomarkersEN | length == 0%}
+      <section id="biomarkers">
+            <div class="bio">
+               {% if collections.biomarkersEN | length == 0%}
 
-            <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">No Biomarkers Added<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Please add biomarkers to display</span></h1>
+                  <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">No Biomarkers Added<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Please add biomarkers to display</span></h1>
 
-         {% else %}
+               {% else %}
 
-            {% for biomarker in collections.biomarkersEN %}
-               <div class="bio-item">
-                  <img src="{{ biomarker.data.pfp }}" alt="Syringe Image">
-                  <h4>{{ biomarker.data.name }}</h4>
-                  <p>{{ biomarker.data.shortDesc}}</p>
-               </div>
-            {% endfor %}
+                  {% for biomarker in collections.biomarkersEN %}
+                     <div class="bio-item">
+                        <img src="{{ biomarker.data.pfp }}" alt="Syringe Image">
+                        <h4>{{ biomarker.data.name }}</h4>
+                        <p>{{ biomarker.data.shortDesc }}</p>
+                     </div>
+                  {% endfor %}
 
-         {% endif %}
-     </div>
-   </section>
+               {% endif %}
+         </div>
+         </section>
    </main>
 
    {% include "english layouts/footerEN.html" %}

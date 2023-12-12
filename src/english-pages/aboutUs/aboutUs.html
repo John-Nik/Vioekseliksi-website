@@ -6,33 +6,29 @@ permalink: aboutus/
 eleventyNavigation:
     key: ABOUT US
     order: 200
+language: EN
+metaDescription: description goes here
+metaCanonical: canonical
+metaTitle: About Us
+manifestLanguage: english
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ language }}">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="Vioexelixi">
-   <meta name="language" content="EN">
-   <!-- <link rel="alternate" href="https://www.vioexelixi.com"> -->
-   <link rel="stylesheet" href="../assets/css/banner.css">
-   <link rel="stylesheet" href="../assets/css/navbar.css">
-   <link rel="stylesheet" href="../assets/css/footer.css">
-   <link rel="stylesheet" href="../assets/css/teammembers.css">
-   <link rel="stylesheet" href="../assets/css/aboutUs.css">
-   <link rel="icon" type="image/webp" href="assets/img/vioekseliksi-logo.webp">
-   <link rel="icon" href="assets\img\vioekseliksi-logo.webp" type="image/png" sizes="16x16 32x32">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-   <title>About Us</title>
+   {% include "metaTags.html" %}
+   {% block pageCSS %}
+   <link rel="stylesheet" href="/assets/css/banner.css">
+   <link rel="stylesheet" href="/assets/css/teammembers.css">
+   <link rel="stylesheet" href="/assets/css/aboutUs.css">
+   {% endblock %}
+
    {% include "prefetch.html" %}
 </head>
 
 <body style="background-color: #F7F8FF">
+   {% include "languageSwitch.html" %}
    {% include "english layouts/navbarEN.html" %}
    <main>
       {% include "english layouts/pageBannerEN.html" %}
@@ -61,7 +57,7 @@ eleventyNavigation:
 
 
       <section id="company">
-         <h1>More About The Company</h1>
+         <h1>Our Story</h1>
          <div class="about_the_company">
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
                   hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus

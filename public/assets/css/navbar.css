@@ -236,6 +236,11 @@
         -ms-user-select: none;
         user-select: none;
         background: transparent;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    #nav-bar #wrapper .link a:active {
+        background-color: transparent;
     }
 
     #nav-bar #wrapper .link a::selection {
@@ -386,6 +391,10 @@
         text-decoration: underline;
         color: var(--primary-blue-color);
         text-decoration-thickness: 3px;
+    }
+
+    #nav-bar .link a .lastletter {
+        letter-spacing: 0px;
     }
     /* ------------------------ Link Text Styling -------------------- */
 

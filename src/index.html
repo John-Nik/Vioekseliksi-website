@@ -6,36 +6,31 @@ permalink:
 eleventyNavigation:
     key: HOME
     order: 100
+language: EN
+metaDescription: description goes here
+metaCanonical: canonical
+metaTitle: Home
+manifestLanguage: english
 ---
 
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="/assets/css/banner.css">
-        <link rel="stylesheet" href="/assets/css/navbar.css">
-        <link rel="stylesheet" href="/assets/css/footer.css">
+        {% include "metaTags.html" %}
+        {% block pageCSS %}
         <link rel="stylesheet" href="/assets/css/faq.css">
-        <script async src="/assets/js/offers.js"></script>
-        <link rel="stylesheet" href="/assets/css/contactusfull.css">
-        <link rel="stylesheet" href="/assets/css/services.css">
-        <link rel="stylesheet" href="/assets/css/teammembers.css">
-        <link rel="stylesheet" href="/assets/css/contact-us-with-google-maps.css">
         <link rel="stylesheet" href="/assets/css/offers.css">
         <link rel="stylesheet" href="/assets/css/herosection.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vioexelixi</title>
-        <link rel="icon" href="assets\img\vioekseliksi-logo.webp" type="image/png" sizes="16x16 32x32">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="/assets/css/services.css">
+        {% endblock %}        
+        <script async src="/assets/js/offers.js"></script>
         {% include "prefetch.html" %}
     </head>
     <body style="background-color: #F7F8FF">
         {% include "english layouts/navbarEN.html" %}
         <main style="overflow: hidden;">
+            {% include "languageSwitch.html" %}
             {% include "english layouts/herosection.html" %}  
             {% include "english layouts/offersEN.html" %}
             {% include "english layouts/faqEN.html" %}
