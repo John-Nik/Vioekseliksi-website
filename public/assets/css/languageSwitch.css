@@ -1,8 +1,4 @@
-/* =================================== Language Settings Styling =================================== */
-  
-  /* Phone Version */
-  @media only screen and (max-width: 48rem) {
-    /* ------------------ Language Settings Container ------------------ */
+@media only screen and (max-width: 48rem) {
   #language-settings-container {
     display: flex;
     flex-direction: column-reverse;
@@ -17,9 +13,7 @@
     overflow: visible;
     user-select: none;
   }
-  /* ------------------ Language Settings Container ------------------ */
-  
-  /* ------------------ Language Settings SVG Container ------------------ */
+
   #language-svg-container {
     width: 60px;
     position: relative;
@@ -40,16 +34,12 @@
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
   }
-  /* ------------------ Language Settings SVG Container ------------------ */
-  
-  /* ------------------ Language Settings SVG Styling ------------------ */
+
   #language-svg {
     width: 30px;
     height: 30px;
   }
-  /* ------------------ Language Settings SVG Styling ------------------ */
-  
-  /* ------------------ Language Settings Options Container ------------------ */
+
   #flag-container {
     display: flex;
     flex-direction: column;
@@ -70,9 +60,7 @@
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
     height: 258px;
   }
-  /* ------------------ Language Settings Options Container ------------------ */
-  
-  /* ------------------ Language Settings Menu Header ------------------ */
+
   #language-settings-container span {
     text-align: center;
     color: black;
@@ -81,16 +69,12 @@
     margin-bottom: 16px;
     margin-top: 8px;
   }
-  /* ------------------ Language Settings Menu Header ------------------ */
-  
-  /* ------------------ Language Options Menu Container ------------------ */
+
   #flag-svg-container {
     display: grid;
     justify-content: center;
   }
-  /* ------------------ Language Options Menu Container ------------------ */
-  
-  /* ------------------ Language Greek Language Option ------------------ */
+
   #greek-flag {
     object-fit: cover;
     width: 50px;
@@ -104,9 +88,7 @@
     margin-top: 4px;
     margin-bottom: 4px;
   }
-  /* ------------------ Language Greek Language Option ------------------ */
-  
-  /* ------------------ Language Greek Language Option Container ------------------ */
+
   #greek-flag-container {
     width: 100px;
     height: auto;
@@ -117,9 +99,7 @@
     display: flex;
     justify-content: center;
   }
-  /* ------------------ Language Greek Language Option Container ------------------ */
-  
-  /* ------------------ Language Greek Language Option ------------------ */
+
   #uk-flag {
     object-fit: cover;
     overflow: hidden;
@@ -133,9 +113,7 @@
     margin-top: 4px;
     margin-bottom: 4px;
   }
-  /* ------------------ Language Greek Language Option ------------------ */
-  
-  /* ------------------ Language English Language Option Container ------------------ */
+
   #uk-flag-container {
     margin-top: 4px;
     width: 100px;
@@ -146,12 +124,9 @@
     display: flex;
     justify-content: center;
   }
-  /* ------------------ Language English Language Option Container ------------------ */
-  }
+}
   
-  /* Tablet and Desktop Vesion */
-  @media only screen and (min-width: 48.01rem) {
-  /* ------------------ Language Settings Container ------------------ */
+@media only screen and (min-width: 48.01rem) {
   #language-settings-container {
     display: flex;
     flex-direction: column-reverse;
@@ -166,9 +141,7 @@
     overflow: visible;
     user-select: none;
   }
-  /* ------------------ Language Settings Container ------------------ */
-  
-  /* ------------------ Language Settings SVG Container ------------------ */
+
   #language-svg-container {
     width: 60px;
     position: relative;
@@ -189,16 +162,12 @@
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
   }
-  /* ------------------ Language Settings SVG Container ------------------ */
-  
-  /* ------------------ Language Settings SVG Styling ------------------ */
+
   #language-svg {
     width: 30px;
     height: 30px;
   }
-  /* ------------------ Language Settings SVG Styling ------------------ */
-  
-  /* ------------------ Language Settings Options Container ------------------ */
+
   #flag-container {
     display: flex;
     flex-direction: column;
@@ -218,18 +187,14 @@
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
     height: 190px;
   }
-  /* ------------------ Language Settings Options Container ------------------ */
-  
-  /* ------------------ Language Settings Menu Header ------------------ */
+
   #language-settings-container span {
     text-align: center;
     color: black;
     font-weight: 400;
     margin-top: 16px;
   }
-  /* ------------------ Language Settings Menu Header ------------------ */
-  
-  /* ------------------ Language Options Menu Container ------------------ */
+
   #flag-svg-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -239,9 +204,7 @@
     justify-items: center;
     margin-bottom: -8px;
   }
-  /* ------------------ Language Options Menu Container ------------------ */
-  
-  /* ------------------ Language Greek Language Option ------------------ */
+
   #greek-flag {
     object-fit: cover;
     width: 40px;
@@ -258,9 +221,7 @@
   #greek-flag-container:hover #greek-flag {
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
   }
-  /* ------------------ Language Greek Language Option ------------------ */
-  
-  /* ------------------ Language Greek Language Option Container ------------------ */
+
   #greek-flag-container {
     display: flex;
     width: 50px;
@@ -278,9 +239,7 @@
   #greek-flag-container:hover {
     transform: scale(1.05);
   }
-  /* ------------------ Language Greek Language Option Container ------------------ */
-  
-  /* ------------------ Language Greek Language Option ------------------ */
+
   #uk-flag {
     object-fit: cover;
     width: 40px;
@@ -297,9 +256,7 @@
   #uk-flag-container:hover #uk-flag {
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
   }
-  /* ------------------ Language Greek Language Option ------------------ */
-  
-  /* ------------------ Language English Language Option Container ------------------ */
+
   #uk-flag-container {
     display: flex;
     width: 50px;
@@ -317,9 +274,4 @@
   #uk-flag-container:hover {
     transform: scale(1.05);
   }
-  /* ------------------ Language English Language Option Container ------------------ */
-  }
-  
-  
-  
-  /* =================================== Language Settings Styling =================================== */
+}

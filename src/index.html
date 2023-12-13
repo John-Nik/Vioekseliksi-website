@@ -19,18 +19,107 @@ manifestLanguage: english
     <head>
         {% include "metaTags.html" %}
         {% block pageCSS %}
-        <link rel="stylesheet" href="/assets/css/faq.css">
-        <link rel="stylesheet" href="/assets/css/offers.css">
-        <link rel="stylesheet" href="/assets/css/herosection.css">
-        <link rel="stylesheet" href="/assets/css/services.css">
+        <link rel="preload" href="/assets/css/faq/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+        <link rel="preload" href="/assets/css/faq/tablet.css" media="screen and (min-width: 768px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+
+        <link rel="preload" href="/assets/css/offersSectionBlock/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+        <link rel="preload" href="/assets/css/offersSectionBlock/tablet.css" media="screen and (min-width: 768px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+
+        <link rel="preload" href="/assets/css/contactUsSectionBlock/all-screen-sizes.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+        <link rel="preload" href="/assets/css/contactUsSectionBlock/mobile.css" media="screen and (max-width: 767px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+        <link rel="preload" href="/assets/css/contactUsSectionBlock/tablet-to-desktop.css" media="screen and (min-width:768px) and (max-width: 1023px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+
+        <link rel="stylesheet" href="/assets/css/herosection/mobile.css" media="screen and (min-width: 0px)" />
+        <link rel="stylesheet" href="/assets/css/herosection/desktop.css" media="screen and (min-width: 1024px)" />
+
+        <link rel="stylesheet" href="/assets/css/servicesSectionBlock/mobile.css" media="screen and (min-width: 0px)" />
+        <link rel="stylesheet" href="/assets/css/servicesSectionBlock/desktop.css" media="screen and (min-width: 1024px)" />
         {% endblock %}        
         <script async src="/assets/js/offers.js"></script>
         {% include "prefetch.html" %}
+        <script type="application/ld+json">
+            [
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Website",
+                    "name": "Vioexelixi",
+                    "alternateName": ["Vioexelixi Lab", "Vioexelixi Laboratory", "Vioexelixi chemistry", "Βιοεξέλιξη", "Βιοεξέλιξη Εργαστήριο", "Βιοεξέλιξη χημείο"],
+                    "url": "https://www.{{ client.domain }}/"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "MedicalBusiness",
+                    "paymentAccepted": "Cash, Credit Card",
+                    "address": 
+                    {
+                        "@type": "PostalAddress",
+                        "streetAddress": "xxxxxxxxxxxxx",
+                        "addressLocality": "xxxxxxxxxxxxxxxxxxxxx",
+                        "addressRegion": "xxxxxxxxxxxxxxxxxxxx",
+                        "postalCode": "xxxxxxxxxxxxxxxx",
+                        "addressCountry": "CY"
+                    },
+                    "geo.latitude": xxxxxxxxxxxxxxxx,
+                    "geo.longitude": xxxxxxxxxxxxxxxx,
+                    "openingHoursSpecification": 
+                    [
+                        {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": 
+                            [
+                                "Monday",
+                                "Tuesday",
+                                "Wednesday",
+                                "Thursday",
+                                "Friday"
+                            ],
+                            "opens": "xxxxxxxxxxxxxx",
+                            "closes": "xxxxxxxxxxxxx"
+                        },
+                        {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": 
+                            [
+                                "Saturday",
+                                "Sunday"
+                            ],
+                            "opens": "xxxxxxxxxxxx",
+                            "closes": "xxxxxxxxxxxxx"
+                        }
+                    ],
+                    "telephone": "xxxxxxxxxxxxxxxxxxxxxxxxxx",
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "How to find an apprenticeship?",
+                            "acceptedAnswer": 
+                            {
+                                "@type": "Answer",
+                                "text": "<p>We provide an official service to search through available apprenticeships. To get started, create an account here, specify the desired region, and your preferences. You will be able to search through all officially registered open apprenticeships.</p>"
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Whom to contact?",
+                            "acceptedAnswer": 
+                            {
+                                "@type": "Answer",
+                                "text": "You can contact the apprenticeship office through our official phone hotline above, or with the web-form below. We generally respond to written requests within 7-10 days."
+                            }
+                        }
+                    ]
+                }
+            ]
+        </script>
     </head>
     <body style="background-color: #F7F8FF">
         {% include "english layouts/navbarEN.html" %}
+        {% include "languageSwitch.html" %}
         <main style="overflow: hidden;">
-            {% include "languageSwitch.html" %}
             {% include "english layouts/herosection.html" %}  
             {% include "english layouts/offersEN.html" %}
             {% include "english layouts/faqEN.html" %}

@@ -1,0 +1,30 @@
+@media only screen and (min-width: 768px) {
+    #team-members .profile-wrapper {
+        display: grid;
+        margin-left: -24px;
+        grid-template-columns: repeat(auto-fit, minmax(307px, 3fr));
+    }
+
+    #team-members .profile {
+        width: clamp(150px, 80%, 350px);
+        max-width: unset();
+        justify-self: center;
+    }
+
+    #team-members .profile-information {
+        padding-left: 16px;
+    }
+
+    #team-members .name {
+        text-align: left;
+    }
+
+    #team-members .role {
+        text-align: left;
+    }
+
+    #team-members .description {
+        margin-top: 32px;
+        margin-bottom: 96px;
+    }
+}

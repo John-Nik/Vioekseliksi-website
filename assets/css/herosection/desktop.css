@@ -1,0 +1,7 @@
+@media only screen and (min-width: 1024px) {
+    .herosection img{
+        width:100%;
+        position:relative;
+        top:10px;
+    }
+}

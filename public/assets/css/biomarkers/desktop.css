@@ -1,0 +1,19 @@
+@media only screen and (min-width: 1024px) {
+    .bio {
+        display: grid;
+        gap: 64px;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 3fr));
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        max-width: 1280px;
+        width: 95%;
+    }
+    
+    .bio-item {
+        row-gap: 20px;
+        width: auto;
+        height: 300px;
+        max-width: 300px;
+    }
+}

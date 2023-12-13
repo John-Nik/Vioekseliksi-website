@@ -6,79 +6,39 @@ eleventyComputed:
     permalink: '/blogs/{{ title | slug }}/index.html'
 ---
 
-    <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <!-- Standard meta tags -->
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="description" content="{{ description }}">
-            <meta name="keywords" content="">
-            <link rel="canonical" href="https://{{ client.domain }}{{ page.url }}">
-    
-            <!--Social Media Display-->
-            <meta property="og:title" content="{{ title }}" />
-            <meta property="og:description" content="{{ description }}" />
-            <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://{{ client.domain }}{{ page.url }}" />
-            <meta property="og:image" content="/assets/images/logo-small.png" />
-            <meta property="og:image:secure_url" content="/assets/images/logo-small.png" />
-    
-            <!--Favicons-->
-            <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
-            <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png?v1">
-            <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
-            <link rel="manifest" href="/assets/favicons/site.webmanifest">
-            <meta name="msapplication-TileColor" content="#da532c">
-            <meta name="theme-color" content="#ffffff">
-    
-            <!-- Preloads -->
-            <link rel="preload" as="image" href="/assets/svgs/logo-white.svg">
-            <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
-            <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
-
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-            <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-            <!-- Sitewide Stylesheets and Scripts -->
-            <link rel="stylesheet" href="/assets/css/blogPage.css">
-            <link rel="stylesheet" href="/assets/css/footer.css">
-            <link rel="stylesheet" href="/assets/css/navbar.css">
-            
-            <title>
-                    {{ title }}
-                    |
-                    {{ client.name }}
-            </title>
-        </head>
-        <body style="background-color: #F7F8FF">
-            {% include "english layouts/navbarEN.html" %}
-            <main id="main">
-                <section id="content-page-849">
-                    <div class="cs-container">
-                        <div class="cs-content">
-                            <h1 class="cs-title">{{ title }}</h1>
-                            <p>
-                                {{ bodyEN }}
-                            </p>
-                        </div>
-                        <div class="cs-image-group">
-                            <!--Top Picture-->
-                            <picture class="cs-picture">
-                                <img decoding="async" src="{{ thumbnail }}" alt="person" width="542" height="520" aria-hidden="true">
-                            </picture>
-                        </div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include "metaTags.html" %}
+        
+        {% block pageCSS %}
+        <link rel="stylesheet" href="/assets/css/blogPostPage/mobile.css" media="screen and (min-width: 0px)">
+        <link rel="stylesheet" href="/assets/css/blogPostPage/tablet.css" media="screen and (min-width: 768px)">
+        {% endblock %}
+        
+        {% include "prefetch.html" %}
+    </head>
+    <body style="background-color: #F7F8FF">
+        {% include "english layouts/navbarEN.html" %}
+        <main id="main">
+            <section id="content-page-849">
+                <div class="cs-container">
+                    <div class="cs-content">
+                        <h1 class="cs-title">{{ title }}</h1>
+                        <p>
+                            {{ bodyEN }}
+                        </p>
                     </div>
-                </section>
-                                
-            </main>
-            {% include "english layouts/footerEN.html" %}
-        </body>
-    </html>
-
-    
-
-    
+                    <div class="cs-image-group">
+                        <!--Top Picture-->
+                        <picture class="cs-picture">
+                            <img decoding="async" src="{{ thumbnail }}" alt="person" width="542" height="520" aria-hidden="true">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+                            
+        </main>
+        {% include "english layouts/footerEN.html" %}
+    </body>
+</html>

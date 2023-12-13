@@ -19,17 +19,23 @@ manifestLanguage: english
 <head>
    {% include "metaTags.html" %}
    {% block pageCSS %}
-   <link rel="stylesheet" href="/assets/css/banner.css">
-   <link rel="stylesheet" href="/assets/css/teammembers.css">
-   <link rel="stylesheet" href="/assets/css/aboutUs.css">
+   <link rel="stylesheet" href="/assets/css/banner/mobile.css" media="screen and (min-width: 0px)" />
+   <link rel="stylesheet" href="/assets/css/banner/tablet.css" media="screen and (min-width: 768px)" />
+   <link rel="stylesheet" href="/assets/css/banner/desktop.css" media="screen and (min-width: 1024px)" />
+
+   <link rel="stylesheet" href="/assets/css/teamMembers/mobile.css" media="screen and (min-width: 0px)" />
+   <link rel="stylesheet" href="/assets/css/teamMembers/tablet.css" media="screen and (min-width: 768px)" />
+   
+   <link rel="stylesheet" href="/assets/css/aboutus/mobile.css" media="screen and (min-width: 0px)" />
+   <link rel="stylesheet" href="/assets/css/aboutus/desktop.css" media="screen and (min-width: 1024px)" />
    {% endblock %}
 
    {% include "prefetch.html" %}
 </head>
 
 <body style="background-color: #F7F8FF">
-   {% include "languageSwitch.html" %}
    {% include "english layouts/navbarEN.html" %}
+   {% include "languageSwitch.html" %}
    <main>
       {% include "english layouts/pageBannerEN.html" %}
       {% include "english layouts/teammembersEN.html" %}

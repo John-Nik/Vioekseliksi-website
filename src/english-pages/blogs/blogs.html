@@ -16,14 +16,21 @@ manifestLanguage: english
     <head>
         {% include "metaTags.html" %}
         {% block pageCSS %}
-        <link rel="stylesheet" href="/assets/css/blogSection.css">
+        <link rel="stylesheet" href="/assets/css/banner/mobile.css" media="screen and (min-width: 0px)" />
+        <link rel="stylesheet" href="/assets/css/banner/tablet.css" media="screen and (min-width: 768px)" />
+        <link rel="stylesheet" href="/assets/css/banner/desktop.css" media="screen and (min-width: 1024px)" />
+
+        <link rel="stylesheet" href="/assets/css/blogSection/mobile.css" media="screen and (min-width: 0px)" />
+        <link rel="stylesheet" href="/assets/css/blogSection/tablet.css" media="screen and (min-width: 768px)" />
+        <link rel="stylesheet" href="/assets/css/blogSection/desktop.css" media="screen and (min-width: 1024px)" />
+        <link rel="stylesheet" href="/assets/css/blogSection/widescreen.css" media="screen and (min-width: 81.25rem)" />
         {% endblock %}
         {% include "prefetch.html" %}
     </head>
     <body style="background-color: #F7F8FF">
         {% include "english layouts/navbarEN.html" %}
+        {% include "languageSwitch.html" %}
         <main>
-            {% include "languageSwitch.html" %}
             <section id="blog-1347">
                 <div class="cs-container">
                     <div class="cs-content">

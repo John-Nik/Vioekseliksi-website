@@ -1,0 +1,125 @@
+@import url(/assets/css/root.css);
+
+@media only screen and (min-width: 0px) {
+    footer {
+        height: fit-content;
+        width: 100%;
+        background-color: var(--blue-color-shade-8);
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    footer .container {
+        width: 100%;
+        height: 100%;
+        max-width: 1024px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    footer .content-container {
+        width: 100%;
+        height: 80%;
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .misc-container {
+        width: 100%;
+        height: 10.6%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    footer .logo-wrapper img {
+        height: 81px;
+        width: auto;
+    }
+
+    footer .logo-wrapper {
+        margin-bottom: 64px;
+    }
+
+    footer .links-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(50px, 1fr));
+        gap: 26px;
+        max-width: 100%;
+    }
+
+    footer .listing-wrappers {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 64px;
+    }
+
+    footer .listing-wrappers:first-child {
+        margin-right: -20px;
+    }
+
+    footer .listing-wrappers ul {
+        list-style: none;
+        margin-top: 32px;
+        align-items: flex-end;
+    }
+
+    footer .footer-links li {
+        margin-bottom: 16px;
+    }
+
+    footer .footer-links li:hover a {
+        text-decoration: underline;
+    }
+
+    footer .footer-links li:active a {
+        color: var(--green-color-tint-4);
+    }
+
+    footer .footer-links li a {
+        color: #cdcdcd;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    footer .title {
+        color: white;
+        font-weight: 600;
+        font-size: 1.25rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer .title::after {
+        content: '';
+        position: absolute;
+        margin-top: 36px;
+        width: 50px;
+        height: 2px;
+        background-color: var(--green-color-tint-1);
+    }
+
+    footer .misc-container small {
+        margin-bottom: 4px;
+        color: #8f8f8f;
+        font-size: 0.75rem;
+    }
+
+    footer .misc-container small a {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    footer .misc-container small a:hover {
+        color: var(--blue-color-tint-3);
+    }
+
+    footer #assets-used a:hover {
+        color: white;
+    }
+}

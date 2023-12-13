@@ -19,16 +19,22 @@ manifestLanguage: english
 <head>
    {% include "metaTags.html" %}
    {% block pageCSS %}
-   <link rel="stylesheet" href="../assets/css/banner.css">
-   <link rel="stylesheet" href="../assets/css/biomarkers.css">
+   <link rel="stylesheet" href="/assets/css/banner/mobile.css" media="screen and (min-width: 0px)" />
+   <link rel="stylesheet" href="/assets/css/banner/tablet.css" media="screen and (min-width: 768px)" />
+   <link rel="stylesheet" href="/assets/css/banner/desktop.css" media="screen and (min-width: 1024px)" />
+
+   <link rel="stylesheet" href="/assets/css/biomarkers/mobile.css" media="screen and (min-width: 0px)" />
+   <link rel="stylesheet" href="/assets/css/biomarkers/tablet.css" media="screen and (min-width: 768px)" />
+   <link rel="stylesheet" href="/assets/css/biomarkers/desktop.css" media="screen and (min-width: 1024px)" />
+   <link rel="stylesheet" href="/assets/css/biomarkers/widescreen.css" media="screen and (min-width: 1024px)" />
    {% endblock %}
    {% include "prefetch.html" %}
 </head>
 
 <body style="background-color: #F7F8FF">
    {% include "english layouts/navbarEN.html" %}
+   {% include "languageSwitch.html" %}
    <main>
-      {% include "languageSwitch.html" %}
       {% include "english layouts/pageBannerEN.html" %}
       <section id="biomarkers">
             <div class="bio">

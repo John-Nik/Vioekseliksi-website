@@ -1,0 +1,49 @@
+@import url(/assets/css/root.css);
+
+@media only screen and (min-width: 0px) {
+    .contactusfullpage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding:100px 0px;
+        row-gap: 50px;
+    }
+
+    .contactusfullpage h1{
+        text-align: center;
+    }
+    .calendly-inline-widget{
+        width:80%;
+        margin: auto;
+    }
+
+    .contactusfullpage ul {
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .info_options {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        color: #0b2d39;
+        column-gap: 20px;
+        padding: 20px 40px;
+    }
+
+    .googlemapspart{
+        padding:20px 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .contactusfullpage h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        padding-bottom: 30px;
+    }
+}

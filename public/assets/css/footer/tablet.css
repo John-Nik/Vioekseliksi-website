@@ -1,0 +1,37 @@
+@media only screen and (min-width: 768px) {
+    footer {
+        height: 512px;
+    }
+    footer .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    footer .content-container {
+        flex-direction: row;
+    }
+    footer .misc-container {
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: row;
+    }
+    footer .logo-wrapper {
+        width: 30%;
+    }
+    footer .links-container {
+        width: 70%;
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
+        padding-right: 16px;
+    }
+    footer .listing-wrappers {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    footer .footer-links li {
+        text-align: right;
+        margin-bottom: 0.5rem;
+    }
+    footer .title {
+        flex-direction: row-reverse;
+    }
+}

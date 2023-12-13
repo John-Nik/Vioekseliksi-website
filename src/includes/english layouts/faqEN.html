@@ -1,7 +1,11 @@
 <section id="faq">
     <div class="container">
         <div class="question-mark-container">
-            <img src="/assets/img/faq-pic.png" alt="">
+            <picture>
+                <source media="(max-width: 600px)" srcset="/assets/img/faq-pic-mobile.webp">
+                <source media="(min-width: 601px)" srcset="/assets/img/faq-pic-desktop.webp">
+                <img aria-hidden="true" decoding="async" src="/assets/img/faq-pic-desktop.webp" alt="" loading="lazy" width="409" height="468">
+            </picture>
             <svg width="0" height="0">
                 <defs>
                   <clipPath id="myClip" clipPathUnits="objectBoundingBox">
@@ -151,7 +155,7 @@
                             transform="matrix(0.08142102,-0.9966798,0.88308677,0.46920971,0,0)" /></g>
                         </svg>
                     </div>
-                    <span class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam qui necessitatibus voluptas odit id porro impedit nihil accusamus ex magni!</span>
+                    <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam qui necessitatibus voluptas odit id porro impedit nihil accusamus ex magni!</p>
                 </div>
                 <div class="question-wrapper">
                     <div class="question-container" onclick="this.parentElement.classList.toggle('answer-reveal')">

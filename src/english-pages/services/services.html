@@ -19,16 +19,21 @@ manifestLanguage: english
 <head>
    {% include "metaTags.html" %}
    {% block pageCSS %}
-   <link rel="stylesheet" href="../../assets/css/banner.css">
-   <link rel="stylesheet" href="../assets/css/servicessfull.css">
+   <link rel="stylesheet" href="/assets/css/banner/mobile.css" media="screen and (min-width: 0px)" />
+   <link rel="stylesheet" href="/assets/css/banner/tablet.css" media="screen and (min-width: 768px)" />
+   <link rel="stylesheet" href="/assets/css/banner/desktop.css" media="screen and (min-width: 1024px)" />
+
+   <link rel="stylesheet" href="/assets/css/servicesPage/mobile.css" media="screen and (min-width: 0px)" />
+   <link rel="stylesheet" href="/assets/css/servicesPage/tablet.css" media="screen and (min-width: 768px)" />
+   <link rel="stylesheet" href="/assets/css/servicesPage/desktop.css" media="screen and (min-width: 1024px)" />
    {% endblock %}
    {% include "prefetch.html" %}
 </head>
 
 <body style="background-color: #F7F8FF">
    {% include "english layouts/navbarEN.html" %}
+   {% include "languageSwitch.html" %}
    <main>
-      {% include "languageSwitch.html" %}
       {% include "english layouts/pageBannerEN.html" %}
 <section id="services">
       <div class="cards">
