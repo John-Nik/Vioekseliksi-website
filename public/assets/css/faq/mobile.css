@@ -301,4 +301,16 @@
     #faq .answer-reveal .question-svg-icon #measurement2 {
         fill: #438A7E !important;
     }
+
+    #faq .subtext {
+        font-size: 12px;
+        margin-top: -48px;
+        color: gray;
+    }
+
+    #faq .subtext-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
 }

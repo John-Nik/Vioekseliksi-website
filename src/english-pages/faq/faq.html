@@ -1,0 +1,31 @@
+---
+bannerTitle: Services
+bannerText: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas hic qui fugiat accusamus fuga.
+bannerImage: ../assets/img/Illustration.svg
+permalink: faq/
+language: EN
+metaDescription: description goes here
+metaCanonical: canonical
+metaTitle: Frequently Asked Questions
+manifestLanguage: english
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "metaTags.html" %}
+    {% include  "prefetch.html"%}
+    {% block pageCSS %}
+    <link rel="stylesheet" href="/assets/css/banner/mobile.css">
+    {% endblock %}
+</head>
+<body>
+    {% include "english layouts/navbarEN.html" %}
+    {% include "languageSwitch.html" %}
+    <main>
+        {% include "english layouts/pageBannerEN.html" %}
+    </main>
+    {% include "english layouts/footerEN.html" %}
+</body>
+</html>

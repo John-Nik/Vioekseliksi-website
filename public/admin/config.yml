@@ -86,3 +86,14 @@ collections:
               - {label: "Πόλη / Επαρχία", name: "city", widget: "string", required: true}
               - {label: "Περιοχή", name: "area", widget: "string", required: false, hint: "**προαιρετικό**"}
               - {label: "Ταχυδρομικός Κώδικας", name: "zip", widget: "number", required: true}
+
+
+  - laber: "Ερωτήσεις / Questions"
+    name: "questions"
+    folder: "src/content_management_files/FAQ"
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - {label: "Ερώτηση", name: "question", widget: "string", i18n: true}
+      - {label: "Απάντηση", name: "answer", widget: "image", i18n: duplicate}
