@@ -7,10 +7,9 @@
         flex-direction: column;
         row-gap: 50px;
         border-radius: 60px;
-        padding-left:150px;
-        padding-right:150px;
-        width:30vw;
-        height:70vh;
+        padding:20px;
+        width:70vw;
+        height:40vh;
         position:relative;
         top:-10vh;
         left:10vw;
@@ -19,5 +18,23 @@
     .serv h4{
         font-size: 2rem;
         margin-bottom: 20px;
+    }
+
+    .carousel-container{
+        display:flex;
+flex-direction: row;
+    }
+    .carousel-item img{
+        width:100px;
+        border:1px solid black;
+    }
+
+    .carousel{
+        display:flex;
+        align-items: center;
+    }
+
+    .carousel-btn img{
+        width:50px;
     }
 }
