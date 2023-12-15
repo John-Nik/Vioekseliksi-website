@@ -88,7 +88,7 @@ collections:
               - {label: "Ταχυδρομικός Κώδικας", name: "zip", widget: "number", required: true}
 
 
-  - laber: "Ερωτήσεις / Questions"
+  - label: "Ερωτήσεις / Questions"
     name: "questions"
     folder: "src/content_management_files/FAQ"
     create: true

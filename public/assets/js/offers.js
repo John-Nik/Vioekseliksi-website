@@ -6,12 +6,12 @@ const offerDesc = document.querySelector('#offers .description');
 const offersSectionBlock = document.querySelector('#offers');
 
 
-const test = new Request('/assets/js/offers.json');
+const offersJSONListing = new Request('/assets/js/offers.json');
 
-logMovies()
-async function logMovies() {
+beginOffers()
+async function beginOffers() {
 
-    const response = await fetch(test);
+    const response = await fetch(offersJSONListing);
     const jsonData = await response.json();
     const numberOfOffers = jsonData.offersList.length;
 

@@ -8,6 +8,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+    background-color: #F7F8FF !important;
+}
+
 @import url(/assets/css/root.css);
 /* ======================= Global Profiles ====================== */
 

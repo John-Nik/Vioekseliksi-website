@@ -1,5 +1,5 @@
 ---
-bannerTitle: Services
+bannerTitle: Frequenty Asked Questions
 bannerText: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas hic qui fugiat accusamus fuga.
 bannerImage: ../assets/img/Illustration.svg
 permalink: faq/
@@ -15,16 +15,27 @@ manifestLanguage: english
 <html lang="en">
 <head>
     {% include "metaTags.html" %}
-    {% include  "prefetch.html"%}
     {% block pageCSS %}
-    <link rel="stylesheet" href="/assets/css/banner/mobile.css">
+    <link rel="stylesheet" href="/assets/css/banner/mobile.css" media="screen and (min-width: 0px)" />
+    <link rel="stylesheet" href="/assets/css/banner/tablet.css" media="screen and (min-width: 768px)" />
+    <link rel="stylesheet" href="/assets/css/banner/desktop.css" media="screen and (min-width: 1024px)" />
     {% endblock %}
+    {% include  "prefetch.html"%}
+    
 </head>
 <body>
     {% include "english layouts/navbarEN.html" %}
     {% include "languageSwitch.html" %}
     <main>
         {% include "english layouts/pageBannerEN.html" %}
+        <label for="test">
+            test:
+            <input id="test" type="search">
+            <ul id="searchResults">
+
+            </ul>
+        </label>
+        <script defer src="/assets/js/searchBar.js"></script>
     </main>
     {% include "english layouts/footerEN.html" %}
 </body>

@@ -1,5 +1,5 @@
-let selectLanguage = document.querySelector("#language-svg-container");
-let languageOptions = document.querySelector(".unrevealed");
+const selectLanguage = document.querySelector("#language-svg-container");
+const languageOptions = document.querySelector(".unrevealed");
 
 
 selectLanguage.addEventListener("click", () => {
@@ -7,8 +7,8 @@ selectLanguage.addEventListener("click", () => {
 });
 
 
-let cookieEn = document.querySelector(".cookieEn");
-let cookieGr = document.querySelector(".cookieGr");
+const cookieEn = document.querySelector(".cookieEn");
+const cookieGr = document.querySelector(".cookieGr");
 
 
 cookieEn.addEventListener("click", () => {
