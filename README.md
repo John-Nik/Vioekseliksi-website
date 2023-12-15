@@ -150,3 +150,9 @@
 			</ul>
 
 
+**0.14.2:** <ul>
+				<li>Fixed hero section headings and image position | E</li>
+				<li>Fixed the section block for both mobile and desktop | E</li>
+			</ul>
+
+
