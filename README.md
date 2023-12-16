@@ -141,18 +141,23 @@
 				<li>Added partytown in preparation for the analytics scripts to be added | G</li>
 				<li>Changed the biomarker's full page .json files to support the new way of site building | G</li>
 			</ul>
-
+<br>
 **0.14.1:** <ul>
 				<li>Split up all the css files between mobile, tablet, desktop and widescreen configurations | G</li>
 				<li>Added the schema structured data formats to the home page for improved SEO | G</li>
 				<li>Inlined the css files of nav and languageSwitch for the mobile version of the website | G</li>
 				<li>Optimized the images' format and size | G</li>
 			</ul>
-
-
+<br>
 **0.14.2:** <ul>
 				<li>Fixed hero section headings and image position | E</li>
 				<li>Fixed the section block for both mobile and desktop | E</li>
+			</ul>
+<br>
+**0.15.0:** <ul>
+				<li>Finished the search bar in the FAQ section | G</li>
+				<li>Hid the API keys from the commit repository | G</li>
+				<li>Added netlify's serverless functions into the repository to support the search bar's autocorrect using google's search engine | G</li>
 			</ul>
 
 

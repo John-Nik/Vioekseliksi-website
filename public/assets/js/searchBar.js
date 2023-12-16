@@ -1,44 +1,45 @@
 const questionsJSONList = new Request('/assets/js/questions.json');
 const inputBox =  document.querySelector('#test');
-const searchResultsShownInHTML = document.querySelector('#searchResults');
+const htmlResultsShown = document.querySelector('#searchResults');
 let questionsList = [];
 let value = '';
-
-grabQuestionsJSON();
-async function grabQuestionsJSON() {
+let hasTimeoutStarted = false;
+grab_questions_JSON_file();
+async function grab_questions_JSON_file() {
     const response = await fetch(questionsJSONList);
     const JSON_Data = await response.json();
     questionsList = JSON_Data.questions;
-    checkInputValue();
+    checkUserInput();
 }
 
 
-function checkInputValue() {
+function checkUserInput() {
     inputBox.addEventListener('input', (key) => {
         value = inputBox.value;
-        searchMatchesOfInput(value);
+        startSearching(value);
     });
 }
 
-function searchMatchesOfInput (inputQuery) {
-    console.clear()
-    let searchResultsShownListings = searchResultsShownInHTML.lastElementChild;
+function startSearching (inputQuery) {
+    // console.clear()
+    let lastSearchResultDisplayed = htmlResultsShown.lastElementChild;
     let words = inputQuery.split(' ');
     words = words.filter((word) => word != '');
-    console.log(words)
     let firstSearch = [];
     let second_search = [];
     let sortedResults = [];
 
-    
-    if ( value === '' ) {
-        searchResultsShownInHTML.innerHTML = '';
+
+    if ( inputQuery === '' ) {
+        htmlResultsShown.innerHTML = '';
     }
 
-    while (searchResultsShownListings) {
-        searchResultsShownInHTML.removeChild(searchResultsShownListings);
-        searchResultsShownListings = searchResultsShownInHTML.lastElementChild
+
+    while (lastSearchResultDisplayed) {
+        htmlResultsShown.removeChild(lastSearchResultDisplayed);
+        lastSearchResultDisplayed = htmlResultsShown.lastElementChild
     }
+
 
     first_search();
     
@@ -47,77 +48,90 @@ function searchMatchesOfInput (inputQuery) {
         let filteredSearch = [];
         let possiblyMistypedWords = [];
 
+
         words.forEach((word) => {
             let resultFound = questionsList.filter((question) => question.toString().includes(word));
             if ( !resultFound.toString().includes(word) ) {
                 possiblyMistypedWords.push(word);
             }
             unfilteredSearch.push(resultFound);
+            filterResults();
         })
         
-
-        unfilteredSearch.forEach((resultFound) => {
-            resultFound.forEach((result) => {
-                let processedResult = [result, 1];
-                filteredSearch.push(processedResult);
-            })
-        });
         
-        toFindDuplicates(filteredSearch);
+        function filterResults() {
+            unfilteredSearch.forEach((resultFound) => {
+                resultFound.forEach((result) => {
+                    let processedResult = [result, 1];
+                    filteredSearch.push(processedResult);
+                })
+            });
+        }
         
-        function toFindDuplicates(arry) {
-            let filteredArray = [];
 
-            arry.forEach((item) => {
-                let itemString = item[0].toString();
-                let filteredArrayString = filteredArray.toString();
+        addingDuplicatesTogether(filteredSearch);
+        
+        function addingDuplicatesTogether(listItems) {
+            let addedDuplicates = [];
+
+
+            listItems.forEach((item) => {
+                let itemToString = item[0].toString();
+                let addedDuplicatesToString = addedDuplicates.toString();
                 
-                if ( filteredArrayString.includes(itemString) ) {
-                    filteredArray.forEach((question) => {
-                        
-                        if ( question[0].toString() == itemString ) {
-                            let position = filteredArray.indexOf(question);
-                            question[1]++;
-                            let newItem = [item[0], question[1]];
 
-                            filteredArray.splice(position, 1, newItem)
+                if ( addedDuplicatesToString.includes(itemToString) ) {
+                    addedDuplicates.forEach((currentlyCheckedQuestion) => {
+                        if ( currentlyCheckedQuestion[0].toString() == itemToString ) {
+                            let indexPositionOfDuplicatedQuestion = addedDuplicates.indexOf(currentlyCheckedQuestion);
+                            currentlyCheckedQuestion[1]++;
+                            let newItem = [item[0], currentlyCheckedQuestion[1]];
+
+                            addedDuplicates.splice(indexPositionOfDuplicatedQuestion, 1, newItem)
                         }
                     })
                 } else {
-                    filteredArray.push(item);
+                    addedDuplicates.push(item);
                 }
             })
             
             
-            firstSearch = filteredArray;
+            firstSearch = addedDuplicates;
         }
 
         if (possiblyMistypedWords.length > 0) {
-            // possibly_mistyped_words(possiblyMistypedWords);
+            autocorrect(possiblyMistypedWords);
         } else {
             rankResults();
         }
     }
     
+
     
+    async function autocorrect(mistyped_words) {
+        let mistyped_words_string = mistyped_words.toString().replace(',', ' ');
+        let timeout = setTimeout(() => {}, 200);
+        let response;
 
 
-    function possibly_mistyped_words(mistyped_words) {
-        let google_autocorrected_words = [];
+        clearTimeout(timeout);
 
-        mistyped_words.forEach((word) => {
-            const autocorrect = new Request(`https://www.googleapis.com/customsearch/v1?key=AIzaSyDnrmfKehW6KJL4xqC2mHDiaZm3gocAmAI&cx=843e64b6a2ef24323&q=autocorrect of ${word} cyprus`)
+        if ( hasTimeoutStarted == false ) {
+            timeout = setTimeout(() => {
 
-            fetch(autocorrect)
-            .then((result) => {return result.json()})
-            .then((print) => {
-                if ( Object.hasOwn(print, 'spelling' ) ) {
-                    google_autocorrected_words.push(print.spelling.correctedQuery);
+                if (hasTimeoutStarted == true) {
+                    hasTimeoutStarted = false;
+                    run();
+                    async function run() {
+                        response = await fetch(`/.netlify/functions/hello-world?input=${mistyped_words_string}`).then(response => response.json());
+                        second_search_process(response);
+                    }
                 }
-            })
-        })
-
-        second_search_process(google_autocorrected_words);
+                
+            }, 200);
+        }
+        
+        hasTimeoutStarted = true;
     }
 
 
@@ -125,10 +139,10 @@ function searchMatchesOfInput (inputQuery) {
     function second_search_process(autocorrected_words) {
         let unfilteredSearch = [];
 
-        autocorrected_words.forEach((word) => {
-            let resultFound = questionsList.filter((question) => question.includes(word));
+        for (let i = 0; i < autocorrected_words.length; i++) {
+            let resultFound = questionsList.filter((question) => question.includes(autocorrected_words[i]));
             unfilteredSearch.push(resultFound);
-        })
+        }
 
         second_search = unfilteredSearch.map((result) => {
             let processedResult = [result, 1];
@@ -143,36 +157,36 @@ function searchMatchesOfInput (inputQuery) {
         let allResultsUnfiltered = firstSearch.concat(second_search);
         let allResultsFiltered = [];
 
-        toFindDuplicates(allResultsUnfiltered);
+        addingDuplicatesTogether(allResultsUnfiltered);
 
-        function toFindDuplicates(arry) {
-            let filteredArray = [];
+        function addingDuplicatesTogether(listItems) {
+            let addedDuplicates = [];
 
-            arry.forEach((item) => {
-                let itemString = item[0].toString();
-                let filteredArrayString = filteredArray.toString();
+            listItems.forEach((item) => {
+                let itemToString = item[0].toString();
+                let addedDuplicatesToString = addedDuplicates.toString();
                 
-                if ( filteredArrayString.includes(itemString) ) {
-                    filteredArray.forEach((question) => {
+                if ( addedDuplicatesToString.includes(itemToString) ) {
+                    addedDuplicates.forEach((question) => {
                         
-                        if ( question[0].toString() == itemString ) {
-                            let position = filteredArray.indexOf(question);
+                        if ( question[0].toString() == itemToString ) {
+                            let indexPositionOfDuplicatedQuestion = addedDuplicates.indexOf(question);
                             question[1]++;
                             let newItem = [item[0], question[1]];
 
-                            filteredArray.splice(position, 1, newItem)
+                            addedDuplicates.splice(indexPositionOfDuplicatedQuestion, 1, newItem)
                         }
                     })
                 } else {
-                    filteredArray.push(item);
+                    addedDuplicates.push(item);
                 }
             })
             
             
-            allResultsFiltered = filteredArray;
+            allResultsFiltered = addedDuplicates;
             sortResults(allResultsFiltered, allResultsFiltered.length);
         }
- 
+
         function sortResults(arr, n) {
             var i, j, temp;
             var swapped;
@@ -199,39 +213,9 @@ function searchMatchesOfInput (inputQuery) {
 
     function populateList() {
         sortedResults.forEach((question) => {
-            if ( searchResultsShownInHTML.childElementCount != 5 ) {
-                searchResultsShownInHTML.innerHTML += `<li>${question[0]}</li>`
+            if ( htmlResultsShown.childElementCount != 5 ) {
+                htmlResultsShown.innerHTML += `<li>${question[0]}</li>`
             }
         })
     }
-
-
-    
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    // questionsList.forEach((questionScanned) => {
-    //     if ( questionScanned.includes(inputQuery) ) {
-    //         if ( searchResultsShownInHTML.childElementCount != 5 ) {
-    //             searchResultsShownInHTML.innerHTML += `<li>${questionScanned}</li>`
-    //         }
-    //     }
-    // }
 }
-
-
-
-
-

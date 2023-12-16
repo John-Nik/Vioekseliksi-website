@@ -7,7 +7,7 @@
       position: fixed;
       width: fit-content;
       float: left;
-      left: calc(50% - clamp(0px, 50%, 600px));
+      left: calc(50% - clamp(0px, 50%, 700px));
       bottom: 8vh;
       z-index: 100;
       overflow: visible;
