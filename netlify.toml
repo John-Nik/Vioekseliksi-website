@@ -9,7 +9,6 @@
 
 [dev]
 	command = "npm run server"
-	port = 3000
 	targetPort = 8080
 	publish = "public"
 	framework = "eleventy"

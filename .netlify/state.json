@@ -1,0 +1,20 @@
+{
+	"siteId": "9621dc3e-f477-4256-a28f-390271a00d49",
+	"geolocation": {
+		"data": {
+			"city": "Larnaca",
+			"country": {
+				"code": "CY",
+				"name": "Cyprus"
+			},
+			"subdivision": {
+				"code": "03",
+				"name": "Larnaka"
+			},
+			"timezone": "Asia/Nicosia",
+			"latitude": 34.9165,
+			"longitude": 33.6272
+		},
+		"timestamp": 1702764678945
+	}
+}
