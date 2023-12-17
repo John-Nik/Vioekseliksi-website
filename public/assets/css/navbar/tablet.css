@@ -50,7 +50,7 @@
     }
 
     #nav-bar .link a {
-        font-size: clamp(1rem, 10%, 1.25rem);
+        font-size: clamp(0.5rem, 1.5vw, 1.25rem);
         text-decoration: none;
         color: var(--black-text-color);
         font-weight: 600;
@@ -84,10 +84,7 @@
     }
 
     #nav-bar .link {
-        padding-top: 16px;
-        padding-bottom: 16px;
-        padding-left: 16px;
-        padding-right: 16px;
+        padding: 16px;
     }
 
     #nav-bar .link:nth-child(1) {

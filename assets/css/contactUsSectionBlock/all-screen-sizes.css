@@ -1,5 +1,5 @@
 .contactusbody{
-    background-color:#0B2D39;
+    
     display:flex;
     align-items: center;
     justify-content: center;
@@ -15,14 +15,14 @@
 }
 
 .contactusbody h3{
-    font-size: 3rem;
+    font-size: clamp(2rem, 3vw, 3rem);
 }
 
-li fa{
+li fa {
     color:#85969C;
 }
 
-li i{
+li i {
     background-color: white;
     border-radius: 50%;
     padding:20px;
@@ -47,7 +47,7 @@ li i{
     transition: transform 0.3s ease-in-out;
 }
 
-.options span{
+.options span {
     color:white;
     margin-bottom: 5px;
 }
@@ -57,15 +57,16 @@ li i{
     align-items: center;
 }
 
-.contactusbody button a{
+.contactusbody button a {
     text-decoration: none;
     color:white;
 }
-.contactusbody button{
+.contactusbody a {
     background-color: #0B2D39;
     border:2px solid white;
     border-radius: 10px;
     padding:10px;
     font-size: 1.8rem;
-    width: 30vw;
+    width: 100%;
+    max-width: 600px;
 }

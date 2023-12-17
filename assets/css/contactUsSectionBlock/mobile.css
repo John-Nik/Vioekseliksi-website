@@ -1,33 +1,95 @@
-@media only screen and (max-width:  767px) {
-    .option {
-        list-style: none;
+@import url(/assets/css/root.css);
+
+@media only screen and (min-width: 0px) {
+    .contactusbody {
+        background-color: var(--blue-color-shade-7);
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
         justify-content: center;
-        list-style: none;
-        padding: 0;
-    }
-    .contactusbody{
-        background-color:#0B2D39;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        height:80vh;
-        color:white;
-        margin-top:10px;
     }
 
-    .contactusbody h3{
-        font-size: 1.5rem;
+    .contactusbody .container {
+        width: 100%;
+        max-width: 1024px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        margin: 64px 0px;
+        padding: 0px 32px;
     }
-    
-    .contactusbody button{
+
+    .contactusbody .option li {
+        text-align: center;
+        color:#85969C;
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 48px;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .contactusbody .option a {
+        text-decoration: none;
+        color: #85969C;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactusbody .option span {
+        font-size: 1.5rem;
+        color: white;
+        letter-spacing: 1px;
+    }
+
+    .contactusbody .option li .icon-wrapper {
+        background-color: white;
+        border-radius: 50%;
+        padding:20px;
+        margin-bottom: 8px;
+        width: 54px;
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+
+    .contactusbody .option .fas {
+        scale: 1.5;
+        color: #85969C;
+    }
+
+    .contactusbody .info-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .contactusbody .button {
+        margin-top: 24px;
+        width: 100%;
+        max-width: 600px;
+        background-color: #0B2D39;
+        border:2px solid white;
         border-radius: 10px;
         padding:10px;
-        font-size: 1.1rem;
-        width:30vw;
+        font-size: 2rem;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+
+    .contactusbody h3 {
+        text-align: center;
+        font-size: 3rem;
+        color: white;
+        margin-top: 32px;
     }
 }
 

@@ -1,5 +1,38 @@
-@media only screen and (min-width:768px) and (max-width: 1023px){
-    .option {
+@media only screen and (min-width: 768px) {
+    .contactusbody {
+        background-color: var(--blue-color-shade-7);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contactusbody .info-wrapper {
+        flex-direction: column;
+    }
+
+    .contactusbody .container {
+        width: 100%;
+        max-width: 1024px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        margin: 64px 0px;
+    }
+
+    .contactusbody .option li .icon-wrapper {
+        background-color: white;
+        border-radius: 50%;
+        padding:20px;
+        margin-bottom: 20px;
+        width:30px;
+        height:30px;
+        transform: scale(1.0);
+        transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+
+    .contactusbody .option {
         list-style: none;
         display: flex;
         flex-direction: row;
@@ -7,26 +40,52 @@
         justify-content: center;
         list-style: none;
         padding: 0;
-    }
-    .contactusbody{
-        background-color:#0B2D39;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        height:50vh;
-        color:white;
-        margin-top:10px;
+        gap: 24px;
     }
 
-    .contactusbody h3{
-        font-size: 2rem;
+    .contactusbody .option li {
+        text-align: center;
+        margin: 30px; 
+        color:#85969C;
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    
-    .contactusbody button{
+
+    .contactusbody h3 {
+        text-align: center;
+        font-size: clamp(2rem, 6vw, 3rem);
+        color: white;
+    }
+
+    .contactusbody a {
+        width: 100%;
+        max-width: 600px;
+        background-color: #0B2D39;
+        border:2px solid white;
         border-radius: 10px;
-        padding:20px;
-        font-size: 1.5rem;
-        width:30vw;
+        padding:10px;
+        font-size: 1.8rem;
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+
+    .contactusbody a:hover {
+        background-color: white;
+        color: #0B2D39;
+    }
+
+    .contactusbody span {
+        margin-bottom: 8px;
+        color: white;
+    }
+
+    .option li:hover .icon-wrapper {
+        transform: scale(1.1);
     }
 }

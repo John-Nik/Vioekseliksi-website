@@ -159,5 +159,7 @@
 				<li>Hid the API keys from the commit repository | G</li>
 				<li>Added netlify's serverless functions into the repository to support the search bar's autocorrect using google's search engine | G</li>
 			</ul>
+<br>
+**0.15.1:** Refactored the css and html of the contact us section block. Still a WIP | G
 
 
