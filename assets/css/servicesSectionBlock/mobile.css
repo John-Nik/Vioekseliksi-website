@@ -1,5 +1,5 @@
 @media only screen and (min-width: 0px) {
-    .s{
+    .services-section-block {
         background-color: white;
         display:flex;
         align-items: center;
@@ -15,26 +15,8 @@
         left:10vw;
     }
     
-    .serv h4{
+    .services-section-block .text-content h2 {
         font-size: 2rem;
         margin-bottom: 20px;
-    }
-
-    .carousel-container{
-        display:flex;
-flex-direction: row;
-    }
-    .carousel-item img{
-        width:100px;
-        border:1px solid black;
-    }
-
-    .carousel{
-        display:flex;
-        align-items: center;
-    }
-
-    .carousel-btn img{
-        width:50px;
     }
 }

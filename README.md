@@ -160,6 +160,9 @@
 				<li>Added netlify's serverless functions into the repository to support the search bar's autocorrect using google's search engine | G</li>
 			</ul>
 <br>
-**0.15.1:** Refactored the css and html of the contact us section block. Still a WIP | G
-
-
+**0.15.1:** Refactored the css and html of the contact us section block. Still a WIP | G <br>
+<br>
+**0.15.2:** <ul>
+				<li>Finished the css and html of the contact us section block | G</li>
+				<li>Hero section is now mobile friendly | G</li>
+			</ul>

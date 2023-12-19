@@ -1,30 +1,52 @@
 @media only screen and (min-width: 0px) {
     .herosection{
         width:100%;
+        height: fit-content;
+        max-height: 600px;
+        position: relative;
+    }
+
+    .herosection .container {
+        width: 100%;
+        height: 600px;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .herosection .text-content {
+        display: block;
+        position: relative;
+        top: -64px;
+        width: 100%;
+        max-width: 1280px;
     }
 
     .herosection img{
-        width:100%;
-        height:300px;
-        position:relative;
+        width:102%;
+        left: -3px;
+        height: 100%;
+        position:absolute;
         top:0px;
+        object-fit: cover;
+        filter: blur(2px) brightness(0.9);
     }
 
     .herosection h1{
-        position:absolute;
+        letter-spacing: -1px;
         color:white;
-        font-size: 5.3vw;
-        top:15vh;
-        left:7.8vw;
-        padding:30px;
+        font-size: clamp(3rem, 5.3vw, 5rem);
+        text-align: center;
+        margin-bottom: 24px;
     }
 
-    .herosection h2{
-        position:absolute;
-        color:white;
-        top:20vh;
-        padding:30px;
-        left:7.8vw;
-        font-size: 1rem;
+    .herosection h2 {
+        font-weight: 500;
+        color: var(--blue-color-tint-8);
+        font-size: clamp(1.2rem, 2.6vw, 2rem);
+        width: 100%;
+        text-align: center;
     }
 }
