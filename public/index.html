@@ -61,6 +61,7 @@
         <link rel="stylesheet" href="/assets/css/herosection/tablet.css" media="screen and (min-width: 768px)" />
 
         <link rel="stylesheet" href="/assets/css/servicesSectionBlock/mobile.css" media="screen and (min-width: 0px)" />
+        <link rel="preload" href="/assets/css/servicesSectionBlock/tablet.css" media="screen and (min-width: 768px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
         <link rel="stylesheet" href="/assets/css/servicesSectionBlock/desktop.css" media="screen and (min-width: 1024px)" />
                 
         <script async src="/assets/js/offers.js"></script>
@@ -237,15 +238,33 @@
 </section>
  
 <div class="services-section-block">
-    <div class="text-content">
-        <h2>SERVICES</h2>
-        <span>Ipsum is simply dummy text of the printing and typesetting industry.</span>
+    <div class="container">
+        <div class="text-content">
+            <h2>SERVICES</h2>
+            <span>Ipsum is simply dummy text of the printing and typesetting industry.</span>
+        </div>
+    
+        <div class="carousel-container">
+            <div class="arrows-wrapper">
+                <img src="/assets/img/leftarrow.png" alt="" class="left-arrow">
+                <img src="/assets/img/rightarrow.png" alt="" class="right-arrow">
+            </div>
+            <div class="carousel-wrapper">
+                <div class="card">
+                    <img src="/assets/img/offers1.png" alt="">
+                </div>
+                <div class="card">
+                    <img src="/assets/img/offers2.png" alt="">
+                </div>
+                <div class="card">
+                    <img src="/assets/img/offers3.png" alt="">
+                </div>
+                <div class="card">
+                    <img src="/assets/img/offers4.png" alt="">
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="carousel-container">
-
-    </div>
-
 </div>  
             <section id="offers">
     <div class="container">
@@ -870,7 +889,7 @@
                 </li>
             </ul>
         </div>
-        <a class="button" href="#">Get in touch</a>
+        <a class="button" href="/contactus">Get in touch</a>
     </div>
 </section>
      

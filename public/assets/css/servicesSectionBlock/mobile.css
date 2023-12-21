@@ -1,22 +1,169 @@
 @media only screen and (min-width: 0px) {
     .services-section-block {
+        display: flex;
+        height: 400px;
+        position: relative;
+        top: -150px;
+        margin-bottom: -100px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .services-section-block .container {
+        width: 100%;
+        max-width: 1024px;
+        height: 100%;
         background-color: white;
-        display:flex;
-        align-items: center;
-        justify-content: space-around;
+        display: flex;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 50px;
         flex-direction: column;
-        row-gap: 50px;
-        border-radius: 60px;
-        padding:20px;
-        width:70vw;
-        height:40vh;
-        position:relative;
-        top:-10vh;
-        left:10vw;
+    }
+
+    .services-section-block .text-content {
+        width: 100%;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px 0px 0px 0px;
+    }
+
+    .services-section-block .text-content h2 + span {
+        padding: 0px 24px;
+    }
+
+    .services-section-block span {
+        text-align: center;
+    }
+
+    .services-section-block .carousel-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .services-section-block .arrows-wrapper {
+        width: 100%;
+        position: absolute;
+        display: none;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+    }
+
+    .services-section-block .arrows-wrapper img {
+        width: 24px;
+        height: auto;
+    }
+
+    .carousel-wrapper {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        height: 305px;
+        width: 80%;
+        overflow: hidden;
+    }
+
+    .card {
+        background-color: rgb(122, 122, 122);
+        display: flex;
+        color: black;
+        font-weight: 600;
+        align-items: center;
+        width: 100%;
+        max-width: 300px;
+        aspect-ratio: 3/2;
+        position: absolute;
+        overflow: visible;
+        border-radius: 30px;
+        opacity: 0;
+        filter: blur(0);
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px;
     }
     
-    .services-section-block .text-content h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
+    @-webkit-keyframes display {
+        0% {
+            opacity: 0;
+            transform: translateX(200%) scale(0.6);
+            transition-timing-function: ease-in;
+            -webkit-filter: blur(0px);
+        }
+        10% {
+            opacity: 1;
+            transform: translateX(100%) scale(0.8);
+            transition-timing-function: ease-in;
+            -webkit-filter: blur(1px);
+        }
+        25% {
+            opacity: 1;
+            transform: translateX(100%) scale(0.8);
+            transition-timing-function: ease-in;
+            -webkit-filter: blur(1px);
+        }
+        35% {
+            opacity: 1;
+            transform: translateX(0px) scale(1);
+            transition-timing-function: ease-in;
+            -webkit-filter: blur(0px);
+        }
+        50% {
+            opacity: 1;
+            transform: translateX(0px) scale(1);
+            transition-timing-function: ease-in;
+            -webkit-filter: blur(0px);
+        }
+        60% {
+            opacity: 1;
+            transform: translateX(-100%) scale(0.8);
+            transition-timing-function: ease-in;
+            -webkit-filter: blur(1px);
+        }
+        75% {
+            opacity: 1;
+            transform: translateX(-100%) scale(0.8);
+            transition-timing-function: ease-in;
+            -webkit-filter: blur(1px);
+        }
+        100% {
+            opacity: 0;
+            transform: translateX(-500%) scale(0.8);
+            transition-timing-function: ease-in;
+            -webkit-filter: blur(15px);
+        }
+    }
+    
+    .carousel-wrapper .card {
+        -webkit-animation: display 15s infinite;
+    }
+    
+    .carousel-wrapper .card:nth-child(2) {
+        animation-delay: 3.75s;
+    }
+
+    .carousel-wrapper .card:nth-child(3) {
+        animation-delay: 7.5s;
+    }
+
+    .carousel-wrapper .card:nth-child(4) {
+        animation-delay: 11.25s;
+    }
+  
+}
+
+@media only screen and (min-width: 400px) {
+    .services-section-block .arrows-wrapper {
+        display: flex;
     }
 }

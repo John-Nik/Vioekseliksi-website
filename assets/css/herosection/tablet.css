@@ -4,6 +4,10 @@
         margin-bottom: 0px;
     }
 
+    .herosection .container {
+        height: 800px;
+    }
+
     .herosection .text-content {
         padding-left: 24px;
     }

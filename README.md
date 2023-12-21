@@ -166,3 +166,5 @@
 				<li>Finished the css and html of the contact us section block | G</li>
 				<li>Hero section is now mobile friendly | G</li>
 			</ul>
+<br>
+**0.16.0:** Refactored the services block on the home page and added a carousel effect | G
