@@ -11,7 +11,7 @@
     }
 
     .about_the_member {
-        flex-direction: row;
+        flex-direction: column;
         padding: 20px;
         column-gap: 50px;
         text-align: left;
@@ -35,4 +35,11 @@
         padding-bottom: 100px;
     }
 
+    .about_the_member img {
+        width: 80%;
+        aspect-ratio: 1/1;
+        max-width: 300px;
+        border-radius: 50%; 
+        object-fit: cover; 
+    }
 }

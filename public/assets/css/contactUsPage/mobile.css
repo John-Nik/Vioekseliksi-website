@@ -1,18 +1,20 @@
-@import url(/assets/css/root.css);
-
 @media only screen and (min-width: 0px) {
     .contactusfullpage {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding:100px 0px;
-        row-gap: 50px;
+        padding: 100px 0px 0px 0px;
     }
 
-    .contactusfullpage h1{
+    .contactusfullpage h1 {
         text-align: center;
+        color: var(--blue-color-shade-7);
+        font-size: clamp(2.5rem, 4vw, 3rem);
+        font-weight: 600;
+        letter-spacing: -1px;
     }
+
     .calendly-inline-widget{
         width:80%;
         margin: auto;
@@ -35,15 +37,18 @@
         padding: 20px 40px;
     }
 
-    .googlemapspart{
-        padding:20px 10px;
+    .googlemapspart {
         text-align: center;
         width: 100%;
     }
 
-    .contactusfullpage h1 {
-        font-size: 2rem;
-        font-weight: 700;
-        padding-bottom: 30px;
+    .googlemapspart .title {
+        padding: 48px 0px;
+        background-color: var(--blue-color-shade-7);
+        color: white;
+    }
+
+    .googlemapspart iframe {
+        height: 450px;
     }
 }

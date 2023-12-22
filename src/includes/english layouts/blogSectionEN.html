@@ -34,24 +34,18 @@
                         <article>
                             <a class="cs-link" href="{{ post[0].url }}">
                                 <picture class="cs-picture">
-                                    <img decoding="async"
-                                        src="{{ post[0].data.thumbnail}}"
-                                        alt="agency" width="413" height="374" aria-hidden="true">
+                                    <img loading="lazy" decoding="async" src="{{ post[0].data.thumbnail}}" alt="agency" width="413" height="374" aria-hidden="true">
                                 </picture>
                                 <div class="cs-item-text">
                                     <h3 class="cs-h3">
                                         {{ post[0].data.title }}
                                         <picture class="cs-icon-wrapper">
-                                            <img class="cs-icon" decoding="async"
-                                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg"
-                                                    alt="arrow" width="413" height="374" aria-hidden="true">
+                                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg" alt="arrow" width="413" height="374" aria-hidden="true">
                                         </picture>
                                     </h3>
                                     <div class="cs-info">
                                         <span class="cs-date">
-                                            <img class="cs-date-icon" decoding="async"
-                                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-calendar.svg"
-                                                    alt="calendar" width="413" height="374" aria-hidden="true">
+                                            <img class="cs-date-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-calendar.svg" alt="calendar" width="413" height="374" aria-hidden="true">
                                         </span>
                                         <span class="cs-category">
                                             {{ post[0].date | postDate }}

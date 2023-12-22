@@ -13,7 +13,7 @@
 
                 {% for person in collections.teamMembersEN %}
                     <div class="profile">
-                        <img src="{{ person.data.pfp }}" alt="">
+                        <img src="{{ person.data.pfp }}" alt="Picture of {{ person.data.name }}" loading="lazy" decoding="async">
                         <div class="profile-information">
                             <span class="name">{{ person.data.name }}</span>
                             <span class="role">{{ person.data.title }}</span>

@@ -167,4 +167,11 @@
 				<li>Hero section is now mobile friendly | G</li>
 			</ul>
 <br>
-**0.16.0:** Refactored the services block on the home page and added a carousel effect | G
+**0.16.0:** Refactored the services block on the home page and added a carousel effect | G<br>
+<br>
+**0.17.0:** <ul>
+				<li>Removed unnecessery imports from css files | G</li>
+				<li>Changed a little bit the offers.js to add aria attributes and lazy loading to the pictures | G</li>
+				<li>Finished the carousel effect on the home page | G</li>
+				<li>Refactored and remade the "more about me" section on the about us page | G</li>
+			</ul>

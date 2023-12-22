@@ -21,6 +21,7 @@ manifestLanguage: english
         {% block pageCSS %}
         <link rel="preload" href="/assets/css/faq/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
         <link rel="preload" href="/assets/css/faq/tablet.css" media="screen and (min-width: 768px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+        <link rel="preload" href="/assets/css/faq/ultra-widescreen.css" media="screen and (min-width: 1600px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 
         <link rel="preload" href="/assets/css/offersSectionBlock/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
         <link rel="preload" href="/assets/css/offersSectionBlock/tablet.css" media="screen and (min-width: 768px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
@@ -116,7 +117,7 @@ manifestLanguage: english
             ]
         </script>
     </head>
-    <body>
+    <body style="overflow-x: clip">
         {% include "english layouts/navbarEN.html" %}
         {% include "languageSwitch.html" %}
         <main style="overflow: hidden;">

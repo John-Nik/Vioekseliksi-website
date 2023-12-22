@@ -50,6 +50,7 @@
         
         <link rel="preload" href="/assets/css/faq/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
         <link rel="preload" href="/assets/css/faq/tablet.css" media="screen and (min-width: 768px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+        <link rel="preload" href="/assets/css/faq/ultra-widescreen.css" media="screen and (min-width: 1600px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 
         <link rel="preload" href="/assets/css/offersSectionBlock/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
         <link rel="preload" href="/assets/css/offersSectionBlock/tablet.css" media="screen and (min-width: 768px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
@@ -157,19 +158,19 @@
             ]
         </script>
     </head>
-    <body>
+    <body style="overflow-x: clip">
         <header id="nav-bar">
     <nav>
         <ul class="show" id="mobile">
             <li>
-                <img class="call-icon" src="/assets/img/call-icon.svg" alt="">
+                <img class="call-icon" src="/assets/img/call-icon.svg" alt="" loading="eager" decoding="async" width="32" height="32">
             </li>
             <li>
-                <img class="logo" src="/assets/img/vioekseliksi-logo.webp" alt="">
+                <img class="logo" src="/assets/img/vioekseliksi-logo.webp" alt="" loading="eager" decoding="async" height="43" width="32">
             </li>
             <li class="navButton">
-                <div class="burger-icon">
-                    <div class="line line1"></div>
+                <div class="burger-icon" aria-label="Menu button" role="button">
+                    <div class="line line1" focusable></div>
                     <div class="line line2"></div>
                     <div class="line line3"></div>
                 </div>
@@ -189,7 +190,7 @@
                     <a href="/services/">SERVICE<span class="lastletter">S</span></a>
                 </li>
                 <li class="logo-container">
-                    <img src="/assets/img/vioekseliksi-logo.webp" alt="" onClick="window.location.href = '/';">
+                    <img src="/assets/img/vioekseliksi-logo.webp" width="35" height="48" height alt="" onClick="window.location.href = '/';" loading="eager" decoding="async">
                 </li>
                 <li class="link " onClick="window.location.href = '/analyzers/';">
                     <a href="/analyzers/">ANALYZER<span class="lastletter">S</span></a>
@@ -250,22 +251,41 @@
                 <img src="/assets/img/rightarrow.png" alt="" class="right-arrow">
             </div>
             <div class="carousel-wrapper">
-                <div class="card">
+                <div class="card" data-index="0">
                     <img src="/assets/img/offers1.png" alt="">
                 </div>
-                <div class="card">
+                <div class="card" data-index="1">
                     <img src="/assets/img/offers2.png" alt="">
                 </div>
-                <div class="card">
+                <div class="card" data-index="2">
                     <img src="/assets/img/offers3.png" alt="">
                 </div>
-                <div class="card">
+                <div class="card" data-index="3">
                     <img src="/assets/img/offers4.png" alt="">
+                </div>
+                <div class="card" data-index="4">
+                    <img src="/assets/img/office-desktop.webp" alt="">
+                </div>
+                <div class="card" data-index="5">
+                    <img src="/assets/img/offers1.png" alt="">
+                </div>
+                <div class="card" data-index="6">
+                    <img src="/assets/img/offers2.png" alt="">
+                </div>
+                <div class="card" data-index="7">
+                    <img src="/assets/img/offers3.png" alt="">
+                </div>
+                <div class="card" data-index="8">
+                    <img src="/assets/img/offers4.png" alt="">
+                </div>
+                <div class="card" data-index="9">
+                    <img src="/assets/img/office-desktop.webp" alt="">
                 </div>
             </div>
         </div>
     </div>
-</div>  
+</div>
+<script defer src="/assets/js/carousel.js"></script>  
             <section id="offers">
     <div class="container">
         <div class="content">
@@ -292,7 +312,7 @@
             <picture>
                 <source media="(max-width: 600px)" srcset="/assets/img/faq-pic-mobile.webp">
                 <source media="(min-width: 601px)" srcset="/assets/img/faq-pic-desktop.webp">
-                <img aria-hidden="true" decoding="async" src="/assets/img/faq-pic-desktop.webp" alt="" loading="lazy" width="409" height="468">
+                <img aria-hidden="true" src="/assets/img/faq-pic-desktop.webp" alt="" loading="lazy" decoding="async" width="409" height="468">
             </picture>
             <svg width="0" height="0">
                 <defs>
@@ -311,7 +331,7 @@
         <div class="questions-container">
             <h2 class="title">Frequently Asked Questions</h2>
             <div class="question-blocks">
-                <div class="question-wrapper answer-reveal">
+                <div class="question-wrapper answer-reveal" role="button">
                     <div class="question-container" onclick="this.parentElement.classList.toggle('answer-reveal')">
                         <span class="question">Lorem ipsum dolor sit</span>
                         <svg class="question-svg-icon"
@@ -445,7 +465,7 @@
                     </div>
                     <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam qui necessitatibus voluptas odit id porro impedit nihil accusamus ex magni!</p>
                 </div>
-                <div class="question-wrapper">
+                <div class="question-wrapper" role="button">
                     <div class="question-container" onclick="this.parentElement.classList.toggle('answer-reveal')">
                         <span class="question">Lorem ipsum dolor sit</span>
                         <svg class="question-svg-icon"
@@ -579,7 +599,7 @@
                     </div>
                     <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam qui necessitatibus voluptas odit id porro impedit nihil accusamus ex magni!</p>
                 </div>
-                <div class="question-wrapper">
+                <div class="question-wrapper" role="button">
                     <div class="question-container" onclick="this.parentElement.classList.toggle('answer-reveal')">
                         <span class="question">Lorem ipsum dolor sit</span>
                         <svg class="question-svg-icon"
@@ -713,7 +733,7 @@
                     </div>
                     <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam qui necessitatibus voluptas odit id porro impedit nihil accusamus ex magni!</p>
                 </div>
-                <div class="question-wrapper">
+                <div class="question-wrapper" role="button">
                     <div class="question-container" onclick="this.parentElement.classList.toggle('answer-reveal')">
                         <span class="question">Lorem ipsum dolor sit</span>
                         <svg class="question-svg-icon"
@@ -848,6 +868,7 @@
                     <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam qui necessitatibus voluptas odit id porro impedit nihil accusamus ex magni!</p>
                 </div>
             </div>
+            <div class="cs-bubbles" aria-hidden="true"></div>
             <div class="subtext-wrapper">
                 <a href="/faq" class="subtext">More questions...</a>
             </div>
@@ -898,7 +919,7 @@
     <div class="container">
         <div class="content-container">
             <div class="logo-wrapper">
-                <img src="/assets/img/vioekseliksi-logo.webp" alt="">
+                <img src="/assets/img/vioekseliksi-logo.webp" alt="Vioekseliksi logo" width="59" height="81" loading="lazy" decoding="async">
             </div>
             <div class="links-container">
                 <div class="listing-wrappers">

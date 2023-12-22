@@ -21,13 +21,15 @@ manifestLanguage: english
    {% block pageCSS %}
    <link rel="stylesheet" href="/assets/css/banner/mobile.css" media="screen and (min-width: 0px)" />
    <link rel="stylesheet" href="/assets/css/banner/tablet.css" media="screen and (min-width: 768px)" />
-   <link rel="stylesheet" href="/assets/css/banner/desktop.css" media="screen and (min-width: 1024px)" />
+   <link rel="preload" href="/assets/css/banner/desktop.css" media="screen and (min-width: 1024px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 
    <link rel="stylesheet" href="/assets/css/teamMembers/mobile.css" media="screen and (min-width: 0px)" />
-   <link rel="stylesheet" href="/assets/css/teamMembers/tablet.css" media="screen and (min-width: 768px)" />
+   <link rel="preload" href="/assets/css/teamMembers/tablet.css" media="screen and (min-width: 768px)" />
    
-   <link rel="stylesheet" href="/assets/css/aboutus/mobile.css" media="screen and (min-width: 0px)" />
-   <link rel="stylesheet" href="/assets/css/aboutus/desktop.css" media="screen and (min-width: 1024px)" />
+   <link rel="preload" href="/assets/css/aboutus/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+   <link rel="preload" href="/assets/css/aboutus/tablet.css" media="screen and (min-width: 768px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+   <link rel="preload" href="/assets/css/aboutus/desktop.css" media="screen and (min-width: 1024px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+   <link rel="preload" href="/assets/css/aboutus/widescreen.css" media="screen and (min-width: 1280px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
    {% endblock %}
 
    {% include "prefetch.html" %}
@@ -41,24 +43,42 @@ manifestLanguage: english
       {% include "english layouts/teammembersEN.html" %}
 
       <section id="members">
-         <h1>More About Each Member</h1>
-         {% if collections.teamMembersEN | length == 0 %}
+
+
+
+         <div class="container">
+
+
+
+            <h1>More About Each Member</h1>
+            
+            {% if collections.teamMembersEN | length == 0 %}
 
             <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">No Members to Show<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Please add members to display their Biography</span></h1>
 
-         {% else %}
+            {% else %}
+            <div class="grid_wrapper">
 
-            {% for person in collections.teamMembersEN %}
+               {% for person in collections.teamMembersEN %}
                <div class="about_the_member">
-                  <img src="{{ person.data.pfp }}">
+                  <img src="{{ person.data.pfp }}" loading="lazy" decoding="async">
                   <div class="moreabout">
                      <h2>{{ person.data.name }}</h2>
                      <p>{{ person.content | safe}}</p>
                   </div>
                </div>
-            {% endfor %}
-            
-         {% endif %}
+               {% endfor %}
+
+            </div>
+            {% endif %}
+
+
+
+
+         </div>
+
+
+
       </section>
 
 
@@ -68,10 +88,10 @@ manifestLanguage: english
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
                   hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
                   saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
-            <img src="..\assets\img\illustration.svg">
+            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
          </div>
          <div class="about_the_company">
-            <img src="..\assets\img\illustration.svg">
+            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
                   hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
                   saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
@@ -80,30 +100,27 @@ manifestLanguage: english
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
                   hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
                   saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
-            <img src="..\assets\img\illustration.svg">
+            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
          </div>
       </section>
       <section id="company2">
          <h1>More About The Company</h1>
          <div class="about_the_company">
-            <img src="..\assets\img\illustration.svg">
+            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
                   hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
                   saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
             
          </div>
          <div class="about_the_company">
-            <img src="..\assets\img\illustration.svg">
+            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
                   hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
                   saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
          </div>
          <div class="about_the_company">
-            <img src="..\assets\img\illustration.svg">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-                  hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
-                  saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
-            
+            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptashicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natussaepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
          </div>
       </section>
    </main>

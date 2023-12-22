@@ -50,13 +50,15 @@
    
    <link rel="stylesheet" href="/assets/css/banner/mobile.css" media="screen and (min-width: 0px)" />
    <link rel="stylesheet" href="/assets/css/banner/tablet.css" media="screen and (min-width: 768px)" />
-   <link rel="stylesheet" href="/assets/css/banner/desktop.css" media="screen and (min-width: 1024px)" />
+   <link rel="preload" href="/assets/css/banner/desktop.css" media="screen and (min-width: 1024px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 
    <link rel="stylesheet" href="/assets/css/teamMembers/mobile.css" media="screen and (min-width: 0px)" />
-   <link rel="stylesheet" href="/assets/css/teamMembers/tablet.css" media="screen and (min-width: 768px)" />
+   <link rel="preload" href="/assets/css/teamMembers/tablet.css" media="screen and (min-width: 768px)" />
    
-   <link rel="stylesheet" href="/assets/css/aboutus/mobile.css" media="screen and (min-width: 0px)" />
-   <link rel="stylesheet" href="/assets/css/aboutus/desktop.css" media="screen and (min-width: 1024px)" />
+   <link rel="preload" href="/assets/css/aboutus/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+   <link rel="preload" href="/assets/css/aboutus/tablet.css" media="screen and (min-width: 768px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+   <link rel="preload" href="/assets/css/aboutus/desktop.css" media="screen and (min-width: 1024px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+   <link rel="preload" href="/assets/css/aboutus/widescreen.css" media="screen and (min-width: 1280px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
    
 
    
@@ -79,14 +81,14 @@
     <nav>
         <ul class="show" id="mobile">
             <li>
-                <img class="call-icon" src="/assets/img/call-icon.svg" alt="">
+                <img class="call-icon" src="/assets/img/call-icon.svg" alt="" loading="eager" decoding="async" width="32" height="32">
             </li>
             <li>
-                <img class="logo" src="/assets/img/vioekseliksi-logo.webp" alt="">
+                <img class="logo" src="/assets/img/vioekseliksi-logo.webp" alt="" loading="eager" decoding="async" height="43" width="32">
             </li>
             <li class="navButton">
-                <div class="burger-icon">
-                    <div class="line line1"></div>
+                <div class="burger-icon" aria-label="Menu button" role="button">
+                    <div class="line line1" focusable></div>
                     <div class="line line2"></div>
                     <div class="line line3"></div>
                 </div>
@@ -106,7 +108,7 @@
                     <a href="/services/">SERVICE<span class="lastletter">S</span></a>
                 </li>
                 <li class="logo-container">
-                    <img src="/assets/img/vioekseliksi-logo.webp" alt="" onClick="window.location.href = '/';">
+                    <img src="/assets/img/vioekseliksi-logo.webp" width="35" height="48" height alt="" onClick="window.location.href = '/';" loading="eager" decoding="async">
                 </li>
                 <li class="link " onClick="window.location.href = '/analyzers/';">
                     <a href="/analyzers/">ANALYZER<span class="lastletter">S</span></a>
@@ -147,7 +149,7 @@
         </div>
         <div class="content">
             <div class="content-container">
-                    <img style="shape-outside: url(../assets/img/Illustration.svg)" src="../assets/img/Illustration.svg" alt="">
+                    <img style="shape-outside: url(../assets/img/Illustration.svg)" src="../assets/img/Illustration.svg" aria-hidden="true" focusable="false" loading="eager" decoding="async">
                 <div class="text-wrapper">
                     <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</span>
                 </div>
@@ -166,7 +168,7 @@
 
                 
                     <div class="profile">
-                        <img src="/assets/cms_media/offers3.webp" alt="">
+                        <img src="/assets/cms_media/offers3.webp" alt="Picture of Kostis" loading="lazy" decoding="async">
                         <div class="profile-information">
                             <span class="name">Kostis</span>
                             <span class="role">Owqner</span>
@@ -180,21 +182,39 @@
 </section>
 
       <section id="members">
-         <h1>More About Each Member</h1>
-         
 
+
+
+         <div class="container">
+
+
+
+            <h1>More About Each Member</h1>
             
+            
+            <div class="grid_wrapper">
+
+               
                <div class="about_the_member">
-                  <img src="/assets/cms_media/offers3.webp">
+                  <img src="/assets/cms_media/offers3.webp" loading="lazy" decoding="async">
                   <div class="moreabout">
                      <h2>Kostis</h2>
                      <p><p>KIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o ownerKIostis o owner</p>
 </p>
                   </div>
                </div>
+               
+
+            </div>
             
-            
-         
+
+
+
+
+         </div>
+
+
+
       </section>
 
 
@@ -204,10 +224,10 @@
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
                   hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
                   saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
-            <img src="..\assets\img\illustration.svg">
+            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
          </div>
          <div class="about_the_company">
-            <img src="..\assets\img\illustration.svg">
+            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
                   hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
                   saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
@@ -216,30 +236,27 @@
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
                   hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
                   saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
-            <img src="..\assets\img\illustration.svg">
+            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
          </div>
       </section>
       <section id="company2">
          <h1>More About The Company</h1>
          <div class="about_the_company">
-            <img src="..\assets\img\illustration.svg">
+            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
                   hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
                   saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
             
          </div>
          <div class="about_the_company">
-            <img src="..\assets\img\illustration.svg">
+            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
                   hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
                   saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
          </div>
          <div class="about_the_company">
-            <img src="..\assets\img\illustration.svg">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-                  hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
-                  saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
-            
+            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptashicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natussaepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
          </div>
       </section>
    </main>
@@ -248,7 +265,7 @@
     <div class="container">
         <div class="content-container">
             <div class="logo-wrapper">
-                <img src="/assets/img/vioekseliksi-logo.webp" alt="">
+                <img src="/assets/img/vioekseliksi-logo.webp" alt="Vioekseliksi logo" width="59" height="81" loading="lazy" decoding="async">
             </div>
             <div class="links-container">
                 <div class="listing-wrappers">

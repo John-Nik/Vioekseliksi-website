@@ -4,7 +4,7 @@
             <picture>
                 <source media="(max-width: 600px)" srcset="/assets/img/faq-pic-mobile.webp">
                 <source media="(min-width: 601px)" srcset="/assets/img/faq-pic-desktop.webp">
-                <img aria-hidden="true" decoding="async" src="/assets/img/faq-pic-desktop.webp" alt="" loading="lazy" width="409" height="468">
+                <img aria-hidden="true" src="/assets/img/faq-pic-desktop.webp" alt="" loading="lazy" decoding="async" width="409" height="468">
             </picture>
             <svg width="0" height="0">
                 <defs>
@@ -23,7 +23,7 @@
         <div class="questions-container">
             <h2 class="title">Frequently Asked Questions</h2>
             <div class="question-blocks">
-                <div class="question-wrapper answer-reveal">
+                <div class="question-wrapper answer-reveal" role="button">
                     <div class="question-container" onclick="this.parentElement.classList.toggle('answer-reveal')">
                         <span class="question">Lorem ipsum dolor sit</span>
                         <svg class="question-svg-icon"
@@ -157,7 +157,7 @@
                     </div>
                     <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam qui necessitatibus voluptas odit id porro impedit nihil accusamus ex magni!</p>
                 </div>
-                <div class="question-wrapper">
+                <div class="question-wrapper" role="button">
                     <div class="question-container" onclick="this.parentElement.classList.toggle('answer-reveal')">
                         <span class="question">Lorem ipsum dolor sit</span>
                         <svg class="question-svg-icon"
@@ -291,7 +291,7 @@
                     </div>
                     <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam qui necessitatibus voluptas odit id porro impedit nihil accusamus ex magni!</p>
                 </div>
-                <div class="question-wrapper">
+                <div class="question-wrapper" role="button">
                     <div class="question-container" onclick="this.parentElement.classList.toggle('answer-reveal')">
                         <span class="question">Lorem ipsum dolor sit</span>
                         <svg class="question-svg-icon"
@@ -425,7 +425,7 @@
                     </div>
                     <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam qui necessitatibus voluptas odit id porro impedit nihil accusamus ex magni!</p>
                 </div>
-                <div class="question-wrapper">
+                <div class="question-wrapper" role="button">
                     <div class="question-container" onclick="this.parentElement.classList.toggle('answer-reveal')">
                         <span class="question">Lorem ipsum dolor sit</span>
                         <svg class="question-svg-icon"
@@ -560,6 +560,7 @@
                     <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam qui necessitatibus voluptas odit id porro impedit nihil accusamus ex magni!</p>
                 </div>
             </div>
+            <div class="cs-bubbles" aria-hidden="true"></div>
             <div class="subtext-wrapper">
                 <a href="/faq" class="subtext">More questions...</a>
             </div>

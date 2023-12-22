@@ -47,8 +47,8 @@ async function beginOffers() {
                 layer2Cycle = layer2Cycle - numberOfOffers;
             }
 
-            offersLayer1.innerHTML += `<img class="img${numberOfCycles} offerimg image" data-cycle="${layer1Cycle}" data-ID="${numberOfCycles}" src="${jsonData.offersList[layer1Cycle].image}" alt="">`;
-            offersLayer2.innerHTML += `<img class="img${numberOfCycles} offerimgtwo image" data-cycle="${layer2Cycle}" data-ID="${numberOfCycles}" src="${jsonData.offersList[layer2Cycle].image}" alt="">`;
+            offersLayer1.innerHTML += `<img class="img${numberOfCycles} offerimg image" data-cycle="${layer1Cycle}" data-ID="${numberOfCycles}" src="${jsonData.offersList[layer1Cycle].image}" alt="" loading="lazy" decoding="async" aria-label="offer to display">`;
+            offersLayer2.innerHTML += `<img class="img${numberOfCycles} offerimgtwo image" data-cycle="${layer2Cycle}" data-ID="${numberOfCycles}" src="${jsonData.offersList[layer2Cycle].image}" alt="" loading="lazy" decoding="async" aria-label="offer to display">`;
 
             if (i == 3 || i == numberOfOffers - 1) {
                 return offersCarousel();

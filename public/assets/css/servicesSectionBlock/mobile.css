@@ -84,6 +84,39 @@
         opacity: 0;
         filter: blur(0);
         box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+        transition: all 2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+
+    .card[data-index="1"] {
+        opacity: 0;
+        transform: translateX(200%) scale(0.6);
+        transition: all 0.01s cubic-bezier(0.39, 0.575, 0.565, 1);
+        -webkit-filter: blur(0px);
+    }
+
+    .card[data-index="2"] {
+        display: flex;
+        opacity: 1;
+        transform: translateX(100%) scale(0.8);
+        -webkit-filter: blur(1px);
+    }
+
+    .card[data-index="3"] {
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+        -webkit-filter: blur(0px);
+    }
+
+    .card[data-index="4"] {
+        opacity: 1;
+        transform: translateX(-100%) scale(0.8);
+        -webkit-filter: blur(1px);
+    }
+
+    .card[data-index="5"] {
+        opacity: 0;
+        transform: translateX(-200%) scale(0.8);
+        -webkit-filter: blur(15px);
     }
 
     .card img {
@@ -93,7 +126,7 @@
         border-radius: 25px;
     }
     
-    @-webkit-keyframes display {
+    /* @-webkit-keyframes display {
         0% {
             opacity: 0;
             transform: translateX(200%) scale(0.6);
@@ -142,7 +175,7 @@
             transition-timing-function: ease-in;
             -webkit-filter: blur(15px);
         }
-    }
+    } */
     
     .carousel-wrapper .card {
         -webkit-animation: display 15s infinite;

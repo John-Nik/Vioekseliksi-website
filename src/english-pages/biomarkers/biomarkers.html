@@ -25,8 +25,8 @@ manifestLanguage: english
 
    <link rel="stylesheet" href="/assets/css/biomarkers/mobile.css" media="screen and (min-width: 0px)" />
    <link rel="stylesheet" href="/assets/css/biomarkers/tablet.css" media="screen and (min-width: 768px)" />
-   <link rel="stylesheet" href="/assets/css/biomarkers/desktop.css" media="screen and (min-width: 1024px)" />
-   <link rel="stylesheet" href="/assets/css/biomarkers/widescreen.css" media="screen and (min-width: 1024px)" />
+   <link rel="preload" href="/assets/css/biomarkers/desktop.css" media="screen and (min-width: 1024px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+   <link rel="preload" href="/assets/css/biomarkers/widescreen.css" media="screen and (min-width: 1024px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
    {% endblock %}
    {% include "prefetch.html" %}
 </head>
@@ -46,8 +46,8 @@ manifestLanguage: english
 
                   {% for biomarker in collections.biomarkersEN %}
                      <div class="bio-item">
-                        <img src="{{ biomarker.data.pfp }}" alt="Syringe Image">
-                        <h4>{{ biomarker.data.name }}</h4>
+                        <img src="{{ biomarker.data.pfp }}" decoding="async" loading="lazy" width="100" height="100" alt="Picture of {{ biomarker.data.pfp }}" aria-hidden="true">
+                        <span style="font-weight: 500;">{{ biomarker.data.name }}</span>
                         <p>{{ biomarker.data.shortDesc }}</p>
                      </div>
                   {% endfor %}

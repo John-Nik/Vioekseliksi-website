@@ -50,11 +50,19 @@
 </script>
     
     <link rel="stylesheet" href="/assets/css/banner/mobile.css" media="screen and (min-width: 0px)" />
-    <link rel="stylesheet" href="/assets/css/banner/tablet.css" media="screen and (min-width: 768px)" />
-    <link rel="stylesheet" href="/assets/css/banner/desktop.css" media="screen and (min-width: 1024px)" />
+    <link rel="stylesheet" href="/assets/css/banner/tablet.css" media="screen and (min-width: 768px)" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="stylesheet" href="/assets/css/banner/desktop.css" media="screen and (min-width: 1024px)" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
 
     <link rel="stylesheet" href="/assets/css/contactUsPage/mobile.css" media="screen and (min-width: 0px)" />
-    <link rel="stylesheet" href="/assets/css/contactUsPage/desktop.css" media="screen and (min-width: 1024px)" />
+    <link rel="stylesheet" href="/assets/css/contactUsPage/desktop.css" media="screen and (min-width: 1024px)" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+
+    <link rel="stylesheet" href="/assets/css/contactUsSectionBlock/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="/assets/css/contactUsSectionBlock/tablet-to-desktop.css" media="screen and (min-width: 768px)" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <style>
+        .contactusbody .button {
+            display: none;
+        }
+    </style>
     
     
 <link rel="prefetch" href="/">
@@ -76,14 +84,14 @@
     <nav>
         <ul class="show" id="mobile">
             <li>
-                <img class="call-icon" src="/assets/img/call-icon.svg" alt="">
+                <img class="call-icon" src="/assets/img/call-icon.svg" alt="" loading="eager" decoding="async" width="32" height="32">
             </li>
             <li>
-                <img class="logo" src="/assets/img/vioekseliksi-logo.webp" alt="">
+                <img class="logo" src="/assets/img/vioekseliksi-logo.webp" alt="" loading="eager" decoding="async" height="43" width="32">
             </li>
             <li class="navButton">
-                <div class="burger-icon">
-                    <div class="line line1"></div>
+                <div class="burger-icon" aria-label="Menu button" role="button">
+                    <div class="line line1" focusable></div>
                     <div class="line line2"></div>
                     <div class="line line3"></div>
                 </div>
@@ -103,7 +111,7 @@
                     <a href="/services/">SERVICE<span class="lastletter">S</span></a>
                 </li>
                 <li class="logo-container">
-                    <img src="/assets/img/vioekseliksi-logo.webp" alt="" onClick="window.location.href = '/';">
+                    <img src="/assets/img/vioekseliksi-logo.webp" width="35" height="48" height alt="" onClick="window.location.href = '/';" loading="eager" decoding="async">
                 </li>
                 <li class="link " onClick="window.location.href = '/analyzers/';">
                     <a href="/analyzers/">ANALYZER<span class="lastletter">S</span></a>
@@ -144,7 +152,7 @@
         </div>
         <div class="content">
             <div class="content-container">
-                    <img style="shape-outside: url(/assets/img/Illustration.svg)" src="/assets/img/Illustration.svg" alt="">
+                    <img style="shape-outside: url(/assets/img/Illustration.svg)" src="/assets/img/Illustration.svg" aria-hidden="true" focusable="false" loading="eager" decoding="async">
                 <div class="text-wrapper">
                     <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas hic qui fugiat accusamus fuga.</span>
                 </div>
@@ -152,49 +160,68 @@
         </div>
     </div>
 </div>
-        <section class="contactusfullpage">
-            <div>
-            <h1>Book an appoinment</h1>
+        <div class="contactusfullpage">
+            <section>
+            <h1>Come talk to us</h1>
+            <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 32px;">
+                <span style="text-align: center; width: 100%; max-width: 50ch; padding: 0px 24px; display: flex; justify-content: center; color: var(--black-text-color); font-size: 1.25rem; margin-top: 16px;">It can be a question or it can be a friendly visit, whatever you want, we're here for you</span>
+            </section>
+            
+            <section style="width: 100%;">
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/elenikapona/book-an-appoinment" style="min-width:320px;height:800px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </section>
 
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/elenikapona/book-an-appoinment"
-                style="min-width:320px;height:800px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
-
-            <ul>
+            <section class="contactusbody">
+    <div class="container">
+        <div class="info-wrapper">
+            <h3>CONTACT US</h3>
+            <ul class="option">
                 <li>
-                    <div class="info_options">
-                        <i class="fas fa-phone" style="font-size: 30px;"></i>
-                        <span><b>PHONE </b></span>
-                        TEL: +357 22 212020
-                    </div>
+                    <a href="">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-phone" style="font-size: 30px;"></i>
+                        </div>
+                        <span><b>PHONE</b></span>
+                        +357 77777777
+                    </a>
                 </li>
                 <li>
-                    <div class="info_options">
-                        <i class="fas fa-envelope" style="font-size: 30px;"></i>
-                        <span><b>EMAIL </b></span>
+                    <a href="">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-envelope" style="font-size: 30px;"></i>
+                        </div>
+                        <span><b>EMAIL</b></span>
                         example@email.com
-                    </div>
+                    </a>
                 </li>
                 <li>
-                    <div class="info_options">
-                        <i class="fas fa-location-dot" style="font-size: 30px;"></i>
-                        <span><b>LOCATION </b></span>
-                        Nikolaou Skoufa 1, Egkomi 2415
-                    </div>
+                    <a href="">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-location-dot" style="font-size: 30px;"></i>
+                        </div>
+                        <span><b>LOCATION</b></span>
+                        Asomatos, Ermou 2, <br>
+                        4645, Limassol
+                    </a>
                 </li>
             </ul>
         </div>
+        <a class="button" href="/contactus">Get in touch</a>
+    </div>
+</section>
 
-            <div class="googlemapspart">
-                <h1>Find Us on Google Maps</h1>
+
+            <section class="googlemapspart">
+
+                <h1 class="title">Find Us on Google Maps</h1>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.049169942403!2d33.313251175519156!3d35.155394458680874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de1b581eb59253%3A0x4bb8791024e1853!2zzpLOmc6fzpXOns6VzpvOmc6ezpcgzprOm86Zzp3Omc6azp8gzpXOoc6TzpHOo86kzpfOoc6Zzp8!5e0!3m2!1sen!2s!4v1701995890038!5m2!1sen!2s"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="100%" height="450" style="border:0; margin-bottom: -4px;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </section>
+            </section>
 
 
     </main>
@@ -203,7 +230,7 @@
     <div class="container">
         <div class="content-container">
             <div class="logo-wrapper">
-                <img src="/assets/img/vioekseliksi-logo.webp" alt="">
+                <img src="/assets/img/vioekseliksi-logo.webp" alt="Vioekseliksi logo" width="59" height="81" loading="lazy" decoding="async">
             </div>
             <div class="links-container">
                 <div class="listing-wrappers">

@@ -109,7 +109,7 @@
         border-radius: 25px;
     }
     
-    @-webkit-keyframes display {
+    /* @-webkit-keyframes display {
         0% {
             opacity: 0;
             transform: translateX(200%) scale(0.6);
@@ -158,7 +158,7 @@
             transition-timing-function: ease-in;
             -webkit-filter: blur(15px);
         }
-    }
+    } */
     
     .carousel-wrapper .card {
         -webkit-animation: display 15s infinite;
