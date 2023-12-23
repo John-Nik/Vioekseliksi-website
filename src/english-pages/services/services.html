@@ -26,6 +26,8 @@ manifestLanguage: english
    <link rel="stylesheet" href="/assets/css/servicesPage/mobile.css" media="screen and (min-width: 0px)" />
    <link rel="stylesheet" href="/assets/css/servicesPage/tablet.css" media="screen and (min-width: 768px)" />
    <link rel="stylesheet" href="/assets/css/servicesPage/desktop.css" media="screen and (min-width: 1024px)" />
+
+   <link rel="preload" href="/assets/css/contactUsSectionBlock/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
    {% endblock %}
    {% include "prefetch.html" %}
 </head>
@@ -35,25 +37,34 @@ manifestLanguage: english
    {% include "languageSwitch.html" %}
    <main>
       {% include "english layouts/pageBannerEN.html" %}
-<section id="services">
-      <div class="cards">
-         {% if collections.servicesProvidedEN | length == 0 %}
+      <section id="services">
+         <div class="cards">
+            {% if collections.servicesProvidedEN | length == 0 %}
 
-            <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">No Services Added<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Please add services to display</span></h1>
+               <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">No Services Added<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Please add services to display</span></h1>
 
-         {% else %}
+            {% else %}
 
-            {% for service in collections.servicesProvidedEN %}
-               <div class="card">
-                  <img src="{{ service.data.image }}" alt="{{ service.data.name }}">
-                  <h4>{{ service.data.name }}</h4>
-                  <p>{{ content | safe }}</p>
-               </div>
-            {% endfor %}
-            
-         {% endif %}
-      </div>
-   </section>
+               {% for service in collections.servicesProvidedEN %}
+                  <div class="card">
+                     <img src="{{ service.data.image }}" alt="{{ service.data.name }}">
+                     <h4>{{ service.data.name }}</h4>
+                     <p>{{ content | safe }}</p>
+                  </div>
+               {% endfor %}
+               
+            {% endif %}
+         </div>
+      </section>
+
+      {% include "english layouts/contactusEN.html" %}
+      <style>
+         @media only screen and (min-width: 768px) {
+               .contactusbody {
+                  display: none;
+               }
+         }
+      </style>
    </main>
 
    {% include "english layouts/footerEN.html" %}

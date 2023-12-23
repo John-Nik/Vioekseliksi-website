@@ -9,7 +9,17 @@
                             <i class="fas fa-phone" style="font-size: 30px;"></i>
                         </div>
                         <span><b>PHONE</b></span>
-                        +357 77777777
+                        {% if client | length == 0 %}
+
+                            Nothing to show
+
+                        {% else %}
+
+                            {% for number in client.phoneForTel %}
+                                {{ number }} <br>
+                            {% endfor %}
+                            
+                        {% endif %}
                     </a>
                 </li>
                 <li>
@@ -18,7 +28,15 @@
                             <i class="fas fa-envelope" style="font-size: 30px;"></i>
                         </div>
                         <span><b>EMAIL</b></span>
-                        example@email.com
+                        {% if client | length == 0 %}
+
+                            Nothing to show
+
+                        {% else %}
+
+                            {{ client.email }}
+
+                        {% endif %}
                     </a>
                 </li>
                 <li>
@@ -27,7 +45,7 @@
                             <i class="fas fa-location-dot" style="font-size: 30px;"></i>
                         </div>
                         <span><b>LOCATION</b></span>
-                        Asomatos, Ermou 2, <br>
+                        Asomatos, Ermou 2 <br>
                         4645, Limassol
                     </a>
                 </li>

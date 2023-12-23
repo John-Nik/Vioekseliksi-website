@@ -25,21 +25,32 @@
         letter-spacing: -1.5px;
         width: 100%;
     }
-
-    #company2 h1{
-        font-size: 2rem;
-    }
     
-    .about_the_company{
+    .about_the_company {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        padding: 10px;
+        justify-content: space-between;
+        padding: 10px 0px;
         row-gap: 50px;
-        width: 60%;
+        width: 100%;
         text-align: center;
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        margin: 48px 0px;
+        gap: 24px;
+    }
+
+    #company .wrapper {
+        padding: 0px 24px;
+    }
+
+    #company .about_the_company:first-child {
+        margin-top: 0px;
+        flex-direction: column-reverse;
+    }
+
+    #company .about_the_company:nth-child(3) {
+        flex-direction: column-reverse;
     }
 
     .about_the_member img {
@@ -62,21 +73,7 @@
     
     .moreabout p {
         font-size: clamp(0.8rem, 4vw, 1rem);
-    }
-
-    #company {
-        display: none;
-    }
-
-    #company2 {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        row-gap: 50px;
-        padding-top: 200px;
-        padding-bottom: 100px;
+        text-align: left;
     }
 
     .about_the_member {
@@ -111,6 +108,47 @@
     }
 
     .about_the_company p {
-        font-size: 1.5rem;
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        line-height: clamp(1.5rem, 3vw, 2rem);
+        text-align: justify;
+        hyphens: auto;
+    }
+
+    #company img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #company picture {
+        width: 100%;
+        max-width: 400px;
+        min-width: 200px;
+    }
+
+    #company {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #company .container {
+        width: 100%;
+        max-width: 1024px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px 24px;
+    }
+
+    #company h1 {
+        font-size: clamp(2.5rem, 4vw, 3rem);
+        text-align: center;
+        color: var(--blue-color-shade-7);
+        font-weight: 600;
+        margin-bottom: 4rem;
+        margin-top: 48px;
+        letter-spacing: -1.5px;
+        width: 100%;
     }
 }

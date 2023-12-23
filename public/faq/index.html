@@ -51,6 +51,12 @@
     <link rel="stylesheet" href="/assets/css/banner/mobile.css" media="screen and (min-width: 0px)" />
     <link rel="stylesheet" href="/assets/css/banner/tablet.css" media="screen and (min-width: 768px)" />
     <link rel="stylesheet" href="/assets/css/banner/desktop.css" media="screen and (min-width: 1024px)" />
+
+    <link rel="stylesheet" href="/assets/css/faq_Page/mobile.css " media="screen and (min-width: 0px)" />
+    <link rel="preload" href="/assets/css/faq_Page/tablet.css " media="screen and (min-width: 768px)" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="preload" href="/assets/css/faq_Page/widescreen.css " media="screen and (min-width: 1280px)" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+
+    <link rel="preload" href="/assets/css/contactUsSectionBlock/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     
     
 <link rel="prefetch" href="/">
@@ -148,14 +154,112 @@
         </div>
     </div>
 </div>
-        <label for="test">
-            test:
-            <input id="test" type="search">
-            <ul id="searchResults">
+        <div id="search-bar">
+            <div class="container">
+                <input onfocus="this.placeholder = ''" id="test" type="search" placeholder="How many days does it take for the results?">
+                <script>
+                    const inputElement = document.querySelector('input');
 
+                    inputElement.addEventListener('focusout', () => {
+                        inputElement.placeholder = 'How many days does it take for the results';
+                    } )
+                </script>
+                <ul id="searchResults">
+
+                </ul>
+            </div>
+            <script defer src="/assets/js/searchBar.js"></script>
+        </div>
+
+        <section id="questions">
+            <div class="container">
+                
+
+                
+
+                    <div class="questions-wrapper">
+                    
+                        <div id="would-you-rather-be-stuck-on-a-broken-ski-lift-or-a-broken-elevator" class="card">
+                            <div class="title-and-icon-wrapper">
+                                <span class="title">Would you rather be stuck on a broken ski lift or a broken elevator? </span>
+                                <div class="img-wrapper">
+                                    <img src="/assets/img/faq.svg" alt="questions and answer icon" decoding="async" loading="lazy" aria-hidden="true">
+                                </div>
+                            </div>
+                            <p class="answer"><p>Nah, don't even bother.</p>
+</p>
+                        </div>
+                    
+                        <div id="favorite-theme-song" class="card">
+                            <div class="title-and-icon-wrapper">
+                                <span class="title">Favorite theme song </span>
+                                <div class="img-wrapper">
+                                    <img src="/assets/img/faq.svg" alt="questions and answer icon" decoding="async" loading="lazy" aria-hidden="true">
+                                </div>
+                            </div>
+                            <p class="answer"><p>Don't think so.</p>
+</p>
+                        </div>
+                    
+                    </div>
+                
+                    
+            </div>
+        </section>
+        <section class="contactusbody">
+    <div class="container">
+        <div class="info-wrapper">
+            <h3>CONTACT US</h3>
+            <ul class="option">
+                <li>
+                    <a href="">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-phone" style="font-size: 30px;"></i>
+                        </div>
+                        <span><b>PHONE</b></span>
+                        
+
+                            Nothing to show
+
+                        
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-envelope" style="font-size: 30px;"></i>
+                        </div>
+                        <span><b>EMAIL</b></span>
+                        
+
+                            Nothing to show
+
+                        
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-location-dot" style="font-size: 30px;"></i>
+                        </div>
+                        <span><b>LOCATION</b></span>
+                        Asomatos, Ermou 2 <br>
+                        4645, Limassol
+                    </a>
+                </li>
             </ul>
-        </label>
-        <script type="module" defer src="/assets/js/searchBar.js"></script>
+        </div>
+        <a class="button" href="/contactus">Get in touch</a>
+    </div>
+</section>
+
+        <style>
+            @media only screen and (min-width: 768px) {
+                .contactusbody {
+                    display: none;
+                }
+            }
+        </style>
     </main>
     <footer>
     <div class="container">

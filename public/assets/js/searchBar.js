@@ -214,7 +214,8 @@ function startSearching (inputQuery) {
     function populateList() {
         sortedResults.forEach((question) => {
             if ( htmlResultsShown.childElementCount != 5 ) {
-                htmlResultsShown.innerHTML += `<li>${question[0]}</li>`
+                let questionID = question[0].replaceAll(' ', '-')
+                htmlResultsShown.innerHTML += `<li onclick="window.location.hash = '#${questionID}'">${question[0]}</li>`
             }
         })
     }

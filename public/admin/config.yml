@@ -72,28 +72,13 @@ collections:
             min: 1
             field: {label: "τηλεφωνο", name: "number", widget: "number"}
 
-          - label: "Διευθύνσεις"
-            name: "addresses"
-            widget: list
-            allow_add: true
-            label_singular: "διεύθυνση"
-            summary: 'Διευθύνσεις: {{fields.number}}'
-            collapsed: true
-            min: 1
-            fields:
-              - {label: "Πρώτη Γραμμή", name: "line1", widget: "string", required: true}
-              - {label: "Δεύτερη Γραμμή", name: "line2", widget: "string", required: false, hint: "**προαιρετικό**"}
-              - {label: "Πόλη / Επαρχία", name: "city", widget: "string", required: true}
-              - {label: "Περιοχή", name: "area", widget: "string", required: false, hint: "**προαιρετικό**"}
-              - {label: "Ταχυδρομικός Κώδικας", name: "zip", widget: "number", required: true}
-
 
   - label: "Ερωτήσεις / Questions"
     name: "questions"
-    folder: "src/content_management_files/FAQ"
+    folder: "src/content_management_files/frequently_asked_questions"
     create: true
     slug: "{{slug}}"
     i18n: true
     fields:
-      - {label: "Ερώτηση", name: "question", widget: "string", i18n: true}
-      - {label: "Απάντηση", name: "answer", widget: "image", i18n: duplicate}
+      - {label: "Ερώτηση", name: "title", widget: "string", i18n: true}
+      - {label: "Απάντηση", name: "body", widget: "markdown", i18n: true}

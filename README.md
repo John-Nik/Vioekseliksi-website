@@ -175,3 +175,15 @@
 				<li>Finished the carousel effect on the home page | G</li>
 				<li>Refactored and remade the "more about me" section on the about us page | G</li>
 			</ul>
+<br>
+**0.17.1:** <ul>
+				<li>Finished the FAQ page | G</li>
+				<li>Refactored the about us page to a more aesthetic and responsive look | G</li>
+				<li>Removed the option for the user to add multiple addresses | G</li>
+				<li>Made the contact us strip update the phone numbers available depending on how many the user has added | G</li>
+				<li>Added a new javascript file only active on the about us page that auto-hyphens words | G</li>
+				<li>Made the search results clickable, allowing the user to be redirected to the question | G</li>
+				<li>Added the contact us strip on all the pages | G</li>
+				<li>Refactored the CSS of the services section block in the home page | G</li>
+				<li>Made the carousel effect on the home page more responsive when clicking and slowed down the carousel animation | G</li>
+			</ul>

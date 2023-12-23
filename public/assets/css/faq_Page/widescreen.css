@@ -1,0 +1,5 @@
+@media only screen and (min-width: 1280px) {
+    #questions .questions-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -4,4 +4,8 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
     }
+
+    #company .about_the_company {
+        flex-direction: row !important;
+    }
 }

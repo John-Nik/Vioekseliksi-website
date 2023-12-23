@@ -30,6 +30,16 @@ manifestLanguage: english
    <link rel="preload" href="/assets/css/aboutus/tablet.css" media="screen and (min-width: 768px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
    <link rel="preload" href="/assets/css/aboutus/desktop.css" media="screen and (min-width: 1024px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
    <link rel="preload" href="/assets/css/aboutus/widescreen.css" media="screen and (min-width: 1280px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+
+   <link rel="preload" href="/assets/css/contactUsSectionBlock/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+   
+   <script src="/assets/js/hyphens.js" async></script>
+   <script type="text/javascript">
+      Hyphenator.config({
+         useCSS3hyphenation: true
+      });
+      Hyphenator.run();
+   </script>
    {% endblock %}
 
    {% include "prefetch.html" %}
@@ -43,13 +53,7 @@ manifestLanguage: english
       {% include "english layouts/teammembersEN.html" %}
 
       <section id="members">
-
-
-
          <div class="container">
-
-
-
             <h1>More About Each Member</h1>
             
             {% if collections.teamMembersEN | length == 0 %}
@@ -71,58 +75,43 @@ manifestLanguage: english
 
             </div>
             {% endif %}
-
-
-
-
          </div>
-
-
-
       </section>
 
 
       <section id="company">
-         <h1>Our Story</h1>
-         <div class="about_the_company">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-                  hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
-                  saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
-            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
+         <div class="container">
+            <h1>Our Story</h1>
+
+            <div class="wrapper">
+               <div class="about_the_company">
+                  <p class="hyphenate">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore eos amet veniam praesentium ex ab, quaerat ratione, dolorum provident tenetur voluptatum hic quam autem explicabo velit ipsa maxime cumque quis.</p>
+                  <picture>
+                     <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
+                  </picture>
+               </div>
+               <div class="about_the_company">
+                  <picture>
+                     <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
+                  </picture>
+                  <p class="hyphenate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero placeat nihil quam ratione adipisci suscipit exercitationem ullam officia vitae dignissimos, impedit nemo similique soluta dolores cupiditate. Voluptas qui blanditiis optio?</p>
+               </div>
+               <div class="about_the_company">
+                  <p class="hyphenate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus consequuntur veniam, quae perspiciatis et fugit deleniti. Alias vel error aut excepturi, dolores obcaecati consectetur qui voluptatem totam voluptas inventore. Eligendi!</p>
+                  <picture>
+                     <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
+                  </picture>
+               </div>
+            </div>
          </div>
-         <div class="about_the_company">
-            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-                  hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
-                  saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
-         </div>
-         <div class="about_the_company">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-                  hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
-                  saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
-            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
-         </div>
-      </section>
-      <section id="company2">
-         <h1>More About The Company</h1>
-         <div class="about_the_company">
-            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-                  hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
-                  saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
-            
-         </div>
-         <div class="about_the_company">
-            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas
-                  hicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus
-                  saepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
-         </div>
-         <div class="about_the_company">
-            <img src="..\assets\img\illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptashicqui fugiat accusamus fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natussaepe rerum dolorem sit voluptas hicqui fugiat accusamus fuga.</p>
-         </div>
-      </section>
+         {% include "english layouts/contactusEN.html" %}
+        <style>
+            @media only screen and (min-width: 768px) {
+                .contactusbody {
+                    display: none;
+                }
+            }
+        </style>
    </main>
 
    {% include "english layouts/footerEN.html" %}

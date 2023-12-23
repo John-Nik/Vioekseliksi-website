@@ -1,8 +1,7 @@
 const dataIndexElements = document.querySelectorAll('[data-index]');
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
-
-console.log(dataIndexElements)
+const card = document.querySelectorAll('.card');
 
 function incrementCarousel() {
     dataIndexElements.forEach((element) => {
@@ -35,6 +34,14 @@ function decrementCarousel() {
 let carouselTimer = setInterval(incrementCarousel, 4000)
 
 leftArrow.addEventListener('click', () => {
+    card.forEach((c) => {
+        c.style.transitionDuration = '0.25s'
+    })
+    setTimeout(() => {
+        card.forEach((c) => {
+            c.style.transitionDuration = '1s'
+        })
+    }, 270)
     decrementCarousel();
 
     clearInterval(carouselTimer);
@@ -43,6 +50,14 @@ leftArrow.addEventListener('click', () => {
 })
 
 rightArrow.addEventListener('click', () => {
+    card.forEach((c) => {
+        c.style.transitionDuration = '0.25s'
+    })
+    setTimeout(() => {
+        card.forEach((c) => {
+            c.style.transitionDuration = '1s'
+        })
+    }, 270)
     incrementCarousel();
 
     clearInterval(carouselTimer);

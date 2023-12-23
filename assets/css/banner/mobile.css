@@ -4,8 +4,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        margin-bottom: 48px;
-        margin-top: 48px;
+        padding: 64px 0px 48px 0px;
     }
     
     #banner .banner-container {
@@ -38,7 +37,7 @@
     
     #banner .title {
         width: 100%;
-        font-size: clamp(2.5rem, 2vw, 3rem);
+        font-size: clamp(2.7rem, 2vw, 3rem);
         font-weight: 700;
         text-align: center;
         color: var(--blue-color-shade-7);
