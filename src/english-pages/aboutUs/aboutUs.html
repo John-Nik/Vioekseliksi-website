@@ -32,6 +32,8 @@ manifestLanguage: english
    <link rel="preload" href="/assets/css/aboutus/widescreen.css" media="screen and (min-width: 1280px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 
    <link rel="preload" href="/assets/css/contactUsSectionBlock/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+
+   <link rel="stylesheet" href="/assets/css/fonts/aboutUs.css" media="none" onload="if(media!=='all')media='all'">
    
    <script src="/assets/js/hyphens.js" async></script>
    <script type="text/javascript">
@@ -104,14 +106,15 @@ manifestLanguage: english
                </div>
             </div>
          </div>
-         {% include "english layouts/contactusEN.html" %}
-        <style>
-            @media only screen and (min-width: 768px) {
-                .contactusbody {
-                    display: none;
-                }
-            }
-        </style>
+      </section>
+      {% include "english layouts/contactusEN.html" %}
+      <style>
+         @media only screen and (min-width: 768px) {
+               .contactusbody {
+                  display: none;
+               }
+         }
+      </style>
    </main>
 
    {% include "english layouts/footerEN.html" %}

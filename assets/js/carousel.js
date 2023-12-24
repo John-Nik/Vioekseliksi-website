@@ -3,6 +3,8 @@ const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
 const card = document.querySelectorAll('.card');
 
+
+
 function incrementCarousel() {
     dataIndexElements.forEach((element) => {
         ++element.dataset.index;

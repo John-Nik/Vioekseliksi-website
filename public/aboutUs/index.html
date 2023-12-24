@@ -37,11 +37,7 @@
 
 <title>About Us | Vioexelixi</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
 
 <script async src="/partytown/partytown.js"></script>
 <script>
@@ -61,6 +57,8 @@
    <link rel="preload" href="/assets/css/aboutus/widescreen.css" media="screen and (min-width: 1280px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 
    <link rel="preload" href="/assets/css/contactUsSectionBlock/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+
+   <link rel="stylesheet" href="/assets/css/fonts/aboutUs.css" media="none" onload="if(media!=='all')media='all'">
    
    <script src="/assets/js/hyphens.js" async></script>
    <script type="text/javascript">
@@ -240,7 +238,8 @@
                </div>
             </div>
          </div>
-         <section class="contactusbody">
+      </section>
+      <section class="contactusbody">
     <div class="container">
         <div class="info-wrapper">
             <h3>CONTACT US</h3>
@@ -287,13 +286,13 @@
     </div>
 </section>
 
-        <style>
-            @media only screen and (min-width: 768px) {
-                .contactusbody {
-                    display: none;
-                }
-            }
-        </style>
+      <style>
+         @media only screen and (min-width: 768px) {
+               .contactusbody {
+                  display: none;
+               }
+         }
+      </style>
    </main>
 
    <footer>

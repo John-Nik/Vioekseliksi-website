@@ -18,6 +18,8 @@ function checkUserInput() {
         value = inputBox.value;
         startSearching(value);
     });
+
+    console.log('script is running just fine')
 }
 
 function startSearching (inputQuery) {

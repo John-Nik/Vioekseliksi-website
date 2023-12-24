@@ -1,5 +1,5 @@
 ---
-bannerTitle: Frequenty Asked Questions
+bannerTitle: Frequently Asked Questions
 bannerText: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas hic qui fugiat accusamus fuga.
 bannerImage: ../assets/img/Illustration.svg
 permalink: faq/
@@ -25,6 +25,8 @@ manifestLanguage: english
     <link rel="preload" href="/assets/css/faq_Page/widescreen.css " media="screen and (min-width: 1280px)" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
 
     <link rel="preload" href="/assets/css/contactUsSectionBlock/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+
+    <link rel="stylesheet" href="/assets/css/fonts/faq.css" media="none" onload="if(media!=='all')media='all'">
     {% endblock %}
     {% include  "prefetch.html"%}
     
@@ -48,7 +50,7 @@ manifestLanguage: english
 
                 </ul>
             </div>
-            <script defer src="/assets/js/searchBar.js"></script>
+            <script defer type="module" src="/assets/js/searchBar.js"></script>
         </div>
 
         <section id="questions">

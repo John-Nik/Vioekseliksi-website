@@ -37,11 +37,7 @@
 
 <title>Frequently Asked Questions | Vioexelixi</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
 
 <script async src="/partytown/partytown.js"></script>
 <script>
@@ -57,6 +53,8 @@
     <link rel="preload" href="/assets/css/faq_Page/widescreen.css " media="screen and (min-width: 1280px)" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
 
     <link rel="preload" href="/assets/css/contactUsSectionBlock/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+
+    <link rel="stylesheet" href="/assets/css/fonts/faq.css" media="none" onload="if(media!=='all')media='all'">
     
     
 <link rel="prefetch" href="/">
@@ -142,7 +140,7 @@
         <div id="banner">
     <div class="banner-container">
         <div class="title-wrapper">
-            <h1 class="title">Frequenty Asked Questions</h1>
+            <h1 class="title">Frequently Asked Questions</h1>
         </div>
         <div class="content">
             <div class="content-container">
@@ -168,7 +166,7 @@
 
                 </ul>
             </div>
-            <script defer src="/assets/js/searchBar.js"></script>
+            <script defer type="module" src="/assets/js/searchBar.js"></script>
         </div>
 
         <section id="questions">

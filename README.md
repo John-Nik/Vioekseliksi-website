@@ -187,3 +187,5 @@
 				<li>Refactored the CSS of the services section block in the home page | G</li>
 				<li>Made the carousel effect on the home page more responsive when clicking and slowed down the carousel animation | G</li>
 			</ul>
+<br>
+**0.17.2:** Added local fonts to reduce the file size download of them and remove any unnecessary fonts | G
