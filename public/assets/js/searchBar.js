@@ -15,10 +15,10 @@ async function grab_questions_JSON_file() {
 
 function checkUserInput() {
     inputBox.addEventListener('input', query);
-
+    console.log('script running as expected');
     inputBox.addEventListener('touchstart', () => {
         inputBox.removeEventListener('input', query);
-
+        console.log('touch screen detected');
         inputBox.addEventListener('keyup', query);
     })
 
