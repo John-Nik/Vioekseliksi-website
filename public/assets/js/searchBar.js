@@ -14,12 +14,23 @@ async function grab_questions_JSON_file() {
 
 
 function checkUserInput() {
-    inputBox.addEventListener('input', (key) => {
+    inputBox.addEventListener('input', () => {
         value = inputBox.value;
         startSearching(value);
     });
 
-    console.log('script is running just fine')
+    inputBox.addEventListener('focusin', () => {
+        inputBox.addEventListener('touchend', userInput)
+    })
+
+    inputBox.addEventListener('focusout', () => {
+        inputBox.removeEventListener('touchend', userInput)
+    })
+
+    function userInput() {
+        value = inputBox.value;
+        startSearching(value);
+    }
 }
 
 function startSearching (inputQuery) {
