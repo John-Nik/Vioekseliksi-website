@@ -2,7 +2,7 @@ const questionsJSONList = new Request('/assets/js/questions.json');
 const inputBox =  document.querySelector('#test');
 const htmlResultsShown = document.querySelector('#searchResults');
 let questionsList = [];
-let value = '';
+let userQuery = '';
 let hasTimeoutStarted = false;
 grab_questions_JSON_file();
 async function grab_questions_JSON_file() {
@@ -14,22 +14,17 @@ async function grab_questions_JSON_file() {
 
 
 function checkUserInput() {
-    inputBox.addEventListener('input', () => {
-        value = inputBox.value;
-        startSearching(value);
-    });
+    inputBox.addEventListener('input', query);
 
-    inputBox.addEventListener('focusin', () => {
-        inputBox.addEventListener('touchend', userInput)
+    inputBox.addEventListener('touchstart', () => {
+        inputBox.removeEventListener('input', query);
+
+        inputBox.addEventListener('keyup', query);
     })
 
-    inputBox.addEventListener('focusout', () => {
-        inputBox.removeEventListener('touchend', userInput)
-    })
-
-    function userInput() {
-        value = inputBox.value;
-        startSearching(value);
+    function query() {
+        userQuery = inputBox.value;
+        startSearching(userQuery);
     }
 }
 
