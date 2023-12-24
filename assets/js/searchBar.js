@@ -15,10 +15,9 @@ async function grab_questions_JSON_file() {
 
 function checkUserInput() {
     inputBox.addEventListener('input', query);
-    console.log('script running as expected');
+
     inputBox.addEventListener('touchstart', () => {
         inputBox.removeEventListener('input', query);
-        console.log('touch screen detected');
         inputBox.addEventListener('keyup', query);
     })
 
@@ -29,8 +28,7 @@ function checkUserInput() {
 }
 
 function startSearching (inputQuery) {
-    // console.clear()
-    let lastSearchResultDisplayed = htmlResultsShown.lastElementChild;
+    let resultDisplayed = htmlResultsShown.lastElementChild;
     let words = inputQuery.split(' ');
     words = words.filter((word) => word != '');
     let firstSearch = [];
@@ -43,41 +41,48 @@ function startSearching (inputQuery) {
     }
 
 
-    while (lastSearchResultDisplayed) {
-        htmlResultsShown.removeChild(lastSearchResultDisplayed);
-        lastSearchResultDisplayed = htmlResultsShown.lastElementChild
+    while (resultDisplayed) {
+        htmlResultsShown.removeChild(resultDisplayed);
+        resultDisplayed = htmlResultsShown.lastElementChild
     }
 
 
     first_search();
     
     function first_search() {
-        let unfilteredSearch = [];
-        let filteredSearch = [];
+        let searchResults = [];
+        let rankedResults = [];
         let possiblyMistypedWords = [];
 
 
         words.forEach((word) => {
-            let resultFound = questionsList.filter((question) => question.toString().includes(word));
-            if ( !resultFound.toString().includes(word) ) {
-                possiblyMistypedWords.push(word);
-            }
-            unfilteredSearch.push(resultFound);
+            let resultFound = [];
+
+            questionsList.forEach((question) => {
+                let questionString = question.toString();
+
+                if ( questionString.includes(word) || questionString.toLowerCase().includes(word) || questionString.toUpperCase().includes(word) ) {
+                    resultFound.push(question);
+                } else {
+                    possiblyMistypedWords.push(word)
+                }
+            })
+
+            searchResults.push(resultFound);
             filterResults();
         })
         
         
         function filterResults() {
-            unfilteredSearch.forEach((resultFound) => {
+            searchResults.forEach((resultFound) => {
                 resultFound.forEach((result) => {
                     let processedResult = [result, 1];
-                    filteredSearch.push(processedResult);
+                    rankedResults.push(processedResult);
                 })
             });
         }
-        
 
-        addingDuplicatesTogether(filteredSearch);
+        addingDuplicatesTogether(rankedResults);
         
         function addingDuplicatesTogether(listItems) {
             let addedDuplicates = [];

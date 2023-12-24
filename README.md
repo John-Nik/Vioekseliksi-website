@@ -190,4 +190,6 @@
 <br>
 **0.17.2:** Added local fonts to reduce the file size download of them and remove any unnecessary fonts | G<br>
 <br>
-**0.17.3:** Made the search bar work on mobile browsers | G
+**0.17.3:** Made the search bar work on mobile browsers | G<br>
+<br>
+**0.17.4:** Improved code clarity in searchBar.js | G
