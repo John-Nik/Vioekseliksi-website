@@ -7,6 +7,43 @@
         padding: 100px 0px 0px 0px;
     }
 
+    #calendly {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #calendly .loading {
+        position: absolute;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--black-text-color);
+    }
+
+    #calendly .loading::after {
+        content: '';
+        animation: loading 4s ease 0s infinite;
+    }
+
+    @keyframes loading {
+        0% {
+            content: '.';
+        }
+        25% {
+            content: '..';
+        }
+        50% {
+            content: '...';
+        }
+        75% {
+            content: '....';
+        }
+        100% {
+            content: '.....';
+        }
+    }
+
     .contactusfullpage h1 {
         text-align: center;
         color: var(--blue-color-shade-7);

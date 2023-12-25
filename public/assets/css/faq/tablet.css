@@ -12,6 +12,15 @@
         display: flex;
     }
 
+    #faq picture img {
+        opacity: 0;
+        transition: opacity 1s cubic-bezier(.18,.54,.55,1);
+    }
+
+    #faq picture.show img {
+        opacity: 1;
+    }
+
     @keyframes blobMovement {
         0% {
             background-color: hsl(115, 100%, 25%);

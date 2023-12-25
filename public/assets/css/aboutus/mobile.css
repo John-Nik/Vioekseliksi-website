@@ -24,6 +24,15 @@
         margin-top: 28px;
         letter-spacing: -1.5px;
         width: 100%;
+
+        opacity: 0;
+        transform: translateY(-100px);
+        transition: all 1s cubic-bezier(.18,.54,.55,1)
+    }
+
+    #members h1.show {
+        opacity: 1;
+        transform: translateY(0px);
     }
     
     .about_the_company {
@@ -90,7 +99,13 @@
         background: #fff;
         border-radius: 15px;
         overflow: hidden;
-        transition: transform 0.2s; 
+
+        opacity: 0;
+        transition: transform 0.2s, opacity 1s cubic-bezier(.18,.54,.55,1); 
+    }
+
+    .about_the_member.show {
+        opacity: 1;
     }
 
     #members .grid_wrapper {
@@ -112,6 +127,15 @@
         line-height: clamp(1.5rem, 3vw, 2rem);
         text-align: justify;
         hyphens: auto;
+
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 1s cubic-bezier(.18,.54,.55,1) 0.25s;
+    }
+
+    .about_the_company.show p {
+        opacity: 1;
+        transform: translateY(0px);
     }
 
     #company img {
@@ -124,6 +148,15 @@
         width: 100%;
         max-width: 400px;
         min-width: 200px;
+
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 1s cubic-bezier(.18,.54,.55,1);
+    }
+
+    #company .show picture {
+        opacity: 1;
+        transform: translateY(0px);
     }
 
     #company {
@@ -150,5 +183,14 @@
         margin-top: 48px;
         letter-spacing: -1.5px;
         width: 100%;
+
+        opacity: 0;
+        transform: translateY(-100px);
+        transition: all 1s cubic-bezier(.18,.54,.55,1);
+    }
+
+    #company h1.show {
+        opacity: 1;
+        transform: translateY(0px);
     }
 }

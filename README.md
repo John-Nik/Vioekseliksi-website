@@ -192,4 +192,9 @@
 <br>
 **0.17.3:** Made the search bar work on mobile browsers | G<br>
 <br>
-**0.17.4:** Improved code clarity in searchBar.js | G
+**0.17.4:** Improved code clarity in searchBar.js | G<br>
+<br>
+**0.17.5:** <ul>
+				<li>Added animations for the elements on the page when they are visible to the user | G</li>
+				<li>Added an indicator in the contact us page that informs the user that something is loading | G</li>
+			</ul>

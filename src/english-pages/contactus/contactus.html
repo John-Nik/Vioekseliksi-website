@@ -47,15 +47,17 @@ manifestLanguage: english
         {% include "english layouts/pageBannerEN.html" %}
         <div class="contactusfullpage">
             <section>
-            <h1>Come talk to us</h1>
-            <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 32px;">
-                <span style="text-align: center; width: 100%; max-width: 50ch; padding: 0px 24px; display: flex; justify-content: center; color: var(--black-text-color); font-size: 1.25rem; margin-top: 16px;">It can be a question or it can be a friendly visit, whatever you want, we're here for you</span>
+                <h1>Come talk to us</h1>
+                <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 32px;">
+                    <span style="text-align: center; width: 100%; max-width: 50ch; padding: 0px 24px; display: flex; justify-content: center; color: var(--black-text-color); font-size: 1.25rem; margin-top: 16px;">It can be a question or it can be a friendly visit, whatever you want, we're here for you</span>
+                </div>
             </section>
             
-            <section style="width: 100%;">
+            <section id="calendly">
+                <span class="loading">Loading</span>
                 <!-- Calendly inline widget begin -->
                 <div class="calendly-inline-widget" data-url="https://calendly.com/elenikapona/book-an-appoinment" style="min-width:320px;height:800px;"></div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <script type="text/javascript" defer src="https://assets.calendly.com/assets/external/widget.js" async></script>
                 <!-- Calendly inline widget end -->
             </section>
 

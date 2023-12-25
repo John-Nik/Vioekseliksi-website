@@ -26,6 +26,15 @@
         align-items: center;
     }
 
+    #faq picture {
+        opacity: 0;
+        transition: opacity 1s cubic-bezier(.18,.54,.55,1);
+    }
+
+    #faq picture.show {
+        opacity: 1;
+    }
+
     #faq .question-mark-container .blob1 {
         width: 80px;
         height: 80px;
@@ -36,6 +45,7 @@
         filter: blur(40px) saturate(2);
         border-radius: 50px;
         animation: blobMovement 20s linear 0s infinite alternate;
+        will-change: transform;
     }
 
     #faq #blob-container {
@@ -80,6 +90,35 @@
         width: calc(100% - 32px);
         height: fit-content;
         margin-bottom: 3rem;
+
+        filter: blur(10px);
+        transform: translateY(-200px);
+        transition: transform 1s cubic-bezier(.18,.54,.55,1);
+    }
+
+    #faq .question-wrapper.show {
+        filter: blur(0px);
+        transform: translateY(0px);
+    }
+
+    #faq .question-wrapper:nth-child(1) {
+        transition: transform 1s cubic-bezier(.18,.54,.55,1) 0.12s, filter 1s cubic-bezier(.18,.54,.55,1) 0.12s;
+    }
+
+    #faq .question-wrapper:nth-child(2) {
+        transition: transform 1s cubic-bezier(.18,.54,.55,1) 0.15s, filter 1s cubic-bezier(.18,.54,.55,1) 0.15s;
+    }
+
+    #faq .question-wrapper:nth-child(3) {
+        transition: transform 1s cubic-bezier(.18,.54,.55,1) 0.18s, filter 1s cubic-bezier(.18,.54,.55,1) 0.18s;
+    }
+
+    #faq .question-wrapper:nth-child(4) {
+        transition: transform 1s cubic-bezier(.18,.54,.55,1) 0.21s, filter 1s cubic-bezier(.18,.54,.55,1) 0.21s;
+    }
+
+    #faq .question-wrapper:nth-child(5) {
+        transition: transform 1s cubic-bezier(.18,.54,.55,1) 0.24s, filter 1s cubic-bezier(.18,.54,.55,1) 0.24s;
     }
     
     #faq .question-wrapper::before {
@@ -337,6 +376,7 @@
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
         animation-fill-mode: forwards;
+        will-change: transform;
     }
     #faq .cs-bubbles:after {
         content: "";
@@ -355,6 +395,7 @@
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
         animation-fill-mode: forwards;
+        will-change: transform;
     }
     @keyframes floatAnimation {
         0% {

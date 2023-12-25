@@ -40,6 +40,17 @@
         font-size: clamp(3rem, 5.3vw, 5rem);
         text-align: center;
         margin-bottom: 24px;
+
+        transform: translateY(250px);
+        opacity: 0;
+        filter: blur(10px);
+        transition: all 1s cubic-bezier(.18,.54,.55,1);
+    }
+
+    .herosection .show h1 {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
     }
 
     .herosection h2 {
@@ -48,5 +59,16 @@
         font-size: clamp(1.2rem, 2.6vw, 2rem);
         width: 100%;
         text-align: center;
+
+        transform: translateY(250px);
+        opacity: 0;
+        filter: blur(10px);
+        transition: all 1s cubic-bezier(.18,.54,.55,1) 0.25s;
+    }
+
+    .herosection .show h2 {
+        transform: translateY(0px);
+        opacity: 1;
+        filter: blur(0px);
     }
 }

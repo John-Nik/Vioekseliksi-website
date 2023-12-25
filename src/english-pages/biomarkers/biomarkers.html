@@ -49,7 +49,7 @@ manifestLanguage: english
                {% else %}
 
                   {% for biomarker in collections.biomarkersEN %}
-                     <div class="bio-item">
+                     <div class="bio-item hidden">
                         <img src="{{ biomarker.data.pfp }}" decoding="async" loading="lazy" width="100" height="100" alt="Picture of {{ biomarker.data.pfp }}" aria-hidden="true">
                         <span style="font-weight: 500;">{{ biomarker.data.name }}</span>
                         <p>{{ biomarker.data.shortDesc }}</p>
