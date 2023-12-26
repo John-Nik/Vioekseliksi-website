@@ -1,0 +1,20 @@
+@media only screen and (min-width: 600px) {
+    #sorting-buttons .span-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #sorting-buttons .wrapper {
+        padding: 0px 24px;
+    }
+
+    #sorting-buttons .trigger-letters-list {
+        width: fit-content;
+    }
+
+    #sorting-buttons .buttons-container {
+        justify-content: flex-end;
+        width: 100%;
+    }
+}

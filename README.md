@@ -198,3 +198,12 @@
 				<li>Added animations for the elements on the page when they are visible to the user | G</li>
 				<li>Added an indicator in the contact us page that informs the user that something is loading | G</li>
 			</ul>
+<br>
+**0.18.0:** <ul>
+				<li>Changed the navigation bar layout for mobile devices | G</li>
+				<li>Finished the biomarkers page | G</li>
+				<li>Minor changes in the way that files are structured through the admin panel | G</li>
+			</ul>
+<br>
+<br>
+# Website layout and functionality is completely finished. 

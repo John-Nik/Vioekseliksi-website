@@ -25,7 +25,8 @@
 <link rel="preload" href="/assets/css/footer/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 <link rel="preload" href="/assets/css/footer/600px.css" media="screen and (min-width: 600px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 <link rel="preload" href="/assets/css/footer/tablet.css" media="screen and (min-width: 768px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-<style> *{ margin: 0; padding: 0; font-family: 'Roboto Slab', serif; font-smooth: always; -webkit-font-smoothing: subpixel-antialiased; -moz-osx-font-smoothing: grayscale;} body{ background-color: #F7F8FF !important;} @import url(/assets/css/root.css); @media only screen and (min-width: 0px) and (max-width: 767px){ main{ padding-top: 96px;} nav{ display: flex; position: fixed; width: 100%;} #nav-bar #mobile .call-icon{ width: 32px; height: auto;} #nav-bar{ width: 100vw; height: 96px; position: fixed; top: 0; left: 0; background-color: white; z-index: 10000;} main{ padding-top: 96px;} #nav-bar #mobile{ display: flex; position: relative; height: 96px; align-items: center; list-style: none; justify-content: space-between; z-index: 10000; background-color: white; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); padding-left: clamp(8px, calc(25vw - 70px), 32px); padding-right: clamp(8px, calc(25vw - 70px), 32px); width: 100%;} #nav-bar #mobile .burger-icon{ width: 36px; height: 32px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;} #nav-bar .burger-icon .line{ width: 100%; height: 2px; background-color: #242424; transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);} .open-menu #nav-bar .burger-icon .line1{ transform: rotate(405deg) translateY(12px) translateX(8px);} .open-menu #nav-bar .burger-icon .line2{ opacity: 0;} .open-menu #nav-bar .burger-icon .line3{ transform: rotate(-405deg) translateY(-14px) translateX(8px);} #nav-bar #mobile .logo{ width: 32px; height: auto;} #nav-bar #wrapper{ display: flex; width: 60%; height: 100vh; position: absolute; flex-direction: column; list-style: none; padding-left: 16px; padding-right: 16px; padding-top: 16px; gap: 24px; box-shadow: 0px 0px 4px rgb(0, 0, 0), 0px 0px 64px 8px rgba(0, 0, 0, 0.3); z-index: 1500; background-color: white;} #nav-bar .container-links{ position: absolute; width: 100%; display: flex; justify-content: flex-end; margin-top: 96px; z-index: 0; opacity: 0; transition: opacity 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95); height: 100vh; z-index: 1000; overflow: hidden; transform: translateX(100%); transition: all 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);} .open-menu #nav-bar .container-links{ transform: translateX(0); opacity: 1;} .open-menu footer{ filter: brightness(0.5);} .open-menu main{ filter: brightness(0.5);} footer{ transition: filter 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95); filter: brightness(1);} main{ transition: filter 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95); filter: brightness(1); z-index: 1; background-color: var(--body-background-color);} #nav-bar #wrapper .logo-container{ display: none;} #nav-bar #wrapper .link a{ text-decoration: none !important; display: flex; flex-direction: row; font-size: clamp(0.75rem, 5vw, 1.25rem); font-weight: 500; letter-spacing: 2px; color: var(--black-text-color); -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none; background: transparent; -webkit-tap-highlight-color: transparent;} #nav-bar #wrapper .link a:active{ background-color: transparent;} #nav-bar #wrapper .link a::selection{ background: transparent;} #nav-bar #wrapper .link a::selection::-moz-selection{ background: transparent;} #nav-bar #wrapper .link:nth-child(1) a{ font-weight: 700;} #nav-bar #wrapper .link{ padding: 16px 0px 16px 8px; border-radius: 16px;} #nav-bar #wrapper .link.active{ background-color: var(--primary-blue-color);} #nav-bar #wrapper .link:active{ background-color: rgb(217, 217, 217);} #nav-bar #wrapper .link a::before{ display: flex; width: clamp(12px, 5vw, 20px); height: clamp(12px, 5vw, 20px); content: ''; margin-right: clamp(0px, 5vw, 8px); background-size: contain; background-repeat: no-repeat; margin-top: 2px; filter: opacity(0.8);} #nav-bar #wrapper .link:nth-child(1) a::before{ background-image: url("/assets/img/home-icon.svg");} #nav-bar #wrapper .link:nth-child(2) a::before{ background-image: url("/assets/img/location-pin.svg");} #nav-bar #wrapper .link:nth-child(3) a::before{ background-image: url("/assets/img/info-icon.svg");} #nav-bar #wrapper .link:nth-child(5) a::before{ background-image: url("/assets/img/blog-icon.svg");} #nav-bar #wrapper .link:nth-child(6) a::before{ background-image: url("/assets/img/biomarkers-icon.svg");} #nav-bar #wrapper .link:nth-child(7) a::before{ background-image: url("/assets/img/call-icon.svg");}}</style>
+<style> *{ margin: 0; padding: 0; font-family: 'Roboto Slab', serif; font-smooth: always; -webkit-font-smoothing: subpixel-antialiased; -moz-osx-font-smoothing: grayscale;} body{ background-color: #F7F8FF !important;} @import url(/assets/css/root.css);
+@media only screen and (min-width: 0px) and (max-width: 767px){ main{ padding-top: 96px;} nav{ display: flex; position: fixed; width: 100%;} #nav-bar #mobile .call-icon{ width: 32px; height: auto;} #nav-bar{ width: 100vw; height: 96px; position: fixed; top: 0; left: 0; background-color: white; z-index: 10000;} main{ padding-top: 96px;} #nav-bar #mobile{ display: flex; position: relative; height: 96px; align-items: center; list-style: none; justify-content: space-between; z-index: 10000; background-color: white; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); padding-left: clamp(8px, calc(25vw - 70px), 32px); padding-right: clamp(8px, calc(25vw - 70px), 32px); width: 100%;} #nav-bar #mobile .burger-icon{ width: 36px; height: 32px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;} #nav-bar .burger-icon .line{ width: 100%; height: 2px; background-color: #242424; transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);} .open-menu #nav-bar .burger-icon .line1{ transform: rotate(405deg) translateY(12px) translateX(8px);} .open-menu #nav-bar .burger-icon .line2{ opacity: 0;} .open-menu #nav-bar .burger-icon .line3{ transform: rotate(-405deg) translateY(-14px) translateX(8px);} #nav-bar #mobile .logo{ width: 32px; height: auto;} #nav-bar #wrapper{ display: flex; width: 100vw; height: 100vh; position: absolute; flex-direction: column; list-style: none; padding-top: 16px; gap: 24px; box-shadow: 0px 0px 4px rgb(0, 0, 0), 0px 0px 64px 8px rgba(0, 0, 0, 0.3); z-index: 1500; background-color: white;} #nav-bar .container-links{ position: absolute; width: 100%; display: flex; justify-content: flex-end; margin-top: 96px; z-index: 0; opacity: 0; transition: opacity 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95); height: 100vh; z-index: 1000; overflow: hidden; transform: translateX(100%); transition: all 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);} .open-menu #nav-bar .container-links{ transform: translateX(0); opacity: 1;} .open-menu footer{ filter: brightness(0.5);} .open-menu main{ filter: brightness(0.5);} footer{ transition: filter 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95); filter: brightness(1);} main{ transition: filter 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95); filter: brightness(1); z-index: 1; background-color: var(--body-background-color);} #nav-bar #wrapper .logo-container{ display: none;} #nav-bar #wrapper .link a{ text-decoration: none !important; display: flex; flex-direction: row; font-size: clamp(0.75rem, 5vw, 1.25rem); font-weight: 500; letter-spacing: 2px; color: var(--black-text-color); -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none; background: transparent; -webkit-tap-highlight-color: transparent;} #nav-bar #wrapper .link a:active{ background-color: transparent;} #nav-bar #wrapper .link a::selection{ background: transparent;} #nav-bar #wrapper .link a::selection::-moz-selection{ background: transparent;} #nav-bar #wrapper .link:nth-child(1) a{ font-weight: 700;} #nav-bar #wrapper .link{ padding: 16px 0px; border-radius: 16px; width: 100%; display: flex; justify-content: center;} #nav-bar #wrapper .link.active a{ color: var(--primary-blue-color);} #nav-bar #wrapper .link:active{ background-color: rgb(217, 217, 217);}}</style>
 <link rel="stylesheet" href="/assets/css/navbar/tablet.css" media="screen and (min-width: 768px)" />
 
 
@@ -56,7 +57,13 @@
 
    <link rel="preload" href="/assets/css/contactUsSectionBlock/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 
+   <link rel="stylesheet" href="/assets/css/biomarkers-alphabetical-buttons/mobile.css" media="screen and (min-width: 0px)" />
+   <link rel="stylesheet" href="/assets/css/biomarkers-alphabetical-buttons/tablet.css" media="screen and (min-width: 600px)" />
+   <link rel="stylesheet" href="/assets/css/biomarkers-alphabetical-buttons/desktop.css" media="screen and (min-width: 1024px)" />
+
    <link rel="stylesheet" href="/assets/css/fonts/services.css" media="none" onload="if(media!=='all')media='all'">
+
+   
    
    
 <link rel="prefetch" href="/">
@@ -154,22 +161,207 @@
         </div>
     </div>
 </div>
-      <section id="biomarkers">
-            <div class="bio">
-               
 
-                  
-                     <div class="bio-item hidden">
-                        <img src="/assets/cms_media/offers3.webp" decoding="async" loading="lazy" width="100" height="100" alt="Picture of /assets/cms_media/offers3.webp" aria-hidden="true">
-                        <span style="font-weight: 500;">fewfew</span>
-                        <p>this is simply an example of a short description for the biomarker being displayed.</p>
-                     </div>
-                  
+      
+         <div id="sorting-buttons">
+            <div class="container">
+               <div class="wrapper">
+                  <div class="span-wrapper">
+                     <span class="trigger-letters-list">Select a letter</span>
+                  </div>
+                  <div class="buttons-container">
+                     <button class="active" data-button="button" data-lettersort="All">A-Z</button>
+                     
+   
+                     
+   
+                     
+                        
+   
+                        
+                                        
+                        
+   
+                     
+                        
+   
+                        
+   
+                     
+                        
+   
+                        
+   
+                     
+                        
+   
+                        
+                                        
+                        
+   
+                     
+   
+                     
+                     
+                     
+    
 
+    
+        
+            <button class="active" data-button="button" data-lettersort="a">A</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="b">B</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="c">C</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="d">D</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="e">E</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="f">F</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="g">G</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="h">H</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="i">I</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="j">J</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="k">K</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="l">L</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="m">M</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="n">N</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="o">O</button>
+        
+    
+        
+            <button class="active" data-button="button" data-lettersort="p">P</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="q">Q</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="r">R</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="s">S</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="t">T</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="u">U</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="v">V</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="w">W</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="x">X</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="y">Y</button>
+        
+    
+        
+            <button class="inactive" data-lettersort="z">Z</button>
+        
+    
+
+                  </div>
+                  <script>
+                     const button = document.querySelector('.trigger-letters-list');
+                     const buttonsContainer = document.querySelector('.buttons-container');
+
+                     button.addEventListener('click', () => {
+                        buttonsContainer.classList.toggle('open')
+                     })
+                  </script>
+               </div>
                
+            </div>
          </div>
-         </section>
-         <section class="contactusbody">
+      
+
+      <section id="biomarkers">
+         <div class="bio">
+            
+
+               
+                  <div class="bio-item hidden" data-letter="p">
+                     <img src="" decoding="async" loading="lazy" width="100" height="100" alt="Picture of " aria-hidden="true">
+                     <span class="biomarker-name" style="font-weight: 500;">peter</span>
+                     <p>peter is nice</p>
+                  </div>
+               
+                  <div class="bio-item hidden" data-letter="p">
+                     <img src="" decoding="async" loading="lazy" width="100" height="100" alt="Picture of " aria-hidden="true">
+                     <span class="biomarker-name" style="font-weight: 500;">petros</span>
+                     <p>mikri perigrafi tou petrou</p>
+                  </div>
+               
+                  <div class="bio-item hidden" data-letter="p">
+                     <img src="" decoding="async" loading="lazy" width="100" height="100" alt="Picture of " aria-hidden="true">
+                     <span class="biomarker-name" style="font-weight: 500;">panagiotis</span>
+                     <p>mikri perigrafi tou panagioti</p>
+                  </div>
+               
+                  <div class="bio-item hidden" data-letter="a">
+                     <img src="" decoding="async" loading="lazy" width="100" height="100" alt="Picture of " aria-hidden="true">
+                     <span class="biomarker-name" style="font-weight: 500;">andria</span>
+                     <p>mikri perigrafi tis andrias</p>
+                  </div>
+               
+
+            
+         </div>
+         <script defer src="/assets/js/biomarkers_alphabetical_sort.js"></script>
+      </section>
+      <section class="contactusbody">
     <div class="container">
         <div class="info-wrapper">
             <h3>CONTACT US</h3>
@@ -216,13 +408,13 @@
     </div>
 </section>
 
-         <style>
-               @media only screen and (min-width: 768px) {
-                  .contactusbody {
-                     display: none;
-                  }
+      <style>
+            @media only screen and (min-width: 768px) {
+               .contactusbody {
+                  display: none;
                }
-         </style>
+            }
+      </style>
    </main>
 
    <footer>

@@ -1,0 +1,72 @@
+@media only screen and (min-width: 0px) {
+    #sorting-buttons {
+        margin-top: 128px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #sorting-buttons .container {
+        width: 100%;
+        max-width: 1280px;
+    }
+
+    #sorting-buttons .buttons-container {
+        margin-top: 64px;
+        width: 80%;
+        height: 0px;
+        overflow-y: clip;
+        max-width: 1280px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(48px, 80px));
+        transition: height 0.3s cubic-bezier(.18,.54,.55,1);
+        justify-content: center;
+    }
+
+    #sorting-buttons .trigger-letters-list {
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        color: white;
+        background-color: var(--blue-color-shade-5);
+        padding: 1rem 1.5rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    #sorting-buttons .buttons-container.open {
+        height: 600px;
+    }
+
+    #sorting-buttons .wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sorting-buttons button {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.788);
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        transition: all 0.2s ease;
+        font-weight: 500;
+        border: 1px solid rgba(0, 0, 0, 0.02);
+    }
+
+    #sorting-buttons button.active:hover {
+        transform: translateY(-2px);
+        background-color: var(--blue-color-tint-5);
+    }
+
+    #sorting-buttons button.inactive {
+        cursor: not-allowed;
+        opacity: 0.4;
+    }
+}

@@ -30,7 +30,13 @@ manifestLanguage: english
 
    <link rel="preload" href="/assets/css/contactUsSectionBlock/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 
+   <link rel="stylesheet" href="/assets/css/biomarkers-alphabetical-buttons/mobile.css" media="screen and (min-width: 0px)" />
+   <link rel="stylesheet" href="/assets/css/biomarkers-alphabetical-buttons/tablet.css" media="screen and (min-width: 600px)" />
+   <link rel="stylesheet" href="/assets/css/biomarkers-alphabetical-buttons/desktop.css" media="screen and (min-width: 1024px)" />
+
    <link rel="stylesheet" href="/assets/css/fonts/services.css" media="none" onload="if(media!=='all')media='all'">
+
+   
    {% endblock %}
    {% include "prefetch.html" %}
 </head>
@@ -40,33 +46,75 @@ manifestLanguage: english
    {% include "languageSwitch.html" %}
    <main>
       {% include "english layouts/pageBannerEN.html" %}
-      <section id="biomarkers">
-            <div class="bio">
-               {% if collections.biomarkersEN | length == 0%}
 
-                  <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">No Biomarkers Added<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Please add biomarkers to display</span></h1>
+      {% if collections.biomarkersEN | length != 0 %}
+         <div id="sorting-buttons">
+            <div class="container">
+               <div class="wrapper">
+                  <div class="span-wrapper">
+                     <span class="trigger-letters-list">Select a letter</span>
+                  </div>
+                  <div class="buttons-container">
+                     <button class="active" data-button="button" data-lettersort="All">A-Z</button>
+                     {% set lettersList = [] %}
+   
+                     
+   
+                     {% for biomarker in collections.biomarkersEN %}
+                        {% set processedLetter = biomarker.data.name | first | lower %}
+   
+                        {% if processedLetter not in lettersList %}
+                           {% set lettersList = (lettersList.push(processedLetter), lettersList) %}             
+                        {% endif %}
+   
+                     {% endfor %}
+   
+                     {% import "english layouts/biomarkersLettersListEN.html" as buttons %}
+                     
+                     {{ buttons.buttonActive(lettersList) }}
+                  </div>
+                  <script>
+                     const button = document.querySelector('.trigger-letters-list');
+                     const buttonsContainer = document.querySelector('.buttons-container');
 
-               {% else %}
-
-                  {% for biomarker in collections.biomarkersEN %}
-                     <div class="bio-item hidden">
-                        <img src="{{ biomarker.data.pfp }}" decoding="async" loading="lazy" width="100" height="100" alt="Picture of {{ biomarker.data.pfp }}" aria-hidden="true">
-                        <span style="font-weight: 500;">{{ biomarker.data.name }}</span>
-                        <p>{{ biomarker.data.shortDesc }}</p>
-                     </div>
-                  {% endfor %}
-
-               {% endif %}
+                     button.addEventListener('click', () => {
+                        buttonsContainer.classList.toggle('open')
+                     })
+                  </script>
+               </div>
+               
+            </div>
          </div>
-         </section>
-         {% include "english layouts/contactusEN.html" %}
-         <style>
-               @media only screen and (min-width: 768px) {
-                  .contactusbody {
-                     display: none;
-                  }
+      {% endif %}
+
+      <section id="biomarkers">
+         <div class="bio">
+            {% if collections.biomarkersEN | length == 0%}
+
+               <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">No Biomarkers Added<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Please add biomarkers to display</span></h1>
+
+            {% else %}
+
+               {% for biomarker in collections.biomarkersEN %}
+                  <div class="bio-item hidden" data-letter="{{ biomarker.data.name | first | lower }}">
+                     <img src="{{ biomarker.data.pfp }}" decoding="async" loading="lazy" width="100" height="100" alt="Picture of {{ biomarker.data.pfp }}" aria-hidden="true">
+                     <span class="biomarker-name" style="font-weight: 500;">{{ biomarker.data.name }}</span>
+                     <p>{{ biomarker.data.shortDesc }}</p>
+                  </div>
+               {% endfor %}
+
+            {% endif %}
+         </div>
+         <script defer src="/assets/js/biomarkers_alphabetical_sort.js"></script>
+      </section>
+      {% include "english layouts/contactusEN.html" %}
+      <style>
+            @media only screen and (min-width: 768px) {
+               .contactusbody {
+                  display: none;
                }
-         </style>
+            }
+      </style>
    </main>
 
    {% include "english layouts/footerEN.html" %}
