@@ -1,6 +1,7 @@
 {
-    "offersList":[
-        { 
+  "en": {
+    "offersList": [
+      { 
             "description":"lorem ipsum", 
             "image":"/assets/img/offers1.png" 
         },
@@ -17,4 +18,13 @@
             "image":"/assets/img/offers4.png" 
         }
     ]
+  },
+  "gr": {
+    "offersList": [
+      {
+        "description": "φδε2ςφες;φε;ς",
+        "image": "/assets/cms_media/offers3.webp"
+      }
+    ]
+  }
 }

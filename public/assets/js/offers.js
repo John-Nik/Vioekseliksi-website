@@ -4,15 +4,22 @@ const offersLayer2 = document.querySelector('.layer2');
 const offersWrappingContainer = document.querySelector('.offers-wrapper');
 const offerDesc = document.querySelector('#offers .description');
 const offersSectionBlock = document.querySelector('#offers');
-
-
+const languageMetaTag = document.querySelector('meta[name="language"]').getAttribute('content');
+let userLanguageServe;
 const offersJSONListing = new Request('/assets/js/offers.json');
+
+if ( languageMetaTag == "EN" ) {
+    userLanguageServe = "en";
+} else {
+    userLanguageServe = "gr";
+}
 
 beginOffers()
 async function beginOffers() {
 
     const response = await fetch(offersJSONListing);
-    const jsonData = await response.json();
+    const responseJSON = await response.json()
+    const jsonData = responseJSON[userLanguageServe];
     const numberOfOffers = jsonData.offersList.length;
 
     switch (numberOfOffers) {
@@ -36,22 +43,29 @@ async function beginOffers() {
 
     initialPopulationOfImages();    
     function initialPopulationOfImages() {
-        for (let i = 0; i < numberOfOffers; i++) {
+        if ( numberOfOffers == 1 ) {
+            const highlightedImageForLayer1 = document.querySelector('.offer-highlighted .img1');
+            highlightedImageForLayer1.src = jsonData.offersList[0].image;
+            offerDesc.textContent = jsonData.offersList[0].description;
+            offerDesc.style.marginBottom = "128px";
+        } else {
+            for (let i = 0; i < numberOfOffers; i++) {
 
-            let numberOfCycles = i+1;
-            let layer1Cycle = numberOfOffers - 1 - i;
-            let layer2Cycle = numberOfOffers - i;
-
-
-            if (layer2Cycle >= numberOfOffers) {
-                layer2Cycle = layer2Cycle - numberOfOffers;
-            }
-
-            offersLayer1.innerHTML += `<img class="img${numberOfCycles} offerimg image" data-cycle="${layer1Cycle}" data-ID="${numberOfCycles}" src="${jsonData.offersList[layer1Cycle].image}" alt="" loading="lazy" decoding="async" aria-label="offer to display">`;
-            offersLayer2.innerHTML += `<img class="img${numberOfCycles} offerimgtwo image" data-cycle="${layer2Cycle}" data-ID="${numberOfCycles}" src="${jsonData.offersList[layer2Cycle].image}" alt="" loading="lazy" decoding="async" aria-label="offer to display">`;
-
-            if (i == 3 || i == numberOfOffers - 1) {
-                return offersCarousel();
+                let numberOfCycles = i+1;
+                let layer1Cycle = numberOfOffers - 1 - i;
+                let layer2Cycle = numberOfOffers - i;
+    
+    
+                if (layer2Cycle >= numberOfOffers) {
+                    layer2Cycle = layer2Cycle - numberOfOffers;
+                }
+    
+                offersLayer1.innerHTML += `<img class="img${numberOfCycles} offerimg image" data-cycle="${layer1Cycle}" data-ID="${numberOfCycles}" src="${jsonData.offersList[layer1Cycle].image}" alt="" loading="lazy" decoding="async" aria-label="offer to display">`;
+                offersLayer2.innerHTML += `<img class="img${numberOfCycles} offerimgtwo image" data-cycle="${layer2Cycle}" data-ID="${numberOfCycles}" src="${jsonData.offersList[layer2Cycle].image}" alt="" loading="lazy" decoding="async" aria-label="offer to display">`;
+    
+                if (i == 3 || i == numberOfOffers - 1) {
+                    return offersCarousel();
+                }
             }
         }
     }

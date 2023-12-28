@@ -27,6 +27,28 @@ collections:
       - {label: "Ρόλος στο χημείο", name: "title", widget: "string", i18n: true}
       - {label: "Περιγραφή", name: "body", widget: "markdown", i18n: true}
 
+  - name: "Offers"
+    label: "Offers / Προσφορές"
+    i18n:
+      structure: single_file
+      locales: [en, gr]
+    files:
+      - label: "Offers List / Λίστα Προσφορών"
+        name: "Offers"
+        file: "assets/js/offers2.json"
+        i18n: true
+        fields:
+          - label: "Offers List"
+            name: "offersList"
+            widget: "list"
+            i18n: true
+            allow_add: true
+            fields:
+              - {label: "Description", name: "description", widget: "string", i18n: true}
+              - {label: "Image", name: "image", widget: "image", i18n: duplicate}
+
+
+
 
   - name: "biomarkers"
     label: "Biomarkers / Βιοδεικτά Στοιχεία"

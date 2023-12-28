@@ -205,5 +205,8 @@
 				<li>Minor changes in the way that files are structured through the admin panel | G</li>
 			</ul>
 <br>
-<br>
-# Website layout and functionality is completely finished. 
+
+# Website layout and functionality is completely finished.
+
+
+**0.18.1:** Made it easier for the clients to change their offers, and added the possibility to add multiple languages | G
