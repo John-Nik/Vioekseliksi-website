@@ -209,4 +209,6 @@
 # Website layout and functionality is completely finished.
 
 
-**0.18.1:** Made it easier for the clients to change their offers, and added the possibility to add multiple languages | G
+**0.18.1:** Made it easier for the clients to change their offers, and added the possibility to add multiple languages | G<br>
+<br>
+**0.18.2:**  Minor bug fixes and refactored the javascript files to make them more readable | G

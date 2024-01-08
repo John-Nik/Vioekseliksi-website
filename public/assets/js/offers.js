@@ -4,11 +4,10 @@ const offersLayer2 = document.querySelector('.layer2');
 const offersWrappingContainer = document.querySelector('.offers-wrapper');
 const offerDesc = document.querySelector('#offers .description');
 const offersSectionBlock = document.querySelector('#offers');
-const languageMetaTag = document.querySelector('meta[name="language"]').getAttribute('content');
-let userLanguageServe;
+let userLanguageServe = '';
 const offersJSONListing = new Request('/assets/js/offers.json');
 
-if ( languageMetaTag == "EN" ) {
+if ( document.querySelector('meta[name="language"]').getAttribute('content') == "EN" ) {
     userLanguageServe = "en";
 } else {
     userLanguageServe = "gr";
@@ -16,7 +15,6 @@ if ( languageMetaTag == "EN" ) {
 
 beginOffers()
 async function beginOffers() {
-
     const response = await fetch(offersJSONListing);
     const responseJSON = await response.json()
     const jsonData = responseJSON[userLanguageServe];
@@ -36,7 +34,7 @@ async function beginOffers() {
             break;
         case 3:
             offersLayers.forEach((layer) => {
-                layer.style.gap = '24px';
+                layer.style.gap = '24px'; 
             });
             break;
     }

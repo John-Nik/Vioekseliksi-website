@@ -1,6 +1,3 @@
-*, *:before, *:after {
-    box-sizing: border-box;
-}
 .cs-topper {
     font-size: var(--topperFontSize);
     line-height: 1.2em;
