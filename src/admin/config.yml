@@ -2,7 +2,7 @@ local_backend: true
 
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  branch: master
 
 # This line should *not* be indented
 publish_mode: editorial_workflow
