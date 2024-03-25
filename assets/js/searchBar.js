@@ -34,6 +34,12 @@ function startSearching (inputQuery) {
     let firstSearch = [];
     let second_search = [];
     let sortedResults = [];
+    let doneTypingInterval = 2000;
+    let typingTimer;
+    let isUserTyping = true;
+
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(() => {isUserTyping = false}, doneTypingInterval);
 
 
     if ( inputQuery === '' ) {
@@ -119,32 +125,21 @@ function startSearching (inputQuery) {
         }
     }
     
-
-    
     async function autocorrect(mistyped_words) {
         let mistyped_words_string = mistyped_words.toString().replace(',', ' ');
-        let timeout = setTimeout(() => {}, 200);
-        let response;
+        let response = {};
+        let checkUserTyping;
 
-
-        clearTimeout(timeout);
-
-        if ( hasTimeoutStarted == false ) {
-            timeout = setTimeout(() => {
-
-                if (hasTimeoutStarted == true) {
-                    hasTimeoutStarted = false;
-                    run();
-                    async function run() {
-                        response = await fetch(`/.netlify/functions/hello-world?input=${mistyped_words_string}`).then(response => response.json());
-                        second_search_process(response);
-                    }
+        clearTimeout(checkUserTyping);
+        checkUserTyping = setTimeout(() => {
+            if (isUserTyping == false) {
+                asyncFetch();
+                async function asyncFetch() {
+                    response = await fetch(`/.netlify/functions/hello-world?input=${mistyped_words_string}`).then(response => response.json());
+                    second_search_process(response);
                 }
-                
-            }, 200);
-        }
-        
-        hasTimeoutStarted = true;
+            }
+        }, doneTypingInterval + 5) 
     }
 
 
@@ -200,26 +195,26 @@ function startSearching (inputQuery) {
             sortResults(allResultsFiltered, allResultsFiltered.length);
         }
 
-        function sortResults(arr, n) {
-            var i, j, temp;
-            var swapped;
-            for (i = 0; i < n - 1; i++) {
+        function sortResults(array, arrayLength) {
+            let temp;
+            let swapped;
+
+            for (let i = 0; i < arrayLength - 1; i++) {
                 swapped = false;
-                for (j = 0; j < n - i - 1; j++) {
-                    if (arr[j][1] > arr[j + 1][1]) {
-                        temp = arr[j];
-                        arr[j] = arr[j + 1];
-                        arr[j + 1] = temp;
+                for (let j = 0; j < arrayLength - i - 1; j++) {
+                    if (array[j][1] > array[j + 1][1]) {
+                        temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
                         swapped = true;
                     }
                 }
-        
 
                 if (swapped == false)
                 break;
             }
 
-            sortedResults = arr.reverse();
+            sortedResults = array.reverse();
             populateList();
         }
     }

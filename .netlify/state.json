@@ -2,19 +2,19 @@
 	"siteId": "9621dc3e-f477-4256-a28f-390271a00d49",
 	"geolocation": {
 		"data": {
-			"city": "Limassol",
+			"city": "Nicosia",
 			"country": {
 				"code": "CY",
 				"name": "Cyprus"
 			},
 			"subdivision": {
-				"code": "02",
-				"name": "Limassol District"
+				"code": "01",
+				"name": "Nicosia"
 			},
 			"timezone": "Asia/Nicosia",
-			"latitude": 34.6874,
-			"longitude": 33.0366
+			"latitude": 35.1638,
+			"longitude": 33.3639
 		},
-		"timestamp": 1703419462480
+		"timestamp": 1704750868556
 	}
 }
