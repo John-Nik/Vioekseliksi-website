@@ -1,6 +1,0 @@
-@media only screen and (min-width: 768px) {
-    #questions .questions-wrapper {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 180px;
-    }
-}

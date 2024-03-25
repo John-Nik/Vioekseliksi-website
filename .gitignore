@@ -1,6 +1,6 @@
+public
 node_modules
 .env
-public
 
 # Local Netlify folder
 .netlify
