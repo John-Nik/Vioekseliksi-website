@@ -219,4 +219,10 @@
 
 **0.19.0:** Activated authentication for the CMS
 
+<br>
+
 **0.19.1:** Added "/public" to the .gitignore file
+
+<br>
+
+**0.19.2:** Deleted the /public folder from the repo
