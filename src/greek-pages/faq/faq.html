@@ -1,0 +1,94 @@
+---
+bannerTitle: Συχνές ερωτήσεις
+bannerText: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere natus saepe rerum dolorem sit voluptas hic qui fugiat accusamus fuga.
+bannerImage: assets/img/Illustration.svg
+permalink: /gr/faq/
+language: GR
+metaDescription: Vioexelixi, ένα εργαστήριο στη Λευκωσία που βοηθά με αναλύσεις στα θέματα της αιμοληψίας, της ανοσολογίας και της μικροβιολογίας. Καλέστε μας για να έρθουμε στο σπίτι σας για μια δωρεάν αιμοληψία
+metaCanonical: canonical
+metaTitle: Συχνές Ερωτήσεις
+manifestLanguage: greek
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "metaTags.html" %}
+    {% block pageCSS %}
+    <link rel="stylesheet" href="/assets/css/banner/mobile.css" media="screen and (min-width: 0px)" />
+    <link rel="stylesheet" href="/assets/css/banner/tablet.css" media="screen and (min-width: 768px)" />
+    <link rel="stylesheet" href="/assets/css/banner/desktop.css" media="screen and (min-width: 1024px)" />
+
+    <link rel="stylesheet" href="/assets/css/faq_Page/mobile.css " media="screen and (min-width: 0px)" />
+    <link rel="preload" href="/assets/css/faq_Page/tablet.css " media="screen and (min-width: 768px)" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link rel="preload" href="/assets/css/faq_Page/widescreen.css " media="screen and (min-width: 1280px)" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+
+    <link rel="preload" href="/assets/css/contactUsSectionBlock/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+
+    <link rel="stylesheet" href="/assets/css/fonts/faq.css" media="none" onload="if(media!=='all')media='all'">
+    {% endblock %}
+    {% include  "prefetch.html"%}
+    
+</head>
+<body>
+    {% include "greek layouts/navbarGR.html" %}
+    {% include "languageSwitch.html" %}
+    <main>
+        {% include "greek layouts/pageBannerGR.html" %}
+        <div id="search-bar">
+            <div class="container">
+                <input onfocus="this.placeholder = ''" id="test" type="search" placeholder="How many days does it take for the results?">
+                <script>
+                    const inputElement = document.querySelector('input');
+
+                    inputElement.addEventListener('focusout', () => {
+                        inputElement.placeholder = 'How many days does it take for the results';
+                    } )
+                </script>
+                <ul id="searchResults">
+
+                </ul>
+            </div>
+            <script defer src="/assets/js/searchBar.js"></script>
+        </div>
+
+        <section id="questions">
+            <div class="container">
+                
+
+                {% if collections.faqGR | length == 0 %}
+
+                    <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">Δεν υπάρχουν ερωτήσεις και απαντήσεις για προβολή<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Παρακαλώ προσθέστε μερικές συχνές ερωτήσεις για να εμφανιστούν</span></h1>
+
+                {% else %}
+
+                    <div class="questions-wrapper">
+                    {% for faq in collections.faqGR %}
+                        <div id="{{ faq.fileSlug }}" class="card">
+                            <div class="title-and-icon-wrapper">
+                                <span class="title">{{ faq.data.question }} </span>
+                                <div class="img-wrapper">
+                                    <img src="/assets/img/faq.svg" alt="questions and answer icon" decoding="async" loading="lazy" aria-hidden="true">
+                                </div>
+                            </div>
+                            <p class="answer">{{ faq.content | safe }}</p>
+                        </div>
+                    {% endfor %}
+                    </div>
+                {% endif %}
+                    
+            </div>
+        </section>
+        {% include "greek layouts/contactusGR.html" %}
+        <style>
+            @media only screen and (min-width: 768px) {
+                .contactusbody {
+                    display: none;
+                }
+            }
+        </style>
+    </main>
+    {% include "greek layouts/footerGR.html" %}
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
   "en": {
     "offersList": [
-      { 
+        { 
             "description":"lorem ipsum", 
             "image":"/assets/img/offers1.png" 
         },

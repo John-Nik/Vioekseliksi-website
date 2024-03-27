@@ -1,0 +1,63 @@
+<section id="blog-1347">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Διαβάστε τα πιο πρόσφατα άρθρα μας</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lobortis quam eu elit lobortis ultrices. Nulla ut accumsan lorem, sed molestie justo. Praesent vehicula eleifend.
+            </p>
+            <h1></h1>
+        </div>
+        {% if collections.post | length == 0 %}
+            <h1 style="font-size: 3rem; color: #0b2d39; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">Δεν υπάρχουν πρόσφατες αναρτήσεις<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Παρακαλώ ελέγξτε αργότερα</span></h1>
+        {% else %}
+        <ul class="cs-card-group">
+                {% set postsArray = [] %}
+
+                {% if collections.post | length == 1 %}
+                    {% set posts = collections.post | reverse %}
+                    {% set iterateMax = posts | slice(1) %}
+                    {% set postsArray = iterateMax %}
+                {% endif %}
+                {% if collections.post | length == 2 %}
+                    {% set posts = collections.post | reverse %}
+                    {% set iterateMax = posts | slice(2) %}
+                    {% set postsArray = iterateMax %}
+                {% endif %}
+                {% if collections.post | length >= 3 %}
+                    {% set posts = collections.post | reverse %}
+                    {% set iterateMax = posts | slice(3) %}
+                    {% set postsArray = iterateMax %}
+                {% endif %}
+
+                {%- for post in postsArray -%}
+                    <li class="cs-item">
+                        <article>
+                            <a class="cs-link" href="{{ post[0].url }}">
+                                <picture class="cs-picture">
+                                    <img loading="lazy" decoding="async" src="{{ post[0].data.thumbnail}}" alt="agency" width="413" height="374" aria-hidden="true">
+                                </picture>
+                                <div class="cs-item-text">
+                                    <h3 class="cs-h3">
+                                        {{ post[0].data.title }}
+                                        <picture class="cs-icon-wrapper">
+                                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-arrow-upper-right.svg" alt="arrow" width="413" height="374" aria-hidden="true">
+                                        </picture>
+                                    </h3>
+                                    <div class="cs-info">
+                                        <span class="cs-date">
+                                            <img class="cs-date-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/agency-calendar.svg" alt="calendar" width="413" height="374" aria-hidden="true">
+                                        </span>
+                                        <span class="cs-category">
+                                            {{ post[0].date | postDate }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                {%- endfor -%}
+            {% endif %}
+        </ul>
+    </div>
+    <div class="cs-bubbles" aria-hidden="true"></div>
+</section>

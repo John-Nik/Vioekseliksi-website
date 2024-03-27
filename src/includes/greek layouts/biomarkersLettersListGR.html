@@ -1,0 +1,11 @@
+{% macro buttonActive(state) %}
+    {% set lettersAlphabet = ["α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "ι", "κ", "λ", "μ", "ν", "ξ", "ο", "π", "ρ", "σ", "τ", "υ", "φ", "χ", "ψ", "ω"] %}
+
+    {% for letter in lettersAlphabet %}
+        {% if letter in state %}
+            <button class="active" data-button="button" data-lettersort="{{ letter }}">{{ letter | upper }}</button>
+        {% else %}
+            <button class="inactive" data-lettersort="{{ letter }}">{{ letter | upper }}</button>
+        {% endif %}
+    {% endfor%}
+{% endmacro %}

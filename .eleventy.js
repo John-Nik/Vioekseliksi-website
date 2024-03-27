@@ -1,5 +1,6 @@
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const { DateTime } = require('luxon');
+const util = require('util');
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -12,6 +13,11 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter('postDate', (dateObj) => {
 		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
 	});
+
+    eleventyConfig.addFilter('console', function(value) {
+        const str = util.inspect(value);
+        return `<div style="white-space: pre-wrap;">${str}</div>;`
+    });
 
     return {
         dir: {

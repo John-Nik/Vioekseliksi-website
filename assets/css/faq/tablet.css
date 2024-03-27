@@ -132,17 +132,4 @@
         margin-bottom: 64px;
         margin-top: 28px;
     }
-    
-    #faq .answer {
-        margin-top: -0.6rem;
-        padding-top: 1.5rem;
-        padding-left: 16px;
-        padding-right: 16px;
-        margin-left: -16px;
-        color: rgb(68, 68, 68);
-        width: 100%;
-        padding-bottom: 2rem;
-        background-color: #F1F2FA;
-        display: none;
-    }
 }

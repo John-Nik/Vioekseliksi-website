@@ -22,6 +22,11 @@
         align-items: flex-start;
     }
 
+    #banner .text {
+        text-align: left;
+        display: inline;
+    }
+
     #banner .text-wrapper {
         margin-top: 24px;
     }
@@ -39,5 +44,6 @@
     #banner img {
         height: clamp(150px, 25vw, 250px);
         margin-top: 64px;
+        display: flex;
     }
 }

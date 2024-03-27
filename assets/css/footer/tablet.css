@@ -8,6 +8,7 @@
     }
     footer .content-container {
         flex-direction: row;
+        justify-content: space-between;
     }
     footer .misc-container {
         justify-content: space-between;
@@ -18,9 +19,8 @@
         width: 30%;
     }
     footer .links-container {
-        width: 70%;
-        grid-template-columns: repeat(4, minmax(100px, 1fr));
-        padding-right: 16px;
+        width: fit-content;
+        grid-template-columns: repeat(3, minmax(100px, 200px));
     }
     footer .listing-wrappers {
         display: flex;

@@ -105,33 +105,51 @@
         will-change: transform opacity;
     }
 
-    .card[data-index="1"] {
+    .card[data-index="0"] {
         opacity: 0;
         transform: translateX(200%) scale(0.6);
         transition: all 0.01s cubic-bezier(0.39, 0.575, 0.565, 1);
         -webkit-filter: blur(0px);
     }
 
-    .card[data-index="2"] {
+    .card[data-index="1"] {
         display: flex;
         opacity: 1;
         transform: translateX(100%) scale(0.8);
         -webkit-filter: blur(1px);
     }
 
-    .card[data-index="3"] {
+    .card[data-index="2"] {
         opacity: 1;
         transform: translateX(0px) scale(1);
         -webkit-filter: blur(0px);
     }
 
-    .card[data-index="4"] {
+    .card[data-index="3"] {
         opacity: 1;
         transform: translateX(-100%) scale(0.8);
         -webkit-filter: blur(1px);
     }
 
+    .card[data-index="4"] {
+        opacity: 0;
+        transform: translateX(-200%) scale(0.8);
+        -webkit-filter: blur(15px);
+    }
+
     .card[data-index="5"] {
+        opacity: 0;
+        transform: translateX(-200%) scale(0.8);
+        -webkit-filter: blur(15px);
+    }
+
+    .card[data-index="6"] {
+        opacity: 0;
+        transform: translateX(-200%) scale(0.8);
+        -webkit-filter: blur(15px);
+    }
+
+    .card[data-index="7"] {
         opacity: 0;
         transform: translateX(-200%) scale(0.8);
         -webkit-filter: blur(15px);

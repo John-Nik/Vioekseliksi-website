@@ -47,9 +47,12 @@
     }
     
     #banner .text {
-        font-size: clamp(12px, 2vw, 24px);
+        font-size: clamp(16px, 2vw, 24px);
         color: var(--blue-color-shade-6);
         line-height: 24px;
+        text-align: center;
+        width: 100%;
+        display: flex;
     }
     
     #banner img {
@@ -57,6 +60,7 @@
         width: auto;
         float: right;
         position: relative;
+        display: none;
     }
     
     #banner .text-wrapper {

@@ -1,7 +1,8 @@
-const dataIndexElements = document.querySelectorAll('[data-index]');
+const dataIndexElements= document.querySelectorAll('[data-index]');
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
 const card = document.querySelectorAll('.card');
+
 
 
 
@@ -9,12 +10,12 @@ function incrementCarousel() {
     dataIndexElements.forEach((element) => {
         ++element.dataset.index;
         
-        if (element.dataset.index >= 10) {
-            element.dataset.index = element.dataset.index - 10;
+        if (element.dataset.index >= dataIndexElements.length) {
+            element.dataset.index = element.dataset.index - dataIndexElements.length;
         }
 
         if (element.dataset.index < 0) {
-            element.dataset.index = 9;
+            element.dataset.index = dataIndexElements.length - 1;
         }
     })
 }
@@ -23,12 +24,12 @@ function decrementCarousel() {
     dataIndexElements.forEach((element) => {
         --element.dataset.index;
         
-        if (element.dataset.index >= 10) {
-            element.dataset.index = element.dataset.index - 10;
+        if (element.dataset.index >= dataIndexElements.length) {
+            element.dataset.index = element.dataset.index - dataIndexElements.length;
         }
 
         if (element.dataset.index < 0) {
-            element.dataset.index = 9;
+            element.dataset.index = dataIndexElements.length - 1;
         }
     })
 }

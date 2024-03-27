@@ -1,8 +1,8 @@
 <div class="services-section-block hidden">
     <div class="container">
         <div class="text-content">
-            <h2>SERVICES</h2>
-            <span>We offer a variety of services, including these few</span>
+            <h2>ΥΠΗΡΕΣΙΕΣ</h2>
+            <span>Προσφέρουμε μια ποικιλία υπηρεσιών, συμπεριλαμβανομένων αυτών των λίγων</span>
         </div>
     
         <div class="carousel-container">
@@ -13,7 +13,7 @@
             <div class="carousel-wrapper">
                 {% set loopIteration = 0 %}
 
-                {% for service in collections.servicesProvidedEN %}
+                {% for service in collections.servicesProvidedGR %}
                     <div class="card" data-index="{{ loopIteration }}">
                         <img src="service[0].data.image" alt="offer card">
                         <span>{{ service[0].data.name }}</span>
@@ -21,7 +21,7 @@
                     {% set loopIteration = loopIteration + 1 %}
                 {% endfor %}
                 
-                {% for service in collections.servicesProvidedEN %}
+                {% for service in collections.servicesProvidedGR %}
                     <div class="card" data-index="{{ loopIteration }}">
                         <img src="service[0].data.image" alt="offer card">
                         <span>{{ service[0].data.name }}</span>

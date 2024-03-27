@@ -217,12 +217,16 @@
 
 <br>
 
-**0.19.0:** Activated authentication for the CMS
+**0.19.0:** Activated authentication for the CMS | G
 
 <br>
 
-**0.19.1:** Added "/public" to the .gitignore file
+**0.19.1:** Added "/public" to the .gitignore file | G
 
 <br>
 
-**0.19.2:** Deleted the /public folder from the repo
+**0.19.2:** Deleted the /public folder from the repo | G
+
+<br>
+
+**0.20.0:** Added the greek page's layout, aswell as some minor styling in the pages | G

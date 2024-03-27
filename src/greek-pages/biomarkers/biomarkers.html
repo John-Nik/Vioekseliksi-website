@@ -1,16 +1,16 @@
 ---
-bannerTitle: Biomarkers
-bannerText: A small page to give information about all the important biomarkers we analyze. Their functionality, structure, where they're produced, and the side-effects they can have
-bannerImage: ../assets/img/biomarkers.webp
-permalink: biomarkers/
+bannerTitle: Βιοδείκτες
+bannerText: Μια μικρή σελίδα που παρέχει πληροφορίες για όλους τους σημαντικούς βιοδείκτες που αναλύουμε. Τη λειτουργικότητά τους, τη δομή τους, το πού παράγονται και τις παρενέργειες που μπορεί να έχουν
+bannerImage: /assets/img/biomarkers.webp
+permalink: /gr/biomarkers/
 eleventyNavigation:
-    key: BIOMARKERS
-    order: 500
-language: EN
-metaDescription: description goes here
+   key: BIOMARKERS
+   order: 1100
+language: GR
+metaDescription: Vioexelixi, ένα εργαστήριο στη Λευκωσία που βοηθά με αναλύσεις στα θέματα της αιμοληψίας, της ανοσολογίας και της μικροβιολογίας. Καλέστε μας για να έρθουμε στο σπίτι σας για μια δωρεάν αιμοληψία
 metaCanonical: canonical
-metaTitle: Biomarkers
-manifestLanguage: english
+metaTitle: Βιοδείκτες
+manifestLanguage: greek
 ---
 
 <!DOCTYPE html>
@@ -42,25 +42,25 @@ manifestLanguage: english
 </head>
 
 <body>
-   {% include "english layouts/navbarEN.html" %}
+   {% include "greek layouts/navbarGR.html" %}
    {% include "languageSwitch.html" %}
    <main>
-      {% include "english layouts/pageBannerEN.html" %}
+      {% include "greek layouts/pageBannerGR.html" %}
 
-      {% if collections.biomarkersEN | length != 0 %}
+      {% if collections.biomarkersGR | length != 0 %}
          <div id="sorting-buttons">
             <div class="container">
                <div class="wrapper">
                   <div class="span-wrapper">
-                     <span class="trigger-letters-list">Select a letter</span>
+                     <span class="trigger-letters-list">Ταξινόμηση</span>
                   </div>
                   <div class="buttons-container">
-                     <button class="active" data-button="button" data-lettersort="All">A-Z</button>
+                     <button class="active" data-button="button" data-lettersort="All">A-Ω</button>
                      {% set lettersList = [] %}
    
                      
    
-                     {% for biomarker in collections.biomarkersEN %}
+                     {% for biomarker in collections.biomarkersGR %}
                         {% set processedLetter = biomarker.data.name | first | lower %}
    
                         {% if processedLetter not in lettersList %}
@@ -69,7 +69,7 @@ manifestLanguage: english
    
                      {% endfor %}
    
-                     {% import "english layouts/biomarkersLettersListEN.html" as buttons %}
+                     {% import "greek layouts/biomarkersLettersListGR.html" as buttons %}
                      
                      {{ buttons.buttonActive(lettersList) }}
                   </div>
@@ -89,13 +89,13 @@ manifestLanguage: english
 
       <section id="biomarkers">
          <div class="bio">
-            {% if collections.biomarkersEN | length == 0%}
+            {% if collections.biomarkersGR | length == 0%}
 
-               <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">No Biomarkers Added<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Please add biomarkers to display</span></h1>
+               <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">Δεν έχουν προστεθεί βιοδείκτες<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Προσθέστε βιοδείκτες για εμφάνιση</span></h1>
 
             {% else %}
 
-               {% for biomarker in collections.biomarkersEN %}
+               {% for biomarker in collections.biomarkersGR %}
                   <div class="bio-item hidden" data-letter="{{ biomarker.data.name | first | lower }}">
                      <img src="{{ biomarker.data.pfp }}" decoding="async" loading="lazy" width="100" height="100" alt="Picture of {{ biomarker.data.pfp }}" aria-hidden="true">
                      <span class="biomarker-name" style="font-weight: 500;">{{ biomarker.data.name }}</span>
@@ -107,7 +107,7 @@ manifestLanguage: english
          </div>
          <script defer src="/assets/js/biomarkers_alphabetical_sort.js"></script>
       </section>
-      {% include "english layouts/contactusEN.html" %}
+      {% include "greek layouts/contactusGR.html" %}
       <style>
             @media only screen and (min-width: 768px) {
                .contactusbody {
@@ -117,7 +117,7 @@ manifestLanguage: english
       </style>
    </main>
 
-   {% include "english layouts/footerEN.html" %}
+   {% include "greek layouts/footerGR.html" %}
 
 </body>
 

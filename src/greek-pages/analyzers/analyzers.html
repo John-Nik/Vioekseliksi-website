@@ -1,16 +1,16 @@
 ---
-bannerTitle: Analyzers
-bannerText: All the machines we use are listed here, briefly explaining them
-bannerImage: ../assets/img/analyzers.webp
-permalink: analyzers/
+bannerTitle: Αναλυτές
+bannerText: Όλα τα μηχανήματα που χρησιμοποιούμε παρατίθενται εδώ, εξηγώντας τα εν συντομία.
+bannerImage: /assets/img/analyzers.webp
+permalink: /gr/analyzers/
 eleventyNavigation:
     key: ANALYZERS
-    order: 400
-language: EN
-metaDescription: description goes here
+    order: 1000
+language: GR
+metaDescription: Vioexelixi, ένα εργαστήριο στη Λευκωσία που βοηθά με αναλύσεις στα θέματα της αιμοληψίας, της ανοσολογίας και της μικροβιολογίας. Καλέστε μας για να έρθουμε στο σπίτι σας για μια δωρεάν αιμοληψία
 metaCanonical: canonical
-metaTitle: Chemical Analyzers
-manifestLanguage: english
+metaTitle: Αναλυτές
+manifestLanguage: greek
 ---
 
 
@@ -35,10 +35,10 @@ manifestLanguage: english
         {% include "prefetch.html" %}
     </head>
     <body>
-        {% include "english layouts/navbarEN.html" %}
+        {% include "greek layouts/navbarGR.html" %}
         {% include "languageSwitch.html" %}
         <main>
-            {% include "english layouts/pageBannerEN.html" %}
+            {% include "greek layouts/pageBannerGR.html" %}
             <section id="blog-1347">
                 <div class="cs-container">
                     <div class="cs-content">
@@ -46,7 +46,7 @@ manifestLanguage: english
                         <p class="cs-text">          </p>
                     </div>
                     {% if collections.post | length == 0 %}
-                        <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">No Items Added<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Please add items to display</span></h1>
+                        <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">Δεν έχουν προστεθεί στοιχεία<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Προσθέστε στοιχεία για να τα εμφανίσετε</span></h1>
                     {% else %}
                     <ul class="cs-card-group">           
                             {%- for post in collections.post | reverse -%}
@@ -89,7 +89,7 @@ manifestLanguage: english
                 </div>
                 <div class="cs-bubbles" aria-hidden="true"></div>
             </section>
-            {% include "english layouts/contactusEN.html" %}
+            {% include "greek layouts/contactusGR.html" %}
             <style>
                 @media only screen and (min-width: 768px) {
                     .contactusbody {
@@ -98,6 +98,6 @@ manifestLanguage: english
                 }
             </style>
         </main>
-        {% include "english layouts/footerEN.html" %}
+        {% include "greek layouts/footerGR.html" %}
     </body>
 </html>

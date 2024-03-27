@@ -35,7 +35,7 @@ collections:
     files:
       - label: "Offers List / Λίστα Προσφορών"
         name: "Offers"
-        file: "assets/js/offers2.json"
+        file: "src/content_management_files/offers/offersList.json"
         i18n: true
         fields:
           - label: "Offers List"
@@ -44,9 +44,9 @@ collections:
             i18n: true
             allow_add: true
             fields:
+              - {label: "Name", name: "offerName", widget: "string", i18n: true}
               - {label: "Description", name: "description", widget: "string", i18n: true}
               - {label: "Image", name: "image", widget: "image", i18n: duplicate}
-
 
 
 

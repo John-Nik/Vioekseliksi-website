@@ -1,16 +1,16 @@
 ---
-bannerTitle: Meet The Team
-bannerText: We are a small team of passionate people, working towards a common goal
-bannerImage: ../assets/img/meet-the-team-banner.webp
-permalink: aboutus/
+bannerTitle: Γνωρίστε την ομάδα
+bannerText: Είμαστε μια μικρή ομάδα παθιασμένων ανθρώπων που εργάζονται για έναν κοινό στόχο
+bannerImage: /assets/img/meet-the-team-banner.webp
+permalink: gr/aboutus/
 eleventyNavigation:
     key: ABOUT US
-    order: 200
-language: EN
-metaDescription: description goes here
+    order: 800
+language: GR
+metaDescription: Vioexelixi, ένα εργαστήριο στη Λευκωσία που βοηθά με αναλύσεις στα θέματα της αιμοληψίας, της ανοσολογίας και της μικροβιολογίας. Καλέστε μας για να έρθουμε στο σπίτι σας για μια δωρεάν αιμοληψία
 metaCanonical: canonical
-metaTitle: About Us
-manifestLanguage: english
+metaTitle: Πληροφορίες
+manifestLanguage: greek
 ---
 
 <!DOCTYPE html>
@@ -34,36 +34,28 @@ manifestLanguage: english
    <link rel="preload" href="/assets/css/contactUsSectionBlock/mobile.css" media="screen and (min-width: 0px)" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 
    <link rel="stylesheet" href="/assets/css/fonts/aboutUs.css" media="none" onload="if(media!=='all')media='all'">
-   
-   <script src="/assets/js/hyphens.js" async></script>
-   <script type="text/javascript">
-      Hyphenator.config({
-         useCSS3hyphenation: true
-      });
-      Hyphenator.run();
-   </script>
    {% endblock %}
    {% include "prefetch.html" %}
 </head>
 
 <body>
-   {% include "english layouts/navbarEN.html" %}
+   {% include "greek layouts/navbarGR.html" %}
    {% include "languageSwitch.html" %}
    <main>
-      {% include "english layouts/pageBannerEN.html" %}
-      {% include "english layouts/teammembersEN.html" %}
+      {% include "greek layouts/pageBannerGR.html" %}
+      {% include "greek layouts/teammembersGR.html" %}
 
       <section id="members">
          <div class="container">
-            <h1 class="hidden">More About Each Member</h1>
+            <h1 class="hidden">Περισσότερα για κάθε μέλος</h1>
             
-            {% if collections.teamMembersEN | length == 0 %}
+            {% if collections.teamMembersGR | length == 0 %}
 
-            <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">No Members to Show<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Please add members to display their Biography</span></h1>
+            <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">Δεν υπάρχουν μέλη για προβολή<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Παρακαλώ προσθέστε μέλη για να εμφανίσετε το βιογραφικό τους</span></h1>
 
             {% else %}
             <div class="grid_wrapper">
-               {% for person in collections.teamMembersEN %}
+               {% for person in collections.teamMembersGR %}
                <div class="about_the_member hidden">
                   <img src="{{ person.data.pfp }}" loading="lazy" decoding="async">
                   <div class="moreabout">
@@ -81,7 +73,7 @@ manifestLanguage: english
 
       <section id="company">
          <div class="container">
-            <h1 class="hidden">Our Story</h1>
+            <h1 class="hidden">Η ιστορία μας</h1>
 
             <div class="wrapper">
                <div class="about_the_company hidden">
@@ -105,7 +97,7 @@ manifestLanguage: english
             </div>
          </div>
       </section>
-      {% include "english layouts/contactusEN.html" %}
+      {% include "greek layouts/contactusGR.html" %}
       <style>
          @media only screen and (min-width: 768px) {
                .contactusbody {
@@ -115,7 +107,7 @@ manifestLanguage: english
       </style>
    </main>
 
-   {% include "english layouts/footerEN.html" %}
+   {% include "greek layouts/footerGR.html" %}
 
 </body>
 

@@ -1,0 +1,56 @@
+<section class="contactusbody">
+    <div class="container">
+        <div class="info-wrapper">
+            <h3>ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ</h3>
+            <ul class="option">
+                <li>
+                    <a href="">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-phone" style="font-size: 30px;"></i>
+                        </div>
+                        <span><b>ΤΗΛΕΦΩΝΟ</b></span>
+                        {% if client | length == 0 %}
+
+                            Τίποτα προς προσβολή
+
+                        {% else %}
+
+                            {% for number in client.phoneForTel %}
+                                {{ number }} <br>
+                            {% endfor %}
+                            
+                        {% endif %}
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-envelope" style="font-size: 30px;"></i>
+                        </div>
+                        <span><b>EMAIL</b></span>
+                        {% if client | length == 0 %}
+
+                        Τίποτα προς προσβολή
+
+                        {% else %}
+
+                            {{ client.email }}
+
+                        {% endif %}
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-location-dot" style="font-size: 30px;"></i>
+                        </div>
+                        <span><b>ΤΟΠΟΘΕΣΙΑ</b></span>
+                        Asomatos, Ermou 2 <br>
+                        4645, Limassol
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <a class="button" href="/contactus">Επικοινωνήστε μαζί μας</a>
+    </div>
+</section>

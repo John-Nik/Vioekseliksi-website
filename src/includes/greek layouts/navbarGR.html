@@ -1,0 +1,47 @@
+<header id="nav-bar">
+    <nav>
+        <ul class="show" id="mobile">
+            <li>
+                <img class="call-icon" src="/assets/img/call-icon.svg" alt="" loading="eager" decoding="async" width="32" height="32">
+            </li>
+            <li>
+                <img class="logo" src="/assets/img/vioekseliksi-logo.webp" alt="" loading="eager" decoding="async" height="43" width="32" onClick="window.location.href = '{{ navPages[0].url }}';">
+            </li>
+            <li class="navButton">
+                <div class="burger-icon" aria-label="Menu button" role="button">
+                    <div class="line line1" focusable></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
+            </li>
+        </ul>
+        <div class="container-links">
+            <ul id="wrapper">
+                {% set navPages = collections.all | eleventyNavigation %}
+                
+                <li class="link {% if page.url == navPages[6].url %}active{% endif %}" onClick="window.location.href = '{{ navPages[6].url }}';">
+                    <a href="{{ navPages[6].url }}">ΑΡΧΙΚ<span class="lastletter">Η</span></a>
+                </li>
+                <li class="link {% if page.url == navPages[7].url %}active{% endif %}" onClick="window.location.href = '{{ navPages[7].url }}';">
+                    <a href="{{ navPages[7].url }}">ΠΛΗΡΟΦΟΡΙΕ<span class="lastletter">Σ</span></a>
+                </li>
+                <li class="link {% if page.url == navPages[8].url %}active{% endif %}" onClick="window.location.href = '{{ navPages[8].url }}';">
+                    <a href="{{ navPages[8].url }}">ΥΠΗΡΕΣΙΕ<span class="lastletter">Σ</span></a>
+                </li>
+                <li class="logo-container">
+                    <img src="/assets/img/vioekseliksi-logo.webp" width="35" height="48" height alt="" onClick="window.location.href = '{{ navPages[0].url }}';" loading="eager" decoding="async">
+                </li>
+                <li class="link {% if page.url == navPages[9].url or 'blogs' in page.url %}active{% endif %}" onClick="window.location.href = '{{ navPages[9].url }}';">
+                    <a href="{{ navPages[9].url }}">ΜΗΧΑΝΗΜΑΤ<span class="lastletter">Α</span></a>
+                </li>
+                <li class="link {% if page.url == navPages[10].url or 'biomarkers' in page.url %}active{% endif %}" onClick="window.location.href = '{{ navPages[10].url }}';">
+                    <a href="{{ navPages[10].url }}">ΒΙΟΔΕΙΚΤΕ<span class="lastletter">Σ</span></a>
+                </li>
+                <li class="link {% if page.url == navPages[11].url %}active{% endif %}" onClick="window.location.href = '{{ navPages[11].url }}';">
+                    <a href="{{ navPages[11].url }}">ΕΠΙΚΟΙΝΩΝΙ<span class="lastletter">Α</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script async src="/assets/js/navBar.js"></script>
+</header>

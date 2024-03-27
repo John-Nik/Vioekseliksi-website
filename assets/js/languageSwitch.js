@@ -12,7 +12,7 @@ const cookieGr = document.querySelector(".cookieGr");
 
 
 cookieEn.addEventListener("click", () => {
-  let e = JSON.stringify(window.location.pathname).replace("gr/", "");
+  let e = JSON.stringify(window.location.pathname).replace("/gr", "");
 
   Cookies.set("english", "en", { expires: 30 });
 
@@ -24,8 +24,8 @@ cookieEn.addEventListener("click", () => {
 
 cookieGr.addEventListener("click", () => {
   let i = JSON.stringify(window.location.pathname).slice(0, 1);
-  Cookies.set("greek", "gr", { expires: 30 });
   Cookies.remove("english");
+  Cookies.set("greek", "gr", { expires: 30 });
 
   if (i == "/" ) {
     let c = i + "gr" + JSON.stringify(window.location.pathname).slice(0, 1);
@@ -37,24 +37,18 @@ cookieGr.addEventListener("click", () => {
   }
 })
 
-if ( Cookies.get("greek") && JSON.stringify(window.location.pathname).slice(0,1).includes("gr") == false ) {
-  let i = JSON.stringify(window.location.pathname).slice(0, 1);
-  Cookies.set("greek", "gr", { expires: 30 });
-  Cookies.remove("english");
+if ( Cookies.get('greek') == 'gr' && JSON.stringify(window.location.pathname).includes('gr') == false ) {
+  Cookies.set('greek', 'gr', { expires: 30 });
+  Cookies.remove('english');
 
-  if (i == "/" ) {
-    let c = i + "gr" + JSON.stringify(window.location.pathname).slice(0, 1);
-    console.log(c);
-    (window.location.href = JSON.parse(c));
-  } else {
-    let b = i + "/gr" + JSON.stringify(window.location.pathname).slice(0, 1);
-    (window.location.href = JSON.parse(b));
-  }
-} else if ( Cookies.get("english") && JSON.stringify(window.location.pathname).includes("gr") ) {
+  let c = '/gr' + window.location.pathname;
+  window.location.href = c;
 
-    let i = JSON.stringify(window.location.pathname).replace("gr/", "");
+} else if ( Cookies.get('english') == 'en' && JSON.stringify(window.location.pathname).includes("gr") ) {
+  let i = JSON.stringify(window.location.pathname).replace("gr/", "");
 
-    Cookies.set("english", "en", { expires: 30 });
+  Cookies.set("english", "en", { expires: 30 });
+  Cookies.remove('greek');
 
-    (window.location.href = JSON.parse(i));
+  window.location.href = JSON.parse(i);
 }

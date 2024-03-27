@@ -4,8 +4,8 @@ const offersLayer2 = document.querySelector('.layer2');
 const offersWrappingContainer = document.querySelector('.offers-wrapper');
 const offerDesc = document.querySelector('#offers .description');
 const offersSectionBlock = document.querySelector('#offers');
+const offersJSONListing = new Request('/assets/js/offersList.json');
 let userLanguageServe = '';
-const offersJSONListing = new Request('/assets/js/offers.json');
 
 if ( document.querySelector('meta[name="language"]').getAttribute('content') == "EN" ) {
     userLanguageServe = "en";
@@ -305,7 +305,7 @@ async function beginOffers() {
 
                 offersFadeInOutEffect();
                 restartCarousel(layerClicked);
-                })
-            } 
+            })
+        } 
     }
 }
