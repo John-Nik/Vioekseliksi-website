@@ -51,7 +51,7 @@ manifestLanguage: greek
                   <div class="card">
                      <img src="{{ service.data.image }}" alt="{{ service.data.name }}">
                      <h4>{{ service.data.name }}</h4>
-                     <p>{{ content | safe }}</p>
+                     <p>{{ service.data.shortDesc }}</p>
                   </div>
                {% endfor %}
                

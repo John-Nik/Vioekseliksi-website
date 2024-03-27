@@ -5,13 +5,13 @@
             <p class="description hidden">Κάθε άτομο εδώ έχει να παίξει το ρόλο του και θέλουμε να τους γνωρίσετε όλους</p>
         </div>
         <div class="profile-wrapper hidden">
-            {% if collections.teamMembersEN | length == 0 %}
+            {% if collections.teamMembersGR | length == 0 %}
 
                 <h1 style="font-size: 3rem; color: #2f6158; margin-top: 2rem; margin-bottom: 10rem; font-weight: 500; text-align: center; line-height: 4rem;">Δεν υπάρχουν μέλη για προβολή<br><span style="font-size: 1.5rem; font-weight: 300; color: #101010">Παρακαλώ προσθέστε μέλη για να εμφανίσετε</span></h1>
 
             {% else %}
 
-                {% for person in collections.teamMembersEN %}
+                {% for person in collections.teamMembersGR %}
                     <div class="profile">
                         <img src="{{ person.data.pfp }}" alt="Picture of {{ person.data.name }}" loading="lazy" decoding="async">
                         <div class="profile-information">

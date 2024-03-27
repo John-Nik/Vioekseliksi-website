@@ -247,3 +247,7 @@
 - Added SVGs to replace the font-awesome icons
 - Stylistic changes in the home page
 - Added some more posts to fill in the home page
+
+<br>
+
+**0.23.1:** Small post changes
