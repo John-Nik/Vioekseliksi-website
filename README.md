@@ -237,4 +237,8 @@
 
 <br>
 
-**0.22.0:** Optimized the contact us page to have a higher pagespeed score and load faster
+**0.22.0:** Optimized the contact us page to have a higher pagespeed score and load faster | G
+
+<br>
+
+**0.22.1:** Small changes to imrove pagespeed score more | G
