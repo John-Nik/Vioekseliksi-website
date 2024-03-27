@@ -57,7 +57,7 @@ manifestLanguage: greek
             <div class="grid_wrapper">
                {% for person in collections.teamMembersGR %}
                <div class="about_the_member hidden">
-                  <img src="{{ person.data.pfp }}" loading="lazy" decoding="async">
+                  <img src="{{ person.data.pfp }}" loading="lazy" decoding="async" alt="{{ person.data.name }} φωτογραφία προφίλ">
                   <div class="moreabout">
                      <h2>{{ person.data.name }}</h2>
                      <p>{{ person.content | safe}}</p>

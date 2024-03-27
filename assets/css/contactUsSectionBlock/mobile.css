@@ -58,9 +58,13 @@
         transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
     }
 
-    .contactusbody .option .fas {
-        scale: 1.5;
-        color: #85969C;
+    .contactusbody .option svg {
+        scale: 1;
+        fill: #85969C;
+    }
+
+    .contactusbody .option li:last-child svg {
+        scale: 0.8;
     }
 
     .contactusbody .info-wrapper {

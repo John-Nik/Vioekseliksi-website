@@ -68,12 +68,13 @@
         height: 100%;
         object-fit: cover;
         border-radius: 25px;
+        filter: brightness(0.8);
     }
 
     .services-section-block .arrows-wrapper img {
         width: 24px;
         height: auto;
-        padding: 8px;
+        padding: 16px;
     }
 
     .carousel-wrapper {
@@ -153,6 +154,16 @@
         opacity: 0;
         transform: translateX(-200%) scale(0.8);
         -webkit-filter: blur(15px);
+    }
+
+    .services-section-block .card span {
+        color: white;
+        width: 100%;
+        display: flex;
+        position: absolute;
+        text-align: center;
+        justify-content: center;
+        font-size: 1.5rem;
     }
 }
 

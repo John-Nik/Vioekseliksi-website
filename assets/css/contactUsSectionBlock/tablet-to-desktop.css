@@ -9,8 +9,8 @@
         height:30px;
     }
 
-    .contactusbody .option li .fas {
-        transform: scale(0.6);
+    .contactusbody .option li svg {
+        transform: scale(1);
         transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
     }
 
@@ -49,7 +49,7 @@
         margin-bottom: 8px;
     }
 
-    .option li:hover .fas {
-        transform: scale(0.7);
+    .option li:hover svg {
+        transform: scale(1.2);
     }
 }

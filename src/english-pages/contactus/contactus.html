@@ -63,7 +63,7 @@ manifestLanguage: english
                     s.type = "text/javascript";
                     s.src = "https://assets.calendly.com/assets/external/widget.js";
 
-                    calendlyWrapper.append(s);
+                    setTimeout(() => { calendlyWrapper.append(s) }, 100);
                 </script>
                 <!-- Calendly inline widget end -->
             </section>

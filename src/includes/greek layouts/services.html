@@ -15,16 +15,16 @@
 
                 {% for service in collections.servicesProvidedGR %}
                     <div class="card" data-index="{{ loopIteration }}">
-                        <img src="service[0].data.image" alt="offer card">
-                        <span>{{ service[0].data.name }}</span>
+                        <img src="{{ service.data.image }}" alt="offer card">
+                        <span>{{ service.data.name }}</span>
                     </div>
                     {% set loopIteration = loopIteration + 1 %}
                 {% endfor %}
                 
                 {% for service in collections.servicesProvidedGR %}
                     <div class="card" data-index="{{ loopIteration }}">
-                        <img src="service[0].data.image" alt="offer card">
-                        <span>{{ service[0].data.name }}</span>
+                        <img src="{{ service.data.image }}" alt="offer card">
+                        <span>{{ service.data.name }}</span>
                     </div>
                     {% set loopIteration = loopIteration + 1 %}
                 {% endfor %}

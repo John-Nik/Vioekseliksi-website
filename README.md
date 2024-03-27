@@ -204,10 +204,8 @@
 				<li>Finished the biomarkers page | G</li>
 				<li>Minor changes in the way that files are structured through the admin panel | G</li>
 			</ul>
+
 <br>
-
-# Website layout and functionality is completely finished.
-
 
 **0.18.1:** Made it easier for the clients to change their offers, and added the possibility to add multiple languages | G
 
@@ -241,4 +239,11 @@
 
 <br>
 
-**0.22.1:** Small changes to imrove pagespeed score more | G
+**0.22.1:** Small changes to improve pagespeed score more | G
+
+<br>
+
+**0.23.0:** 
+- Added SVGs to replace the font-awesome icons
+- Stylistic changes in the home page
+- Added some more posts to fill in the home page

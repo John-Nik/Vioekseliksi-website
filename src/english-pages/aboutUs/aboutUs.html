@@ -65,7 +65,7 @@ manifestLanguage: english
             <div class="grid_wrapper">
                {% for person in collections.teamMembersEN %}
                <div class="about_the_member hidden">
-                  <img src="{{ person.data.pfp }}" loading="lazy" decoding="async">
+                  <img src="{{ person.data.pfp }}" loading="lazy" decoding="async" alt="{{ person.data.name }} profile picture">
                   <div class="moreabout">
                      <h2>{{ person.data.name }}</h2>
                      <p>{{ person.content | safe}}</p>
@@ -87,19 +87,19 @@ manifestLanguage: english
                <div class="about_the_company hidden">
                   <p class="hyphenate">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore eos amet veniam praesentium ex ab, quaerat ratione, dolorum provident tenetur voluptatum hic quam autem explicabo velit ipsa maxime cumque quis.</p>
                   <picture>
-                     <img src="/assets/img/Illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
+                     <img src="/assets/img/Illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async" alt="">
                   </picture>
                </div>
                <div class="about_the_company hidden">
                   <picture>
-                     <img src="/assets/img/Illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
+                     <img src="/assets/img/Illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async" alt="">
                   </picture>
                   <p class="hyphenate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero placeat nihil quam ratione adipisci suscipit exercitationem ullam officia vitae dignissimos, impedit nemo similique soluta dolores cupiditate. Voluptas qui blanditiis optio?</p>
                </div>
                <div class="about_the_company hidden">
                   <p class="hyphenate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus consequuntur veniam, quae perspiciatis et fugit deleniti. Alias vel error aut excepturi, dolores obcaecati consectetur qui voluptatem totam voluptas inventore. Eligendi!</p>
                   <picture>
-                     <img src="/assets/img/Illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async">
+                     <img src="/assets/img/Illustration.svg" aria-hidden="true" focusable="false" loading="lazy" decoding="async" alt="">
                   </picture>
                </div>
             </div>
