@@ -234,3 +234,7 @@
 <br>
 
 **0.21.0:** Removed Font-Awesome CSS Stylesheet | G
+
+<br>
+
+**0.22.0:** Optimized the contact us page to have a higher pagespeed score and load faster
