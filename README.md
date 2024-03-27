@@ -230,3 +230,7 @@
 <br>
 
 **0.20.0:** Added the greek page's layout, aswell as some minor styling in the pages | G
+
+<br>
+
+**0.21.0:** Removed Font-Awesome CSS Stylesheet | G
