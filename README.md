@@ -1,6 +1,6 @@
 ## Contributors
-- [@Giannis Nikolaou](https://github.com/John-Nik)
-- [@Eleni Kapona](https://github.com/kaponael)
+- [Giannis Nikolaou](https://github.com/John-Nik)
+- [Eleni Kapona](https://github.com/kaponael)
 
 ## Vioekseliksi Updates
 
